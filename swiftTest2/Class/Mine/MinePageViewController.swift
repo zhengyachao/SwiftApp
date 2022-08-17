@@ -14,9 +14,21 @@ class MinePageViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         self.view.backgroundColor = UIColor.background
+        
+        let logoutBtn = UIButton.init(frame: CGRect.init(x: 0, y: 0, width: 40, height: 40))
+        logoutBtn.setTitle("退出", for: .normal)
+        logoutBtn.setTitleColor(UIColor.white, for: .normal)
+        logoutBtn.titleLabel?.font = UIFont.systemFont(ofSize: 16)
+        logoutBtn.addTarget(self, action: #selector(onClickLogoutBtn), for: .touchUpInside)
+        let rightItem = UIBarButtonItem.init(customView: logoutBtn)
+        self.navigationItem.rightBarButtonItem = rightItem
+
     }
     
-
+    @objc func onClickLogoutBtn () {
+        // 退出登录通知
+        kNotificationCenter.post(name: NSNotification.Name(kLogoutSuccessNotice), object: nil)
+    }
     /*
     // MARK: - Navigation
 

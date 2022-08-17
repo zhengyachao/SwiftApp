@@ -92,11 +92,7 @@ class LoginPageViewController: UIViewController, UITextFieldDelegate {
     
     // MARK -- 登录按钮
     @objc func onClickLoginBtn () {
-        kUserDefaults.set(true, forKey: kIsLogin)
-        kUserDefaults.synchronize()
-        
-        /// 跳转到Tabbar页
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        appDelegate.window?.rootViewController = YCTabbarViewController()
+        // 登录成功通知
+        kNotificationCenter.post(name: NSNotification.Name(kLoginSuccessNotice), object: nil)
     }
 }

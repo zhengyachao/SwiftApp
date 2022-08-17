@@ -16,6 +16,7 @@
 		C25BF04C28ACCFD3003E9836 /* LoginPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C25BF04B28ACCFD3003E9836 /* LoginPageViewController.swift */; };
 		C25BF04F28ACD1AD003E9836 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C25BF04E28ACD1AD003E9836 /* UIColorExtension.swift */; };
 		C25BF05228ACD76E003E9836 /* UtilTextHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = C25BF05128ACD76E003E9836 /* UtilTextHeader.swift */; };
+		C25BF05428ACEE14003E9836 /* UtilNoticeHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = C25BF05328ACEE14003E9836 /* UtilNoticeHeader.swift */; };
 		C292F85528AC7D2D001B1984 /* SwiftHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = C292F85428AC7D2D001B1984 /* SwiftHeader.swift */; };
 		C292F85728AC8082001B1984 /* YCTabbarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C292F85628AC8082001B1984 /* YCTabbarViewController.swift */; };
 		C292F86228AC8734001B1984 /* YCBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C292F86128AC8734001B1984 /* YCBaseViewController.swift */; };
@@ -59,6 +60,7 @@
 		C25BF04B28ACCFD3003E9836 /* LoginPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPageViewController.swift; sourceTree = "<group>"; };
 		C25BF04E28ACD1AD003E9836 /* UIColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		C25BF05128ACD76E003E9836 /* UtilTextHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UtilTextHeader.swift; sourceTree = "<group>"; };
+		C25BF05328ACEE14003E9836 /* UtilNoticeHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UtilNoticeHeader.swift; sourceTree = "<group>"; };
 		C292F85428AC7D2D001B1984 /* SwiftHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftHeader.swift; sourceTree = "<group>"; };
 		C292F85628AC8082001B1984 /* YCTabbarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YCTabbarViewController.swift; sourceTree = "<group>"; };
 		C292F86128AC8734001B1984 /* YCBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YCBaseViewController.swift; sourceTree = "<group>"; };
@@ -175,6 +177,7 @@
 			children = (
 				C292F85428AC7D2D001B1984 /* SwiftHeader.swift */,
 				C25BF05128ACD76E003E9836 /* UtilTextHeader.swift */,
+				C25BF05328ACEE14003E9836 /* UtilNoticeHeader.swift */,
 			);
 			path = "Macro&Const";
 			sourceTree = "<group>";
@@ -516,6 +519,7 @@
 				C25BF04C28ACCFD3003E9836 /* LoginPageViewController.swift in Sources */,
 				C25BF04628ACCFAC003E9836 /* HomePageViewController.swift in Sources */,
 				C25BF04A28ACCFBC003E9836 /* MinePageViewController.swift in Sources */,
+				C25BF05428ACEE14003E9836 /* UtilNoticeHeader.swift in Sources */,
 				C25BF05228ACD76E003E9836 /* UtilTextHeader.swift in Sources */,
 				C292F85728AC8082001B1984 /* YCTabbarViewController.swift in Sources */,
 				C25BF04F28ACD1AD003E9836 /* UIColorExtension.swift in Sources */,

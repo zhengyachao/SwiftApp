@@ -17,7 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         // 是否登录
         let isLogin = kUserDefaults.bool(forKey: kIsLogin)
-        print("111111----",isLogin)
+        print("isLogin----",isLogin)
         
         self.window = UIWindow.init()
         self.window?.backgroundColor = .white
@@ -30,8 +30,30 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Mark -- IQKeyboardManager键盘管理
         IQKeyboardManager.shared.enable = true
 
+        // MARK -- 添加通知方法
+        kNotificationCenter.addObserver(self, selector: #selector(onLoginSuccessNotify), name: NSNotification.Name(kLoginSuccessNotice), object: nil)
+        kNotificationCenter.addObserver(self, selector: #selector(onLogoutSuccessNotify), name: NSNotification.Name(kLogoutSuccessNotice), object: nil)
         
         return true
+    }
+    
+    @objc func onLoginSuccessNotify () {
+        
+        kUserDefaults.set(true, forKey: kIsLogin)
+        kUserDefaults.synchronize()
+        
+        /// 跳转到Tabbar页
+        kAppDelegate.window?.rootViewController = YCTabbarViewController()
+    }
+    
+    @objc func onLogoutSuccessNotify () {
+        
+        kUserDefaults.set(false, forKey: kIsLogin)
+        kUserDefaults.synchronize()
+        
+        /// 跳转到登录页
+        let loginNavVC = YCNavigationController.init(rootViewController: LoginPageViewController())
+        kAppDelegate.window?.rootViewController = loginNavVC
     }
     
 }
