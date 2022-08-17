@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import IQKeyboardManagerSwift
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -14,12 +15,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        // 是否登录
+        let isLogin = kUserDefaults.bool(forKey: kIsLogin)
+        print("111111----",isLogin)
         
         self.window = UIWindow.init()
         self.window?.backgroundColor = .white
         self.window?.frame = UIScreen.main.bounds
         self.window?.makeKeyAndVisible()
-        self.window?.rootViewController = YCTabbarViewController()
+        
+        let loginNavVC = YCNavigationController.init(rootViewController: LoginPageViewController())
+        self.window?.rootViewController = isLogin ? YCTabbarViewController() : loginNavVC
+        
+        // Mark -- IQKeyboardManager键盘管理
+        IQKeyboardManager.shared.enable = true
+
         
         return true
     }

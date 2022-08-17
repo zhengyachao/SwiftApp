@@ -9,6 +9,8 @@ target 'swiftTest2' do
   pod 'MJRefresh'
   pod 'MBProgressHUD'
   pod 'SnapKitExtend'
+  pod 'IQKeyboardManagerSwift'
+
   
 
   target 'swiftTest2Tests' do

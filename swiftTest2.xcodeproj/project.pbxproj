@@ -10,11 +10,14 @@
 		0032FAB010D88C89AD0EC8D7 /* Pods_swiftTest2Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93EE9D4F2C7FC435A8F48FB9 /* Pods_swiftTest2Tests.framework */; };
 		72B850ADFA12235DC50DF19D /* Pods_swiftTest2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3FA13B3B777DCDF7C202157 /* Pods_swiftTest2.framework */; };
 		A3306C0339E055C3993D67D6 /* Pods_swiftTest2_swiftTest2UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E05880E99F318E30AA0B1A6 /* Pods_swiftTest2_swiftTest2UITests.framework */; };
+		C25BF04628ACCFAC003E9836 /* HomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C25BF04528ACCFAC003E9836 /* HomePageViewController.swift */; };
+		C25BF04828ACCFB5003E9836 /* MessagePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C25BF04728ACCFB5003E9836 /* MessagePageViewController.swift */; };
+		C25BF04A28ACCFBC003E9836 /* MinePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C25BF04928ACCFBC003E9836 /* MinePageViewController.swift */; };
+		C25BF04C28ACCFD3003E9836 /* LoginPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C25BF04B28ACCFD3003E9836 /* LoginPageViewController.swift */; };
+		C25BF04F28ACD1AD003E9836 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C25BF04E28ACD1AD003E9836 /* UIColorExtension.swift */; };
+		C25BF05228ACD76E003E9836 /* UtilTextHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = C25BF05128ACD76E003E9836 /* UtilTextHeader.swift */; };
 		C292F85528AC7D2D001B1984 /* SwiftHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = C292F85428AC7D2D001B1984 /* SwiftHeader.swift */; };
 		C292F85728AC8082001B1984 /* YCTabbarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C292F85628AC8082001B1984 /* YCTabbarViewController.swift */; };
-		C292F85C28AC8611001B1984 /* HomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C292F85B28AC8611001B1984 /* HomePageViewController.swift */; };
-		C292F85E28AC861C001B1984 /* MinePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C292F85D28AC861C001B1984 /* MinePageViewController.swift */; };
-		C292F86028AC8633001B1984 /* MessagePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C292F85F28AC8633001B1984 /* MessagePageViewController.swift */; };
 		C292F86228AC8734001B1984 /* YCBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C292F86128AC8734001B1984 /* YCBaseViewController.swift */; };
 		C292F86428AC875A001B1984 /* YCNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C292F86328AC875A001B1984 /* YCNavigationController.swift */; };
 		C2B1664D28AB9273004C7084 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2B1664C28AB9273004C7084 /* AppDelegate.swift */; };
@@ -50,11 +53,14 @@
 		6A6CF99E6574EF7F05DB26DA /* Pods-swiftTest2-swiftTest2UITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-swiftTest2-swiftTest2UITests.release.xcconfig"; path = "Target Support Files/Pods-swiftTest2-swiftTest2UITests/Pods-swiftTest2-swiftTest2UITests.release.xcconfig"; sourceTree = "<group>"; };
 		6D33019C09E60E5E33F86307 /* Pods-swiftTest2Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-swiftTest2Tests.release.xcconfig"; path = "Target Support Files/Pods-swiftTest2Tests/Pods-swiftTest2Tests.release.xcconfig"; sourceTree = "<group>"; };
 		93EE9D4F2C7FC435A8F48FB9 /* Pods_swiftTest2Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_swiftTest2Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C25BF04528ACCFAC003E9836 /* HomePageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomePageViewController.swift; sourceTree = "<group>"; };
+		C25BF04728ACCFB5003E9836 /* MessagePageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessagePageViewController.swift; sourceTree = "<group>"; };
+		C25BF04928ACCFBC003E9836 /* MinePageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MinePageViewController.swift; sourceTree = "<group>"; };
+		C25BF04B28ACCFD3003E9836 /* LoginPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPageViewController.swift; sourceTree = "<group>"; };
+		C25BF04E28ACD1AD003E9836 /* UIColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
+		C25BF05128ACD76E003E9836 /* UtilTextHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UtilTextHeader.swift; sourceTree = "<group>"; };
 		C292F85428AC7D2D001B1984 /* SwiftHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftHeader.swift; sourceTree = "<group>"; };
 		C292F85628AC8082001B1984 /* YCTabbarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YCTabbarViewController.swift; sourceTree = "<group>"; };
-		C292F85B28AC8611001B1984 /* HomePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageViewController.swift; sourceTree = "<group>"; };
-		C292F85D28AC861C001B1984 /* MinePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MinePageViewController.swift; sourceTree = "<group>"; };
-		C292F85F28AC8633001B1984 /* MessagePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagePageViewController.swift; sourceTree = "<group>"; };
 		C292F86128AC8734001B1984 /* YCBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YCBaseViewController.swift; sourceTree = "<group>"; };
 		C292F86328AC875A001B1984 /* YCNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YCNavigationController.swift; sourceTree = "<group>"; };
 		C2B1664928AB9273004C7084 /* swiftTest2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = swiftTest2.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -124,6 +130,55 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		C25BF04128ACCF8E003E9836 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				C25BF04528ACCFAC003E9836 /* HomePageViewController.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		C25BF04228ACCF8E003E9836 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				C25BF04B28ACCFD3003E9836 /* LoginPageViewController.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		C25BF04328ACCF8E003E9836 /* Mine */ = {
+			isa = PBXGroup;
+			children = (
+				C25BF04928ACCFBC003E9836 /* MinePageViewController.swift */,
+			);
+			path = Mine;
+			sourceTree = "<group>";
+		};
+		C25BF04428ACCF8E003E9836 /* Message */ = {
+			isa = PBXGroup;
+			children = (
+				C25BF04728ACCFB5003E9836 /* MessagePageViewController.swift */,
+			);
+			path = Message;
+			sourceTree = "<group>";
+		};
+		C25BF04D28ACD1AD003E9836 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				C25BF04E28ACD1AD003E9836 /* UIColorExtension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		C25BF05028ACD745003E9836 /* Macro&Const */ = {
+			isa = PBXGroup;
+			children = (
+				C292F85428AC7D2D001B1984 /* SwiftHeader.swift */,
+				C25BF05128ACD76E003E9836 /* UtilTextHeader.swift */,
+			);
+			path = "Macro&Const";
+			sourceTree = "<group>";
+		};
 		C292F85028AC7AC1001B1984 /* BaseVC */ = {
 			isa = PBXGroup;
 			children = (
@@ -151,9 +206,10 @@
 		C292F85A28AC85F9001B1984 /* Class */ = {
 			isa = PBXGroup;
 			children = (
-				C292F85B28AC8611001B1984 /* HomePageViewController.swift */,
-				C292F85D28AC861C001B1984 /* MinePageViewController.swift */,
-				C292F85F28AC8633001B1984 /* MessagePageViewController.swift */,
+				C25BF04128ACCF8E003E9836 /* Home */,
+				C25BF04228ACCF8E003E9836 /* Login */,
+				C25BF04428ACCF8E003E9836 /* Message */,
+				C25BF04328ACCF8E003E9836 /* Mine */,
 			);
 			path = Class;
 			sourceTree = "<group>";
@@ -183,16 +239,17 @@
 		C2B1664B28AB9273004C7084 /* swiftTest2 */ = {
 			isa = PBXGroup;
 			children = (
-				C292F85A28AC85F9001B1984 /* Class */,
-				C292F85828AC85F9001B1984 /* Model */,
-				C292F85928AC85F9001B1984 /* View */,
-				C292F85028AC7AC1001B1984 /* BaseVC */,
 				C2B1664C28AB9273004C7084 /* AppDelegate.swift */,
-				C2B1665228AB9273004C7084 /* Main.storyboard */,
 				C2B1665528AB9274004C7084 /* Assets.xcassets */,
 				C2B1665728AB9274004C7084 /* LaunchScreen.storyboard */,
+				C2B1665228AB9273004C7084 /* Main.storyboard */,
 				C2B1665A28AB9274004C7084 /* Info.plist */,
-				C292F85428AC7D2D001B1984 /* SwiftHeader.swift */,
+				C292F85028AC7AC1001B1984 /* BaseVC */,
+				C292F85A28AC85F9001B1984 /* Class */,
+				C25BF04D28ACD1AD003E9836 /* Extension */,
+				C25BF05028ACD745003E9836 /* Macro&Const */,
+				C292F85828AC85F9001B1984 /* Model */,
+				C292F85928AC85F9001B1984 /* View */,
 			);
 			path = swiftTest2;
 			sourceTree = "<group>";
@@ -453,12 +510,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C292F85C28AC8611001B1984 /* HomePageViewController.swift in Sources */,
-				C292F86028AC8633001B1984 /* MessagePageViewController.swift in Sources */,
 				C292F85528AC7D2D001B1984 /* SwiftHeader.swift in Sources */,
 				C292F86228AC8734001B1984 /* YCBaseViewController.swift in Sources */,
-				C292F85E28AC861C001B1984 /* MinePageViewController.swift in Sources */,
+				C25BF04828ACCFB5003E9836 /* MessagePageViewController.swift in Sources */,
+				C25BF04C28ACCFD3003E9836 /* LoginPageViewController.swift in Sources */,
+				C25BF04628ACCFAC003E9836 /* HomePageViewController.swift in Sources */,
+				C25BF04A28ACCFBC003E9836 /* MinePageViewController.swift in Sources */,
+				C25BF05228ACD76E003E9836 /* UtilTextHeader.swift in Sources */,
 				C292F85728AC8082001B1984 /* YCTabbarViewController.swift in Sources */,
+				C25BF04F28ACD1AD003E9836 /* UIColorExtension.swift in Sources */,
 				C2B1664D28AB9273004C7084 /* AppDelegate.swift in Sources */,
 				C292F86428AC875A001B1984 /* YCNavigationController.swift in Sources */,
 			);

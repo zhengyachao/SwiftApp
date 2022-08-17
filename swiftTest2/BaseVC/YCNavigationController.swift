@@ -33,8 +33,10 @@ class YCNavigationController: UINavigationController {
         self.navigationBar.setBackgroundImage(bgImage, for: .default)
         self.navigationBar.shadowImage = UIImage()
         
+        /// 半透明度-false view.frame 从（0,64）开始计算
         self.navigationBar.isTranslucent = false
         
+        // 适配ios15.0导航颜色、字体等配置
         if #available(iOS 15.0, *) {
             let app = UINavigationBarAppearance()
             // 重置背景和阴影颜色
