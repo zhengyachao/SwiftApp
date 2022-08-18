@@ -7,13 +7,9 @@
 
 import Foundation
 
-import MJRefresh
-
+//MARK: 纯代码布局--类似OC的Masonry
 import SnapKit
-
 import SnapKitExtend
-
-import MBProgressHUD
 
 //MRAK: 应用通用配置
 let kScreenWidth  = UIScreen.main.bounds.width
@@ -24,7 +20,7 @@ let kNotificationCenter = NotificationCenter.default
 let kAppDelegate  = UIApplication.shared.delegate as! AppDelegate
 
 
-// 是否是刘海屏
+//MRAK:是否是刘海屏
 var kDevice_Is_iPhoneX : Bool {
     guard #available(iOS 11.0, *) else {
         return false
@@ -36,11 +32,8 @@ var kDevice_Is_iPhoneX : Bool {
 }
 
 let kStatusBarHeight = kDevice_Is_iPhoneX ? 44.0 : 20.0   // 状态栏高度
-
 let kAppNavBarHeight = kDevice_Is_iPhoneX ? 88.0 : 64.0   // 导航栏高度
-
 let kAppTabBarHeight = kDevice_Is_iPhoneX ? 83.0 : 49.0   // tabBar高度
-
 let kAppNavAndTabBarHeight = kAppNavBarHeight + kAppTabBarHeight   // 导航栏高度 + tabBar高度
 
 
@@ -72,6 +65,5 @@ extension UIColor {
         return UIColor.hex(hexString: "#999999")
     }
 }
-
 
 

@@ -25,7 +25,6 @@ class LoginPageViewController: UIViewController, UITextFieldDelegate {
         super.viewWillDisappear(animated)
         self.navigationController?.navigationBar.isHidden = false
     }
-    
 
     func initUI() {
         // Mark --- 账号
@@ -92,7 +91,19 @@ class LoginPageViewController: UIViewController, UITextFieldDelegate {
     
     // MARK -- 登录按钮
     @objc func onClickLoginBtn () {
-        // 登录成功通知
-        kNotificationCenter.post(name: NSNotification.Name(kLoginSuccessNotice), object: nil)
+        
+        
+        MBProgressHUD.showAdded(to: self.view, animated: true)
+        // gcd 延迟2秒执行
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2.0, execute: {
+            
+            // 登录成功通知
+            kNotificationCenter.post(name: NSNotification.Name(kLoginSuccessNotice), object: nil)
+            MBProgressHUD.hide(for: self.view, animated: true)
+        })
+        
+        /*
+        DispatchQueue.main.async{//UI操作self.tableView.reloadData()}
+         */
     }
 }

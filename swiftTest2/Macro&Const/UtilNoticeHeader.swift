@@ -6,7 +6,7 @@
 //
 
 import Foundation
-
+//Mark ---- 通知名称统一处理
 let kLoginSuccessNotice  = "kLoginSuccessNotice"   // 登录成功通知
 let kLogoutSuccessNotice = "kLogoutSuccessNotice"  // 退出登录成功通知
 

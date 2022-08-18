@@ -1,10 +1,5 @@
 //
 //  UIColorExtension.swift
-//  U17
-//
-//  Created by charles on 2017/7/31.
-//  Copyright © 2017年 charles. All rights reserved.
-//
 
 import UIKit
 

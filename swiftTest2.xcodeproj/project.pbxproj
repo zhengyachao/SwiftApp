@@ -28,6 +28,16 @@
 		C2B1666428AB9274004C7084 /* swiftTest2Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2B1666328AB9274004C7084 /* swiftTest2Tests.swift */; };
 		C2B1666E28AB9274004C7084 /* swiftTest2UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2B1666D28AB9274004C7084 /* swiftTest2UITests.swift */; };
 		C2B1667028AB9274004C7084 /* swiftTest2UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2B1666F28AB9274004C7084 /* swiftTest2UITestsLaunchTests.swift */; };
+		C2D23B3828ADDFE2007C149B /* DictionaryExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2D23B2728ADDFE2007C149B /* DictionaryExtension.swift */; };
+		C2D23B3B28ADDFE2007C149B /* WindowExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2D23B2A28ADDFE2007C149B /* WindowExtension.swift */; };
+		C2D23B3C28ADDFE2007C149B /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2D23B2B28ADDFE2007C149B /* StringExtension.swift */; };
+		C2D23B3D28ADDFE2007C149B /* UIBarButtonItemExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2D23B2C28ADDFE2007C149B /* UIBarButtonItemExtension.swift */; };
+		C2D23B3E28ADDFE2007C149B /* UIDeviceExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2D23B2D28ADDFE2007C149B /* UIDeviceExtension.swift */; };
+		C2D23B4128ADDFE2007C149B /* DispatchQueueExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2D23B3028ADDFE2007C149B /* DispatchQueueExtension.swift */; };
+		C2D23B4328ADDFE2007C149B /* ArrayExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2D23B3228ADDFE2007C149B /* ArrayExtensions.swift */; };
+		C2D23B4428ADDFE2007C149B /* ButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2D23B3328ADDFE2007C149B /* ButtonExtension.swift */; };
+		C2D23B4528ADDFE2007C149B /* FontExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2D23B3428ADDFE2007C149B /* FontExtension.swift */; };
+		C2D23B4828ADDFE2007C149B /* UIImageExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2D23B3728ADDFE2007C149B /* UIImageExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +86,17 @@
 		C2B1666928AB9274004C7084 /* swiftTest2UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = swiftTest2UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2B1666D28AB9274004C7084 /* swiftTest2UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = swiftTest2UITests.swift; sourceTree = "<group>"; };
 		C2B1666F28AB9274004C7084 /* swiftTest2UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = swiftTest2UITestsLaunchTests.swift; sourceTree = "<group>"; };
+		C2D23B2628ADD218007C149B /* swiftTest2-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "swiftTest2-Bridging-Header.h"; sourceTree = "<group>"; };
+		C2D23B2728ADDFE2007C149B /* DictionaryExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DictionaryExtension.swift; sourceTree = "<group>"; };
+		C2D23B2A28ADDFE2007C149B /* WindowExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WindowExtension.swift; sourceTree = "<group>"; };
+		C2D23B2B28ADDFE2007C149B /* StringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
+		C2D23B2C28ADDFE2007C149B /* UIBarButtonItemExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIBarButtonItemExtension.swift; sourceTree = "<group>"; };
+		C2D23B2D28ADDFE2007C149B /* UIDeviceExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIDeviceExtension.swift; sourceTree = "<group>"; };
+		C2D23B3028ADDFE2007C149B /* DispatchQueueExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DispatchQueueExtension.swift; sourceTree = "<group>"; };
+		C2D23B3228ADDFE2007C149B /* ArrayExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArrayExtensions.swift; sourceTree = "<group>"; };
+		C2D23B3328ADDFE2007C149B /* ButtonExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonExtension.swift; sourceTree = "<group>"; };
+		C2D23B3428ADDFE2007C149B /* FontExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FontExtension.swift; sourceTree = "<group>"; };
+		C2D23B3728ADDFE2007C149B /* UIImageExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageExtensions.swift; sourceTree = "<group>"; };
 		D3FA13B3B777DCDF7C202157 /* Pods_swiftTest2.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_swiftTest2.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D59B5F94AD5566389FDEA433 /* Pods-swiftTest2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-swiftTest2.debug.xcconfig"; path = "Target Support Files/Pods-swiftTest2/Pods-swiftTest2.debug.xcconfig"; sourceTree = "<group>"; };
 		E370FEBBA6C4284F0F91CB94 /* Pods-swiftTest2.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-swiftTest2.release.xcconfig"; path = "Target Support Files/Pods-swiftTest2/Pods-swiftTest2.release.xcconfig"; sourceTree = "<group>"; };
@@ -167,6 +188,16 @@
 		C25BF04D28ACD1AD003E9836 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				C2D23B3228ADDFE2007C149B /* ArrayExtensions.swift */,
+				C2D23B3328ADDFE2007C149B /* ButtonExtension.swift */,
+				C2D23B2728ADDFE2007C149B /* DictionaryExtension.swift */,
+				C2D23B3028ADDFE2007C149B /* DispatchQueueExtension.swift */,
+				C2D23B3428ADDFE2007C149B /* FontExtension.swift */,
+				C2D23B2B28ADDFE2007C149B /* StringExtension.swift */,
+				C2D23B2C28ADDFE2007C149B /* UIBarButtonItemExtension.swift */,
+				C2D23B2D28ADDFE2007C149B /* UIDeviceExtension.swift */,
+				C2D23B3728ADDFE2007C149B /* UIImageExtensions.swift */,
+				C2D23B2A28ADDFE2007C149B /* WindowExtension.swift */,
 				C25BF04E28ACD1AD003E9836 /* UIColorExtension.swift */,
 			);
 			path = Extension;
@@ -247,6 +278,7 @@
 				C2B1665728AB9274004C7084 /* LaunchScreen.storyboard */,
 				C2B1665228AB9273004C7084 /* Main.storyboard */,
 				C2B1665A28AB9274004C7084 /* Info.plist */,
+				C2D23B2628ADD218007C149B /* swiftTest2-Bridging-Header.h */,
 				C292F85028AC7AC1001B1984 /* BaseVC */,
 				C292F85A28AC85F9001B1984 /* Class */,
 				C25BF04D28ACD1AD003E9836 /* Extension */,
@@ -515,15 +547,25 @@
 			files = (
 				C292F85528AC7D2D001B1984 /* SwiftHeader.swift in Sources */,
 				C292F86228AC8734001B1984 /* YCBaseViewController.swift in Sources */,
+				C2D23B3D28ADDFE2007C149B /* UIBarButtonItemExtension.swift in Sources */,
 				C25BF04828ACCFB5003E9836 /* MessagePageViewController.swift in Sources */,
 				C25BF04C28ACCFD3003E9836 /* LoginPageViewController.swift in Sources */,
+				C2D23B4328ADDFE2007C149B /* ArrayExtensions.swift in Sources */,
+				C2D23B3B28ADDFE2007C149B /* WindowExtension.swift in Sources */,
+				C2D23B3828ADDFE2007C149B /* DictionaryExtension.swift in Sources */,
 				C25BF04628ACCFAC003E9836 /* HomePageViewController.swift in Sources */,
+				C2D23B3C28ADDFE2007C149B /* StringExtension.swift in Sources */,
 				C25BF04A28ACCFBC003E9836 /* MinePageViewController.swift in Sources */,
+				C2D23B3E28ADDFE2007C149B /* UIDeviceExtension.swift in Sources */,
+				C2D23B4128ADDFE2007C149B /* DispatchQueueExtension.swift in Sources */,
+				C2D23B4428ADDFE2007C149B /* ButtonExtension.swift in Sources */,
 				C25BF05428ACEE14003E9836 /* UtilNoticeHeader.swift in Sources */,
 				C25BF05228ACD76E003E9836 /* UtilTextHeader.swift in Sources */,
 				C292F85728AC8082001B1984 /* YCTabbarViewController.swift in Sources */,
+				C2D23B4828ADDFE2007C149B /* UIImageExtensions.swift in Sources */,
 				C25BF04F28ACD1AD003E9836 /* UIColorExtension.swift in Sources */,
 				C2B1664D28AB9273004C7084 /* AppDelegate.swift in Sources */,
+				C2D23B4528ADDFE2007C149B /* FontExtension.swift in Sources */,
 				C292F86428AC875A001B1984 /* YCNavigationController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -721,6 +763,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.trustmobi.demo.swiftTest2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/trustmobi/Desktop/zhengyc-EMM/SwiftApp/swiftTest2/swiftTest2-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -753,6 +796,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.trustmobi.demo.swiftTest2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/trustmobi/Desktop/zhengyc-EMM/SwiftApp/swiftTest2/swiftTest2-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};

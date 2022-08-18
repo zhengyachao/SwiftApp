@@ -7,4 +7,8 @@
 
 import Foundation
 
-let kIsLogin  = "isLogin"
+//Mark ---- 本地存储相关的key值
+
+let kIsLogin      = "isLogin"     /// 是否登录
+let kUserAccount  = "userAccount" /// 用户账号
+
