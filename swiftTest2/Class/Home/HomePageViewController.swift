@@ -7,6 +7,7 @@
 
 import UIKit
 import Kingfisher
+import SwiftyJSON
 
 class HomePageViewController: UIViewController, ZCycleViewProtocol, UICollectionViewDelegate {
     
@@ -49,12 +50,15 @@ class HomePageViewController: UIViewController, ZCycleViewProtocol, UICollection
         // Do any additional setup after loading the view.
         view.backgroundColor = UIColor.background
         
+        /*
         view.addSubview(topCycleView)
         topCycleView.snp.makeConstraints { make in
             make.top.left.right.equalTo(view)
             make.height.equalTo(200)
         }
+        */
         
+        requestAppListApi()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -67,6 +71,25 @@ class HomePageViewController: UIViewController, ZCycleViewProtocol, UICollection
         super.viewWillDisappear(animated)
         
         //self.navigationController?.navigationBar.isHidden = false
+    }
+    
+    //MARK: 网络请求
+    func requestAppListApi () {
+        homeProvider.request(HomeAppListApi.realtimeWeather(cityId: "101110101")) { result in
+            switch result {
+            case let .success(response):
+                do {
+                    // SwiftyJSON 解析data数据
+                    let jsonDic = try JSON(data: response.data)
+                    print(jsonDic)
+                } catch  {
+                    
+                }
+                
+            case let .failure(error as NSError):
+                print(error)
+            }
+        }
     }
     
     //MARK: ZCycleViewProtocol

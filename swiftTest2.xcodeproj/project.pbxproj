@@ -43,6 +43,7 @@
 		C2D23B5028ADEA1C007C149B /* ZPageControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2D23B4D28ADEA1C007C149B /* ZPageControl.swift */; };
 		C2D23B5428ADEE32007C149B /* HomeCycleCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2D23B5328ADEE32007C149B /* HomeCycleCollectionCell.swift */; };
 		C2D23B5728AE14A8007C149B /* MessageListTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2D23B5628AE14A8007C149B /* MessageListTVCell.swift */; };
+		C2D23B5A28AE2A37007C149B /* HomeAppListApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2D23B5928AE2A37007C149B /* HomeAppListApi.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -107,6 +108,7 @@
 		C2D23B4D28ADEA1C007C149B /* ZPageControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZPageControl.swift; sourceTree = "<group>"; };
 		C2D23B5328ADEE32007C149B /* HomeCycleCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCycleCollectionCell.swift; sourceTree = "<group>"; };
 		C2D23B5628AE14A8007C149B /* MessageListTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageListTVCell.swift; sourceTree = "<group>"; };
+		C2D23B5928AE2A37007C149B /* HomeAppListApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeAppListApi.swift; sourceTree = "<group>"; };
 		D3FA13B3B777DCDF7C202157 /* Pods_swiftTest2.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_swiftTest2.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D59B5F94AD5566389FDEA433 /* Pods-swiftTest2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-swiftTest2.debug.xcconfig"; path = "Target Support Files/Pods-swiftTest2/Pods-swiftTest2.debug.xcconfig"; sourceTree = "<group>"; };
 		E370FEBBA6C4284F0F91CB94 /* Pods-swiftTest2.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-swiftTest2.release.xcconfig"; path = "Target Support Files/Pods-swiftTest2/Pods-swiftTest2.release.xcconfig"; sourceTree = "<group>"; };
@@ -276,6 +278,7 @@
 		C2B1664B28AB9273004C7084 /* swiftTest2 */ = {
 			isa = PBXGroup;
 			children = (
+				C2D23B5828AE2A21007C149B /* Api */,
 				C2B1664C28AB9273004C7084 /* AppDelegate.swift */,
 				C2B1665528AB9274004C7084 /* Assets.xcassets */,
 				C2B1665728AB9274004C7084 /* LaunchScreen.storyboard */,
@@ -351,6 +354,14 @@
 				C2D23B5628AE14A8007C149B /* MessageListTVCell.swift */,
 			);
 			path = Message;
+			sourceTree = "<group>";
+		};
+		C2D23B5828AE2A21007C149B /* Api */ = {
+			isa = PBXGroup;
+			children = (
+				C2D23B5928AE2A37007C149B /* HomeAppListApi.swift */,
+			);
+			path = Api;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -599,6 +610,7 @@
 				C25BF04828ACCFB5003E9836 /* MessagePageViewController.swift in Sources */,
 				C25BF04C28ACCFD3003E9836 /* LoginPageViewController.swift in Sources */,
 				C2D23B4328ADDFE2007C149B /* ArrayExtensions.swift in Sources */,
+				C2D23B5A28AE2A37007C149B /* HomeAppListApi.swift in Sources */,
 				C2D23B3B28ADDFE2007C149B /* WindowExtension.swift in Sources */,
 				C2D23B3828ADDFE2007C149B /* DictionaryExtension.swift in Sources */,
 				C25BF04628ACCFAC003E9836 /* HomePageViewController.swift in Sources */,
