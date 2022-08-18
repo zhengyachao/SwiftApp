@@ -108,6 +108,27 @@ extension UIImage {
         UIGraphicsEndImageContext()
         return image!
     }
+    
+    //生成一个指定颜色的图片
+    class func createImageWithColor(_ color: UIColor, frame: CGRect) -> UIImage? {
+        // 开始绘图
+        UIGraphicsBeginImageContext(frame.size)
+        
+        // 获取绘图上下文
+        let context = UIGraphicsGetCurrentContext()
+        // 设置填充颜色
+        context?.setFillColor(color.cgColor)
+        // 使用填充颜色填充区域
+        context?.fill(frame)
+        
+        // 获取绘制的图像
+        let image = UIGraphicsGetImageFromCurrentImageContext()
+        
+        // 结束绘图
+        UIGraphicsEndImageContext()
+        
+        return image
+    }
 
 }
 

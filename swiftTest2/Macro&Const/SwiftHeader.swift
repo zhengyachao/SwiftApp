@@ -10,6 +10,7 @@ import Foundation
 //MARK: 纯代码布局--类似OC的Masonry
 import SnapKit
 import SnapKitExtend
+import Kingfisher
 
 //MRAK: 应用通用配置
 let kScreenWidth  = UIScreen.main.bounds.width

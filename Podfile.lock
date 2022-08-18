@@ -1,32 +1,50 @@
 PODS:
+  - Alamofire (5.6.2)
   - IQKeyboardManagerSwift (6.5.10)
+  - Kingfisher (6.3.1)
   - MBProgressHUD (1.2.0)
   - MJRefresh (3.7.5)
+  - Moya (15.0.0):
+    - Moya/Core (= 15.0.0)
+  - Moya/Core (15.0.0):
+    - Alamofire (~> 5.0)
   - SnapKit (4.2.0)
   - SnapKitExtend (1.0.7):
     - SnapKit
+  - SwiftyJSON (5.0.1)
 
 DEPENDENCIES:
   - IQKeyboardManagerSwift
+  - Kingfisher
   - MBProgressHUD
   - MJRefresh
+  - Moya
   - SnapKitExtend
+  - SwiftyJSON
 
 SPEC REPOS:
   trunk:
+    - Alamofire
     - IQKeyboardManagerSwift
+    - Kingfisher
     - MBProgressHUD
     - MJRefresh
+    - Moya
     - SnapKit
     - SnapKitExtend
+    - SwiftyJSON
 
 SPEC CHECKSUMS:
+  Alamofire: d368e1ff8a298e6dde360e35a3e68e6c610e7204
   IQKeyboardManagerSwift: 52962c76ab33532f15ad9f3ff4e5715eda5335bb
+  Kingfisher: 016c8b653a35add51dd34a3aba36b580041acc74
   MBProgressHUD: 3ee5efcc380f6a79a7cc9b363dd669c5e1ae7406
   MJRefresh: fdf5e979eb406a0341468932d1dfc8b7f9fce961
+  Moya: 138f0573e53411fb3dc17016add0b748dfbd78ee
   SnapKit: fe8a619752f3f27075cc9a90244d75c6c3f27e2a
   SnapKitExtend: 00ee4db6d1f80bee01a1e75745f2a6ae695ba662
+  SwiftyJSON: 2f33a42c6fbc52764d96f13368585094bfd8aa5e
 
-PODFILE CHECKSUM: 69e191e24c4efc76d8630879f2041200caa12ce6
+PODFILE CHECKSUM: 335b7a595cf41b0e806b3139d8d14f134908c173
 
 COCOAPODS: 1.11.3

@@ -38,6 +38,11 @@
 		C2D23B4428ADDFE2007C149B /* ButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2D23B3328ADDFE2007C149B /* ButtonExtension.swift */; };
 		C2D23B4528ADDFE2007C149B /* FontExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2D23B3428ADDFE2007C149B /* FontExtension.swift */; };
 		C2D23B4828ADDFE2007C149B /* UIImageExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2D23B3728ADDFE2007C149B /* UIImageExtensions.swift */; };
+		C2D23B4E28ADEA1C007C149B /* ZCycleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2D23B4B28ADEA1C007C149B /* ZCycleView.swift */; };
+		C2D23B4F28ADEA1C007C149B /* ZCycleLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2D23B4C28ADEA1C007C149B /* ZCycleLayout.swift */; };
+		C2D23B5028ADEA1C007C149B /* ZPageControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2D23B4D28ADEA1C007C149B /* ZPageControl.swift */; };
+		C2D23B5428ADEE32007C149B /* HomeCycleCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2D23B5328ADEE32007C149B /* HomeCycleCollectionCell.swift */; };
+		C2D23B5728AE14A8007C149B /* MessageListTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2D23B5628AE14A8007C149B /* MessageListTVCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -97,6 +102,11 @@
 		C2D23B3328ADDFE2007C149B /* ButtonExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonExtension.swift; sourceTree = "<group>"; };
 		C2D23B3428ADDFE2007C149B /* FontExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FontExtension.swift; sourceTree = "<group>"; };
 		C2D23B3728ADDFE2007C149B /* UIImageExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageExtensions.swift; sourceTree = "<group>"; };
+		C2D23B4B28ADEA1C007C149B /* ZCycleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZCycleView.swift; sourceTree = "<group>"; };
+		C2D23B4C28ADEA1C007C149B /* ZCycleLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZCycleLayout.swift; sourceTree = "<group>"; };
+		C2D23B4D28ADEA1C007C149B /* ZPageControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZPageControl.swift; sourceTree = "<group>"; };
+		C2D23B5328ADEE32007C149B /* HomeCycleCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCycleCollectionCell.swift; sourceTree = "<group>"; };
+		C2D23B5628AE14A8007C149B /* MessageListTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageListTVCell.swift; sourceTree = "<group>"; };
 		D3FA13B3B777DCDF7C202157 /* Pods_swiftTest2.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_swiftTest2.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D59B5F94AD5566389FDEA433 /* Pods-swiftTest2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-swiftTest2.debug.xcconfig"; path = "Target Support Files/Pods-swiftTest2/Pods-swiftTest2.debug.xcconfig"; sourceTree = "<group>"; };
 		E370FEBBA6C4284F0F91CB94 /* Pods-swiftTest2.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-swiftTest2.release.xcconfig"; path = "Target Support Files/Pods-swiftTest2/Pods-swiftTest2.release.xcconfig"; sourceTree = "<group>"; };
@@ -230,13 +240,6 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		C292F85928AC85F9001B1984 /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
 		C292F85A28AC85F9001B1984 /* Class */ = {
 			isa = PBXGroup;
 			children = (
@@ -279,12 +282,13 @@
 				C2B1665228AB9273004C7084 /* Main.storyboard */,
 				C2B1665A28AB9274004C7084 /* Info.plist */,
 				C2D23B2628ADD218007C149B /* swiftTest2-Bridging-Header.h */,
+				C2D23B5128ADEE01007C149B /* View&Cell */,
+				C2D23B4928ADEA1C007C149B /* ThirdParty */,
 				C292F85028AC7AC1001B1984 /* BaseVC */,
 				C292F85A28AC85F9001B1984 /* Class */,
 				C25BF04D28ACD1AD003E9836 /* Extension */,
 				C25BF05028ACD745003E9836 /* Macro&Const */,
 				C292F85828AC85F9001B1984 /* Model */,
-				C292F85928AC85F9001B1984 /* View */,
 			);
 			path = swiftTest2;
 			sourceTree = "<group>";
@@ -304,6 +308,49 @@
 				C2B1666F28AB9274004C7084 /* swiftTest2UITestsLaunchTests.swift */,
 			);
 			path = swiftTest2UITests;
+			sourceTree = "<group>";
+		};
+		C2D23B4928ADEA1C007C149B /* ThirdParty */ = {
+			isa = PBXGroup;
+			children = (
+				C2D23B4A28ADEA1C007C149B /* CycleView(轮播图) */,
+			);
+			path = ThirdParty;
+			sourceTree = "<group>";
+		};
+		C2D23B4A28ADEA1C007C149B /* CycleView(轮播图) */ = {
+			isa = PBXGroup;
+			children = (
+				C2D23B4B28ADEA1C007C149B /* ZCycleView.swift */,
+				C2D23B4C28ADEA1C007C149B /* ZCycleLayout.swift */,
+				C2D23B4D28ADEA1C007C149B /* ZPageControl.swift */,
+			);
+			path = "CycleView(轮播图)";
+			sourceTree = "<group>";
+		};
+		C2D23B5128ADEE01007C149B /* View&Cell */ = {
+			isa = PBXGroup;
+			children = (
+				C2D23B5528AE1490007C149B /* Message */,
+				C2D23B5228ADEE01007C149B /* Home */,
+			);
+			path = "View&Cell";
+			sourceTree = "<group>";
+		};
+		C2D23B5228ADEE01007C149B /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				C2D23B5328ADEE32007C149B /* HomeCycleCollectionCell.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		C2D23B5528AE1490007C149B /* Message */ = {
+			isa = PBXGroup;
+			children = (
+				C2D23B5628AE14A8007C149B /* MessageListTVCell.swift */,
+			);
+			path = Message;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -546,6 +593,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C292F85528AC7D2D001B1984 /* SwiftHeader.swift in Sources */,
+				C2D23B5428ADEE32007C149B /* HomeCycleCollectionCell.swift in Sources */,
 				C292F86228AC8734001B1984 /* YCBaseViewController.swift in Sources */,
 				C2D23B3D28ADDFE2007C149B /* UIBarButtonItemExtension.swift in Sources */,
 				C25BF04828ACCFB5003E9836 /* MessagePageViewController.swift in Sources */,
@@ -557,14 +605,18 @@
 				C2D23B3C28ADDFE2007C149B /* StringExtension.swift in Sources */,
 				C25BF04A28ACCFBC003E9836 /* MinePageViewController.swift in Sources */,
 				C2D23B3E28ADDFE2007C149B /* UIDeviceExtension.swift in Sources */,
+				C2D23B4E28ADEA1C007C149B /* ZCycleView.swift in Sources */,
+				C2D23B4F28ADEA1C007C149B /* ZCycleLayout.swift in Sources */,
 				C2D23B4128ADDFE2007C149B /* DispatchQueueExtension.swift in Sources */,
 				C2D23B4428ADDFE2007C149B /* ButtonExtension.swift in Sources */,
 				C25BF05428ACEE14003E9836 /* UtilNoticeHeader.swift in Sources */,
 				C25BF05228ACD76E003E9836 /* UtilTextHeader.swift in Sources */,
 				C292F85728AC8082001B1984 /* YCTabbarViewController.swift in Sources */,
 				C2D23B4828ADDFE2007C149B /* UIImageExtensions.swift in Sources */,
+				C2D23B5028ADEA1C007C149B /* ZPageControl.swift in Sources */,
 				C25BF04F28ACD1AD003E9836 /* UIColorExtension.swift in Sources */,
 				C2B1664D28AB9273004C7084 /* AppDelegate.swift in Sources */,
+				C2D23B5728AE14A8007C149B /* MessageListTVCell.swift in Sources */,
 				C2D23B4528ADDFE2007C149B /* FontExtension.swift in Sources */,
 				C292F86428AC875A001B1984 /* YCNavigationController.swift in Sources */,
 			);
