@@ -31,13 +31,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         IQKeyboardManager.shared.enable = true
 
         // MARK -- 添加通知方法
-        kNotificationCenter.addObserver(self, selector: #selector(onLoginSuccessNotify), name: NSNotification.Name(kLoginSuccessNotice), object: nil)
+        kNotificationCenter.addObserver(self, selector: #selector(onLoginSuccessNotify(_:)), name: NSNotification.Name(kLoginSuccessNotice), object: nil)
         kNotificationCenter.addObserver(self, selector: #selector(onLogoutSuccessNotify), name: NSNotification.Name(kLogoutSuccessNotice), object: nil)
         
         return true
     }
-    
-    @objc func onLoginSuccessNotify () {
+    //MARK: 登录成功通知
+    @objc func onLoginSuccessNotify (_ notify : NSNotification) {
         
         kUserDefaults.set(true, forKey: kIsLogin)
         kUserDefaults.synchronize()
@@ -45,7 +45,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         /// 跳转到Tabbar页
         kAppDelegate.window?.rootViewController = YCTabbarViewController()
     }
-    
+    //MARK: 退出登录通知
     @objc func onLogoutSuccessNotify () {
         
         kUserDefaults.set(false, forKey: kIsLogin)

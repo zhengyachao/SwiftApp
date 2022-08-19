@@ -10,6 +10,6 @@
 
 #import "MBProgressHUD.h"
 #import "MJRefresh.h"
-
+#import "BRPickerView.h"
 
 #endif /* swiftTest2_Bridging_Header_h */

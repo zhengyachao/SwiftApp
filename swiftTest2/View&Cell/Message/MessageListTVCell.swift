@@ -7,7 +7,21 @@
 
 import UIKit
 
+//MARK: cell代理
+protocol MessageListTVCellProtocol : AnyObject {
+    // 点击bgImageView图片
+    func tapBgImageView(isUpdate:Bool)
+}
+
 class MessageListTVCell: UITableViewCell {
+    //block
+    typealias tapImageBlock = (_ isUpdate:Bool)->Void
+    var tapBlock: tapImageBlock?
+    // 代理
+    weak var cellDelegate : MessageListTVCellProtocol?
+    
+    var isChange = true
+    
     // 图片
     lazy var bgImageView = UIImageView(frame: CGRect.zero)
     // 标题
@@ -59,6 +73,11 @@ class MessageListTVCell: UITableViewCell {
         contentView.addSubview(timeLabel)
         bgImageView.layer.cornerRadius = 25.0
         bgImageView.clipsToBounds = true
+
+        bgImageView.isUserInteractionEnabled = true
+        let tap = UITapGestureRecognizer.init(target: self, action: #selector(onTapBgImageView))
+        bgImageView.addGestureRecognizer(tap)
+        
         bgImageView.snp.makeConstraints { make in
             make.left.equalTo(10)
             make.width.height.equalTo(50)
@@ -85,10 +104,24 @@ class MessageListTVCell: UITableViewCell {
             make.width.equalTo(140)
         }
     }
-    
-    func configMessageListTVCellModel () {
+  
+    @objc func onTapBgImageView () {
+        //
+        isChange = !isChange
         
-        bgImageView.image = UIImage.createImageWithColor(UIColor.theme, frame: CGRect(x: 0, y: 0, width: 1, height: 1))
+        tapBlock?(isChange)
+        
+        self.cellDelegate?.tapBgImageView(isUpdate: isChange)
+    }
+    
+    func configMessageListTVCellModel (_ isUpdate:Bool) {
+        
+        if isUpdate {
+            bgImageView.image = UIImage.createImageWithColor(UIColor.red, frame: CGRect(x: 0, y: 0, width: 1, height: 1))
+        } else
+        {
+            bgImageView.image = UIImage.createImageWithColor(UIColor.theme, frame: CGRect(x: 0, y: 0, width: 1, height: 1))
+        }
         
         titleLabel.text = "这是一个标题"
         titleLabel.textColor = UIColor.mainFontColor
@@ -98,7 +131,8 @@ class MessageListTVCell: UITableViewCell {
         detailLabel.textColor = UIColor.subFontColor
         detailLabel.font = UIFont.systemFont(ofSize: 12)
         
-        timeLabel.text = "2022-08-18"
+        timeLabel.text = NSDate.br_string(from: Date(), dateFormat: "yyyy-MM-dd hh:mm:ss")
+//        timeLabel.text = NSDate.br_string(from: NSDate.init(timeIntervalSinceNow: 1970) as Date, dateFormat: "yyyy-MM-dd")
         timeLabel.textAlignment = .right
         timeLabel.textColor = UIColor.smallFontColor
         timeLabel.font = UIFont.systemFont(ofSize: 10)

@@ -7,10 +7,11 @@
 
 import UIKit
 
-class MessagePageViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
+class MessagePageViewController: UIViewController,UITableViewDelegate,UITableViewDataSource,MessageListTVCellProtocol {
 
     var dataArray = ["1"]
-
+    var isUpdate = false
+    
     lazy var msgTabelView: UITableView = {
         
         let tableView = UITableView(frame: CGRect.zero, style: .grouped)
@@ -58,7 +59,16 @@ class MessagePageViewController: UIViewController,UITableViewDelegate,UITableVie
         
         let listCell = MessageListTVCell.cellWithTableView(tableView)
         
-        listCell?.configMessageListTVCellModel()
+        listCell?.configMessageListTVCellModel(self.isUpdate)
+        
+        listCell?.tapBlock = { [weak self] isUpdated in
+            
+            self?.isUpdate = isUpdated
+            
+            self?.msgTabelView.reloadData()
+        }
+        
+        listCell?.cellDelegate = self
         
         return listCell!
     }
@@ -86,6 +96,13 @@ class MessagePageViewController: UIViewController,UITableViewDelegate,UITableVie
         let detailVC = MessageDetailPageVC()
         
         self.navigationController?.pushViewController(detailVC, animated: true)
+    }
+    
+    //MARK:MessageListTVCellProtocol
+    func tapBgImageView(isUpdate: Bool) {
+        self.isUpdate = isUpdate
+        
+        self.msgTabelView.reloadData()
     }
 
 }

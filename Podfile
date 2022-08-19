@@ -7,8 +7,11 @@ target 'swiftTest2' do
 
   # Pods for swiftTest2
   
+  # OC版本库
   pod 'MJRefresh'
   pod 'MBProgressHUD'
+  pod 'BRPickerView'
+  
   # 纯代码布局---Masonry
   pod 'SnapKitExtend'
   # 键盘管理
