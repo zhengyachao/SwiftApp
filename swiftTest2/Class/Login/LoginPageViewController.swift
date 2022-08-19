@@ -8,6 +8,9 @@
 import UIKit
 
 class LoginPageViewController: UIViewController, UITextFieldDelegate {
+    lazy var accountTf = UITextField.init(frame: CGRect.zero)
+    lazy var pwdTf     = UITextField.init(frame: CGRect.zero)
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,7 +31,6 @@ class LoginPageViewController: UIViewController, UITextFieldDelegate {
 
     func initUI() {
         // Mark --- 账号
-        let accountTf = UITextField.init(frame: CGRect.zero)
         accountTf.placeholder = "请输入账号"
         accountTf.borderStyle = .roundedRect
         accountTf.clearButtonMode = .whileEditing
@@ -51,10 +53,9 @@ class LoginPageViewController: UIViewController, UITextFieldDelegate {
         accountTf.delegate = self
 
         // Mark --- 密码
-        let pwdTf = UITextField.init(frame: CGRect.zero)
         pwdTf.placeholder = "请输入密码"
         pwdTf.borderStyle = .roundedRect
-        pwdTf.clearButtonMode = .whileEditing
+        pwdTf.isSecureTextEntry = true
         self.view.addSubview(pwdTf)
         pwdTf.snp.makeConstraints { make in
             make.top.equalTo(accountTf.snp_bottom).offset(20)
@@ -73,13 +74,25 @@ class LoginPageViewController: UIViewController, UITextFieldDelegate {
         pwdTf.leftViewMode = .always
         pwdTf.delegate = self
         
+        let rightPwdView = UIView.init(frame: CGRect.init(x: 0, y: 0, width: 30, height: 20))
+        let eyesBtn = UIButton.init(frame: CGRect.init(x: 0, y: 0, width: 20, height: 20))
+        eyesBtn.setImage(UIImage(named: "login_close_icon"), for: .normal)
+        eyesBtn.setImage(UIImage(named: "login_open_icon"), for: .selected)
+        eyesBtn.addTarget(self, action: #selector(onClickEyesBtn(_:)), for: .touchUpInside)
+        rightPwdView.addSubview(eyesBtn)
+        pwdTf.rightView = rightPwdView
+        pwdTf.rightViewMode = .always
+        pwdTf.clearButtonMode = .whileEditing
+
+        
+        
         let loginBtn = UIButton()
         loginBtn.backgroundColor = UIColor.theme
         loginBtn.setTitle("登录", for: .normal)
         loginBtn.setTitleColor(UIColor.white, for: .normal)
         loginBtn.titleLabel?.font = UIFont.systemFont(ofSize: 18)
         loginBtn.layer.cornerRadius = 5.0
-        loginBtn.addTarget(self, action: #selector(onClickLoginBtn), for: .touchUpInside)
+        loginBtn.addTarget(self, action: #selector(onClickLoginBtn(_:)), for: .touchUpInside)
         self.view.addSubview(loginBtn)
         loginBtn.snp.makeConstraints { make in
             make.top.equalTo(pwdTf.snp_bottom).offset(20)
@@ -89,8 +102,14 @@ class LoginPageViewController: UIViewController, UITextFieldDelegate {
         }
     }
     
+    //MARK -- 密码明密文转换
+    @objc func onClickEyesBtn (_ btn:UIButton) {
+        btn.isSelected = !btn.isSelected
+        pwdTf.isSecureTextEntry = !pwdTf.isSecureTextEntry
+    }
+    
     // MARK -- 登录按钮
-    @objc func onClickLoginBtn () {
+    @objc func onClickLoginBtn (_ btn:UIButton) {
         
         
         MBProgressHUD.showAdded(to: self.view, animated: true)
