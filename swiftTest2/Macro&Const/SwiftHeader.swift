@@ -13,6 +13,7 @@ import SnapKitExtend
 import Kingfisher
 import Moya
 import SwiftyJSON
+import HandyJSON
 
 //MRAK: 应用通用配置
 let kScreenWidth  = UIScreen.main.bounds.width

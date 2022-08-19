@@ -11,30 +11,28 @@ import Moya
 let homeProvider = MoyaProvider<HomeAppListApi>()
 
 enum HomeAppListApi {
-    
-    case realtimeWeather(cityId:String)
+    case findRecruitmentDataPage(majorId:Int)
 }
 
 extension HomeAppListApi:  TargetType {
     var baseURL: URL {
         switch self {
-        case .realtimeWeather(_):
-            /*http://weatherapi.market.xiaomi.com/wtr-v2/weather?cityId=101110101&imei=e32c8a29d0e8633283737f5d9f381d47&device=HM2013023&miuiVersion=JHBCNBD16.0&modDevice=&source=miuiWeatherApp*/
-            return URL(string: "http://weatherapi.market.xiaomi.com/wtr-v2/weather")!
+        case .findRecruitmentDataPage(_):
+            return URL(string: "http://iservice.bjyijie.com.cn/")!
         }
     }
     
     var path: String {
         switch self {
-        case .realtimeWeather(_):
-            return ""
+        case .findRecruitmentDataPage(_):
+            return "studentUser/getJudgeMajorType"
         }
     }
     
     // 请求类型
     var method: Moya.Method {
         switch self {
-        case .realtimeWeather(_):
+        case .findRecruitmentDataPage(_):
             return .get
         }
     }
@@ -43,16 +41,13 @@ extension HomeAppListApi:  TargetType {
         var parmeters: [String : Any] = [:]
         
         switch self {
-        case .realtimeWeather(let cityId):
-            print("cityId----",cityId)
-//            cityId=101110101&imei=e32c8a29d0e8633283737f5d9f381d47&device=HM2013023&miuiVersion=JHBCNBD16.0&modDevice=&source=miuiWeatherApp
-            parmeters = ["cityId":cityId,
-                         "imei":"e32c8a29d0e8633283737f5d9f381d47",
-                         "device":"HM2013023",
-                         "miuiVersion":"JHBCNBD16.0",
-                         "modDevice": "",
-                         "source":"miuiWeatherApp"
-                        ] as [String : Any]
+        case .findRecruitmentDataPage(let majorId):
+            
+            parmeters["majorId"] = majorId
+            print("当前接口parmeters为\(parmeters)")
+            if self.method == .post {
+                return .requestCompositeParameters(bodyParameters: parmeters, bodyEncoding: JSONEncoding.default, urlParameters: [:])
+            }
             return .requestParameters(parameters: parmeters, encoding: URLEncoding.default)
         }
     }

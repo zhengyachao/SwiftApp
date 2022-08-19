@@ -8,6 +8,7 @@
 import UIKit
 import Kingfisher
 import SwiftyJSON
+import HandyJSON
 
 class HomePageViewController: UIViewController, ZCycleViewProtocol, UICollectionViewDelegate {
     
@@ -57,14 +58,13 @@ class HomePageViewController: UIViewController, ZCycleViewProtocol, UICollection
             make.height.equalTo(200)
         }
         */
-        
-        requestAppListApi()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
         //self.navigationController?.navigationBar.isHidden = true
+        requestAppListApi()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -75,16 +75,29 @@ class HomePageViewController: UIViewController, ZCycleViewProtocol, UICollection
     
     //MARK: 网络请求
     func requestAppListApi () {
-        homeProvider.request(HomeAppListApi.realtimeWeather(cityId: "101110101")) { result in
+        homeProvider.request(HomeAppListApi.findRecruitmentDataPage(majorId: 1357)) { result in
             switch result {
             case let .success(response):
-                do {
-                    // SwiftyJSON 解析data数据
-                    let jsonDic = try JSON(data: response.data)
-                    print(jsonDic)
-                } catch  {
-                    
-                }
+                /*
+                 返回值格式
+                 {
+                     "rescode": "200",
+                     "resMessage": "成功",
+                     "data": {
+                         "relationMajorType": 2
+                     }
+                 }
+                 */
+                // SwiftyJSON  Data转JSON字符串:
+                let jsonStr = JSON(response.data).description
+                print("JSON字符串---",jsonStr)
+                // HandyJSON JSON字符串转model
+                let homeTestModel = HomeTestModel.deserialize(from: jsonStr)
+                print(homeTestModel?.data?.relationMajorType as Any)
+                
+                // 那么，我们指定解析 "data"，通过点来表达路径---定点解析
+                let forecastModel = ForecastModel.deserialize(from: jsonStr, designatedPath: "data")
+                print("forecastModel------",forecastModel?.relationMajorType as Any)
                 
             case let .failure(error as NSError):
                 print(error)

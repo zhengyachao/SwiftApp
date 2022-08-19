@@ -44,6 +44,8 @@
 		C2D23B5428ADEE32007C149B /* HomeCycleCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2D23B5328ADEE32007C149B /* HomeCycleCollectionCell.swift */; };
 		C2D23B5728AE14A8007C149B /* MessageListTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2D23B5628AE14A8007C149B /* MessageListTVCell.swift */; };
 		C2D23B5A28AE2A37007C149B /* HomeAppListApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2D23B5928AE2A37007C149B /* HomeAppListApi.swift */; };
+		C2D23B5C28AE436C007C149B /* HomeTestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2D23B5B28AE436C007C149B /* HomeTestModel.swift */; };
+		C2D23B5E28AE45A0007C149B /* YCBaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2D23B5D28AE45A0007C149B /* YCBaseModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -109,6 +111,8 @@
 		C2D23B5328ADEE32007C149B /* HomeCycleCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCycleCollectionCell.swift; sourceTree = "<group>"; };
 		C2D23B5628AE14A8007C149B /* MessageListTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageListTVCell.swift; sourceTree = "<group>"; };
 		C2D23B5928AE2A37007C149B /* HomeAppListApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeAppListApi.swift; sourceTree = "<group>"; };
+		C2D23B5B28AE436C007C149B /* HomeTestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTestModel.swift; sourceTree = "<group>"; };
+		C2D23B5D28AE45A0007C149B /* YCBaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YCBaseModel.swift; sourceTree = "<group>"; };
 		D3FA13B3B777DCDF7C202157 /* Pods_swiftTest2.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_swiftTest2.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D59B5F94AD5566389FDEA433 /* Pods-swiftTest2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-swiftTest2.debug.xcconfig"; path = "Target Support Files/Pods-swiftTest2/Pods-swiftTest2.debug.xcconfig"; sourceTree = "<group>"; };
 		E370FEBBA6C4284F0F91CB94 /* Pods-swiftTest2.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-swiftTest2.release.xcconfig"; path = "Target Support Files/Pods-swiftTest2/Pods-swiftTest2.release.xcconfig"; sourceTree = "<group>"; };
@@ -238,6 +242,8 @@
 		C292F85828AC85F9001B1984 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				C2D23B5D28AE45A0007C149B /* YCBaseModel.swift */,
+				C2D23B5B28AE436C007C149B /* HomeTestModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -615,6 +621,7 @@
 				C2D23B3828ADDFE2007C149B /* DictionaryExtension.swift in Sources */,
 				C25BF04628ACCFAC003E9836 /* HomePageViewController.swift in Sources */,
 				C2D23B3C28ADDFE2007C149B /* StringExtension.swift in Sources */,
+				C2D23B5E28AE45A0007C149B /* YCBaseModel.swift in Sources */,
 				C25BF04A28ACCFBC003E9836 /* MinePageViewController.swift in Sources */,
 				C2D23B3E28ADDFE2007C149B /* UIDeviceExtension.swift in Sources */,
 				C2D23B4E28ADEA1C007C149B /* ZCycleView.swift in Sources */,
@@ -624,6 +631,7 @@
 				C25BF05428ACEE14003E9836 /* UtilNoticeHeader.swift in Sources */,
 				C25BF05228ACD76E003E9836 /* UtilTextHeader.swift in Sources */,
 				C292F85728AC8082001B1984 /* YCTabbarViewController.swift in Sources */,
+				C2D23B5C28AE436C007C149B /* HomeTestModel.swift in Sources */,
 				C2D23B4828ADDFE2007C149B /* UIImageExtensions.swift in Sources */,
 				C2D23B5028ADEA1C007C149B /* ZPageControl.swift in Sources */,
 				C25BF04F28ACD1AD003E9836 /* UIColorExtension.swift in Sources */,

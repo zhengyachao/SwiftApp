@@ -17,8 +17,10 @@ target 'swiftTest2' do
   pod 'Kingfisher'
   # 网络请求
   pod 'Moya'
-  # json字典转模型
+  # json解析
   pod 'SwiftyJSON'
+  # Swift-转模型HandyJSON
+  pod 'HandyJSON'
 
   target 'swiftTest2Tests' do
     inherit! :search_paths

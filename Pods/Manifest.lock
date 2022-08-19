@@ -1,5 +1,6 @@
 PODS:
   - Alamofire (5.6.2)
+  - HandyJSON (5.0.2)
   - IQKeyboardManagerSwift (6.5.10)
   - Kingfisher (6.3.1)
   - MBProgressHUD (1.2.0)
@@ -14,6 +15,7 @@ PODS:
   - SwiftyJSON (5.0.1)
 
 DEPENDENCIES:
+  - HandyJSON
   - IQKeyboardManagerSwift
   - Kingfisher
   - MBProgressHUD
@@ -25,6 +27,7 @@ DEPENDENCIES:
 SPEC REPOS:
   trunk:
     - Alamofire
+    - HandyJSON
     - IQKeyboardManagerSwift
     - Kingfisher
     - MBProgressHUD
@@ -36,6 +39,7 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   Alamofire: d368e1ff8a298e6dde360e35a3e68e6c610e7204
+  HandyJSON: 9e4e236f5d2dbefad5155a77417bbea438201c03
   IQKeyboardManagerSwift: 52962c76ab33532f15ad9f3ff4e5715eda5335bb
   Kingfisher: 016c8b653a35add51dd34a3aba36b580041acc74
   MBProgressHUD: 3ee5efcc380f6a79a7cc9b363dd669c5e1ae7406
@@ -45,6 +49,6 @@ SPEC CHECKSUMS:
   SnapKitExtend: 00ee4db6d1f80bee01a1e75745f2a6ae695ba662
   SwiftyJSON: 2f33a42c6fbc52764d96f13368585094bfd8aa5e
 
-PODFILE CHECKSUM: 335b7a595cf41b0e806b3139d8d14f134908c173
+PODFILE CHECKSUM: 23b37dfba50886ca181e460d080d7186178a2938
 
 COCOAPODS: 1.11.3
