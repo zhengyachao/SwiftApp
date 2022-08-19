@@ -15,14 +15,13 @@ class HomePageViewController: UIViewController, ZCycleViewProtocol, UICollection
     let imageArray = ["http://mvimg2.meitudata.com/55fe3d94efbc12843.jpg",
                       "http://mvimg2.meitudata.com/55fe3d94efbc12843.jpg",
                       "http://mvimg2.meitudata.com/55fe3d94efbc12843.jpg"]
-    //MARK: 懒加载
+    //MARK: 懒加载--轮播图ZCycleView
     lazy var topCycleView: ZCycleView = {
         
         let cycleView = ZCycleView()
         cycleView.delegate = self
         /// 刷新数据
         cycleView.reloadItemsCount(imageArray.count)
-        
         // 初始下标
         cycleView.initialIndex = 1
         /// 滚动时间间隔，默认3s

@@ -80,5 +80,12 @@ class MessagePageViewController: UIViewController,UITableViewDelegate,UITableVie
     func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
         return 0.01
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let detailVC = MessageDetailPageVC()
+        
+        self.navigationController?.pushViewController(detailVC, animated: true)
+    }
 
 }

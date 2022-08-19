@@ -82,6 +82,7 @@ class LoginPageViewController: UIViewController, UITextFieldDelegate {
         rightPwdView.addSubview(eyesBtn)
         pwdTf.rightView = rightPwdView
         pwdTf.rightViewMode = .always
+        //MARK: 当UITextField的rightView被占用的时候，clearButtonMode就失效了
         pwdTf.clearButtonMode = .whileEditing
 
         

@@ -11,19 +11,29 @@ class YCBaseViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        view.backgroundColor = .background
+        //
+        setupBackBtn()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    //MARK: 统一设置二级以上页的返回按钮
+    func setupBackBtn () {
+        
+        let backBtn = UIButton.init(frame: CGRect.init(x: 0, y: 0, width: 40, height: 40))
+        backBtn.setImage(UIImage(named: "common_back_btn"), for: .normal)
+        backBtn.setImage(UIImage(named: "common_back_btn"), for: .highlighted)
+        backBtn.setTitle("返回", for: .normal)
+        backBtn.titleLabel?.font = UIFont.systemFont(ofSize: 16.0)
+        backBtn.addTarget(self, action: #selector(onClickBackBtn(_:)), for: .touchUpInside)
+        
+        let backItem = UIBarButtonItem.init(customView: backBtn)
+        
+        self.navigationItem.leftBarButtonItem = backItem
     }
-    */
-
+    
+    //MARK: 返回按钮点击方法 子类可重写
+    @objc open func onClickBackBtn(_ btn:UIButton) {
+        
+        self.navigationController?.popViewController(animated: true)
+    }
 }

@@ -46,6 +46,8 @@
 		C2D23B5A28AE2A37007C149B /* HomeAppListApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2D23B5928AE2A37007C149B /* HomeAppListApi.swift */; };
 		C2D23B5C28AE436C007C149B /* HomeTestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2D23B5B28AE436C007C149B /* HomeTestModel.swift */; };
 		C2D23B5E28AE45A0007C149B /* YCBaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2D23B5D28AE45A0007C149B /* YCBaseModel.swift */; };
+		C2D23B6128AF6F41007C149B /* MineCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2D23B6028AF6F41007C149B /* MineCollectionViewCell.swift */; };
+		C2D23B6728AF7607007C149B /* MessageDetailPageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2D23B6628AF7607007C149B /* MessageDetailPageVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -113,6 +115,8 @@
 		C2D23B5928AE2A37007C149B /* HomeAppListApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeAppListApi.swift; sourceTree = "<group>"; };
 		C2D23B5B28AE436C007C149B /* HomeTestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTestModel.swift; sourceTree = "<group>"; };
 		C2D23B5D28AE45A0007C149B /* YCBaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YCBaseModel.swift; sourceTree = "<group>"; };
+		C2D23B6028AF6F41007C149B /* MineCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MineCollectionViewCell.swift; sourceTree = "<group>"; };
+		C2D23B6628AF7607007C149B /* MessageDetailPageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageDetailPageVC.swift; sourceTree = "<group>"; };
 		D3FA13B3B777DCDF7C202157 /* Pods_swiftTest2.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_swiftTest2.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D59B5F94AD5566389FDEA433 /* Pods-swiftTest2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-swiftTest2.debug.xcconfig"; path = "Target Support Files/Pods-swiftTest2/Pods-swiftTest2.debug.xcconfig"; sourceTree = "<group>"; };
 		E370FEBBA6C4284F0F91CB94 /* Pods-swiftTest2.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-swiftTest2.release.xcconfig"; path = "Target Support Files/Pods-swiftTest2/Pods-swiftTest2.release.xcconfig"; sourceTree = "<group>"; };
@@ -197,6 +201,7 @@
 			isa = PBXGroup;
 			children = (
 				C25BF04728ACCFB5003E9836 /* MessagePageViewController.swift */,
+				C2D23B6628AF7607007C149B /* MessageDetailPageVC.swift */,
 			);
 			path = Message;
 			sourceTree = "<group>";
@@ -340,6 +345,7 @@
 		C2D23B5128ADEE01007C149B /* View&Cell */ = {
 			isa = PBXGroup;
 			children = (
+				C2D23B5F28AF6F2A007C149B /* Mine */,
 				C2D23B5528AE1490007C149B /* Message */,
 				C2D23B5228ADEE01007C149B /* Home */,
 			);
@@ -368,6 +374,14 @@
 				C2D23B5928AE2A37007C149B /* HomeAppListApi.swift */,
 			);
 			path = Api;
+			sourceTree = "<group>";
+		};
+		C2D23B5F28AF6F2A007C149B /* Mine */ = {
+			isa = PBXGroup;
+			children = (
+				C2D23B6028AF6F41007C149B /* MineCollectionViewCell.swift */,
+			);
+			path = Mine;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -611,6 +625,7 @@
 			files = (
 				C292F85528AC7D2D001B1984 /* SwiftHeader.swift in Sources */,
 				C2D23B5428ADEE32007C149B /* HomeCycleCollectionCell.swift in Sources */,
+				C2D23B6728AF7607007C149B /* MessageDetailPageVC.swift in Sources */,
 				C292F86228AC8734001B1984 /* YCBaseViewController.swift in Sources */,
 				C2D23B3D28ADDFE2007C149B /* UIBarButtonItemExtension.swift in Sources */,
 				C25BF04828ACCFB5003E9836 /* MessagePageViewController.swift in Sources */,
@@ -625,6 +640,7 @@
 				C25BF04A28ACCFBC003E9836 /* MinePageViewController.swift in Sources */,
 				C2D23B3E28ADDFE2007C149B /* UIDeviceExtension.swift in Sources */,
 				C2D23B4E28ADEA1C007C149B /* ZCycleView.swift in Sources */,
+				C2D23B6128AF6F41007C149B /* MineCollectionViewCell.swift in Sources */,
 				C2D23B4F28ADEA1C007C149B /* ZCycleLayout.swift in Sources */,
 				C2D23B4128ADDFE2007C149B /* DispatchQueueExtension.swift in Sources */,
 				C2D23B4428ADDFE2007C149B /* ButtonExtension.swift in Sources */,
