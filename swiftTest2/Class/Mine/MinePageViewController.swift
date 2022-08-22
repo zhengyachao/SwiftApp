@@ -59,4 +59,10 @@ class MinePageViewController: UIViewController, UICollectionViewDelegate, UIColl
         
         return cell
     }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let webVC = YCBaseWebViewController()
+        
+        self.navigationController?.pushViewController(webVC, animated: true)
+    }
 }
