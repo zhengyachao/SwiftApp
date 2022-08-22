@@ -7,7 +7,7 @@
 
 import UIKit
 
-class MessagePageViewController: UIViewController,UITableViewDelegate,UITableViewDataSource,MessageListTVCellProtocol {
+class MessagePageViewController: UIViewController {
 
     var dataArray = ["1"]
     var isUpdate = false
@@ -48,11 +48,23 @@ class MessagePageViewController: UIViewController,UITableViewDelegate,UITableVie
             msgTabelView.mj_header?.endRefreshing()
         })
     }
+}
+
+//MARK: -- 点击cell头像的代理
+extension MessagePageViewController : MessageListTVCellProtocol {
+    func tapBgImageView(isUpdate: Bool) {
+        self.isUpdate = isUpdate
+        
+        self.msgTabelView.reloadData()
+    }
+}
+
+//MARK: -- UITableViewDelegate,UITableViewDataSource
+extension MessagePageViewController : UITableViewDelegate,UITableViewDataSource {
     
-    //MARK:UITableViewDelegate,UITableViewDataSource
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
      
-        return dataArray.count
+        return 10
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -97,12 +109,4 @@ class MessagePageViewController: UIViewController,UITableViewDelegate,UITableVie
         
         self.navigationController?.pushViewController(detailVC, animated: true)
     }
-    
-    //MARK:MessageListTVCellProtocol
-    func tapBgImageView(isUpdate: Bool) {
-        self.isUpdate = isUpdate
-        
-        self.msgTabelView.reloadData()
-    }
-
 }
