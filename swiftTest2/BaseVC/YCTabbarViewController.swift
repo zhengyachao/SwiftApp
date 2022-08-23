@@ -41,6 +41,6 @@ class YCTabbarViewController: UITabBarController {
         self.viewControllers = [homeNavVC, msgNavVC, mineNavVC]
         
         //默认选中的下标
-//        self.selectedIndex = 1
+        self.selectedIndex = 0
     }
 }

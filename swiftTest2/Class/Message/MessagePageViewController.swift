@@ -34,6 +34,9 @@ class MessagePageViewController: UIViewController {
         // Do any additional setup after loading the view.
         view.backgroundColor = UIColor.background
         
+//        let ary = ["1"]
+//        print(ary[2])
+        
         view.addSubview(msgTabelView)
         msgTabelView.snp.makeConstraints { make in
             make.edges.equalTo(view)
@@ -80,7 +83,7 @@ extension MessagePageViewController : UITableViewDelegate,UITableViewDataSource 
             self?.msgTabelView.reloadData()
         }
         
-        listCell?.cellDelegate = self
+//        listCell?.cellDelegate = self
         
         return listCell!
     }

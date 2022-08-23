@@ -292,13 +292,14 @@
 		C2B1664B28AB9273004C7084 /* swiftTest2 */ = {
 			isa = PBXGroup;
 			children = (
-				C2D23B5828AE2A21007C149B /* Api */,
 				C2B1664C28AB9273004C7084 /* AppDelegate.swift */,
 				C2B1665528AB9274004C7084 /* Assets.xcassets */,
 				C2B1665728AB9274004C7084 /* LaunchScreen.storyboard */,
 				C2B1665228AB9273004C7084 /* Main.storyboard */,
 				C2B1665A28AB9274004C7084 /* Info.plist */,
 				C2D23B2628ADD218007C149B /* swiftTest2-Bridging-Header.h */,
+				C2CDC3C628B4687E008D72CD /* Tool */,
+				C2D23B5828AE2A21007C149B /* Api */,
 				C2D23B5128ADEE01007C149B /* View&Cell */,
 				C2D23B4928ADEA1C007C149B /* ThirdParty */,
 				C292F85028AC7AC1001B1984 /* BaseVC */,
@@ -325,6 +326,13 @@
 				C2B1666F28AB9274004C7084 /* swiftTest2UITestsLaunchTests.swift */,
 			);
 			path = swiftTest2UITests;
+			sourceTree = "<group>";
+		};
+		C2CDC3C628B4687E008D72CD /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Tool;
 			sourceTree = "<group>";
 		};
 		C2D23B4928ADEA1C007C149B /* ThirdParty */ = {
@@ -855,7 +863,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.trustmobi.demo.swiftTest2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = "/Users/trustmobi/Desktop/zhengyc-EMM/SwiftApp/swiftTest2/swiftTest2-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/swiftTest2/swiftTest2-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -888,7 +896,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.trustmobi.demo.swiftTest2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = "/Users/trustmobi/Desktop/zhengyc-EMM/SwiftApp/swiftTest2/swiftTest2-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/swiftTest2/swiftTest2-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};

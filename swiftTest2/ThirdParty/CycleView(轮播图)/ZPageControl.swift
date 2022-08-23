@@ -56,11 +56,11 @@ public class ZPageControl: UIControl {
             item.frame = itemFrame
             if index == currentPage {
                 item.backgroundColor = currentPageIndicatorTintColor
-                var cornerRadius = currentDotRadius == nil ? itemFrame.size.height/2 : currentDotRadius!
+                let cornerRadius = currentDotRadius == nil ? itemFrame.size.height/2 : currentDotRadius!
                 item.layer.cornerRadius = cornerRadius
             } else {
                 item.backgroundColor = pageIndicatorTintColor
-                var cornerRadius = dotRadius == nil ? itemFrame.size.height/2 : dotRadius!
+                let cornerRadius = dotRadius == nil ? itemFrame.size.height/2 : dotRadius!
                 item.layer.cornerRadius = cornerRadius
             }
         }
