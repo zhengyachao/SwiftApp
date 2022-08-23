@@ -7,7 +7,7 @@
 
 import UIKit
 
-class MinePageViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
+class MinePageViewController: UIViewController {
 
     //MARK: collectionView
     lazy var collectionView: UICollectionView = {
@@ -45,8 +45,10 @@ class MinePageViewController: UIViewController, UICollectionViewDelegate, UIColl
         // 退出登录通知
         kNotificationCenter.post(name: NSNotification.Name(kLogoutSuccessNotice), object: nil)
     }
-    
-    //MARK: UICollectionViewDataSource && UICollectionViewDelegate
+}
+
+//MARK: -- UICollectionViewDelegate, UICollectionViewDataSource
+extension MinePageViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
         return 9

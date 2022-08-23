@@ -10,11 +10,18 @@ import Kingfisher
 import SwiftyJSON
 import HandyJSON
 
-class HomePageViewController: UIViewController, ZCycleViewProtocol, UICollectionViewDelegate {
-    
+class HomePageViewController: UIViewController {
+
     let imageArray = ["http://mvimg2.meitudata.com/55fe3d94efbc12843.jpg",
                       "http://mvimg2.meitudata.com/55fe3d94efbc12843.jpg",
+                      "http://mvimg2.meitudata.com/55fe3d94efbc12843.jpg",
+                      "http://mvimg2.meitudata.com/55fe3d94efbc12843.jpg",
+                      "http://mvimg2.meitudata.com/55fe3d94efbc12843.jpg",
+                      "http://mvimg2.meitudata.com/55fe3d94efbc12843.jpg",
+                      "http://mvimg2.meitudata.com/55fe3d94efbc12843.jpg",
+                      "http://mvimg2.meitudata.com/55fe3d94efbc12843.jpg",
                       "http://mvimg2.meitudata.com/55fe3d94efbc12843.jpg"]
+    
     //MARK: 懒加载--轮播图ZCycleView
     lazy var topCycleView: ZCycleView = {
         
@@ -23,11 +30,13 @@ class HomePageViewController: UIViewController, ZCycleViewProtocol, UICollection
         /// 刷新数据
         cycleView.reloadItemsCount(imageArray.count)
         // 初始下标
-        cycleView.initialIndex = 1
+        cycleView.initialIndex = 0
         /// 滚动时间间隔，默认3s
         cycleView.timeInterval = 2
         /// 是否自动滚动
         cycleView.isAutomatic = false
+        /// 是否无限轮播
+        cycleView.isInfinite = false
         /// 中间item的放大比例, >=1
         cycleView.itemZoomScale = 1.5
         cycleView.itemSpacing = 10
@@ -38,10 +47,18 @@ class HomePageViewController: UIViewController, ZCycleViewProtocol, UICollection
     
     lazy var collectionView: UICollectionView = {
         
-        let collectionView = UICollectionView()
-        
+        let layout = UICollectionViewFlowLayout.init()
+        layout.itemSize = CGSize(width: kScreenWidth - 60, height: kScreenHeight - kAppNavAndTabBarHeight - 200 - 20)
+        layout.minimumLineSpacing = 15
+        layout.scrollDirection = .horizontal
+        layout.sectionInset = UIEdgeInsets.init(top: 10, left: 30, bottom: 10, right: 30)
+        let collectionView = UICollectionView.init(frame: CGRect.zero, collectionViewLayout: layout)
         collectionView.delegate = self
-        
+        collectionView.dataSource = self
+        // 不展示滚动条
+        collectionView.showsHorizontalScrollIndicator = false
+        // 注册collectionCell
+        collectionView.register(HomeCycleCollectionCell.classForCoder(), forCellWithReuseIdentifier: "HomeCycleCollectionCell_Id")
         return collectionView
     }()
     
@@ -50,20 +67,25 @@ class HomePageViewController: UIViewController, ZCycleViewProtocol, UICollection
         // Do any additional setup after loading the view.
         view.backgroundColor = UIColor.background
         
-        /*
-        view.addSubview(topCycleView)
-        topCycleView.snp.makeConstraints { make in
-            make.top.left.right.equalTo(view)
-            make.height.equalTo(200)
-        }
-        */
+//        view.addSubview(topCycleView)
+//        view.addSubview(collectionView)
+//        topCycleView.snp.makeConstraints { make in
+//            make.top.left.right.equalTo(view)
+//            make.height.equalTo(200)
+//        }
+//        
+//        collectionView.snp.makeConstraints { make in
+//            make.top.equalTo(topCycleView.snp_bottom).offset(10)
+//            make.left.right.equalTo(view)
+//            make.bottom.equalTo(view.snp_bottom).offset(-10)
+//        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
         //self.navigationController?.navigationBar.isHidden = true
-        requestAppListApi()
+//        requestAppListApi()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -104,7 +126,12 @@ class HomePageViewController: UIViewController, ZCycleViewProtocol, UICollection
         }
     }
     
-    //MARK: ZCycleViewProtocol
+    
+    
+}
+//MARK: ZCycleViewProtocol
+extension HomePageViewController :ZCycleViewProtocol {
+    
     func cycleViewRegisterCellClasses() -> [String : AnyClass] {
         /// 注册cell，[重用标志符：cell类]
         
@@ -116,7 +143,9 @@ class HomePageViewController: UIViewController, ZCycleViewProtocol, UICollection
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "HomeCycleCollectionCell", for: indexPath) as! HomeCycleCollectionCell
         
         cell.bgImageView.kf.setImage(with: URL(string: imageArray[realIndex]))
-
+//        cell.bgImageView.layer.cornerRadius = 20.0
+//        cell.bgImageView.clipsToBounds = true
+        
         return cell
     }
     
@@ -133,5 +162,25 @@ class HomePageViewController: UIViewController, ZCycleViewProtocol, UICollection
         pageControl.pageIndicatorTintColor = .green
         pageControl.frame = CGRect(x: 0, y: cycleView.bounds.height-25, width: cycleView.bounds.width, height: 25)
     }
+}
+
+extension HomePageViewController: UICollectionViewDelegate,UICollectionViewDataSource {
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 9
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "HomeCycleCollectionCell_Id", for: indexPath) as! HomeCycleCollectionCell
+        
+        cell.bgImageView.kf.setImage(with: URL(string: imageArray[indexPath.item]))
+//        cell.bgImageView.image = UIImage.createImageWithColor(UIColor.random, frame: cell.bounds)
+        cell.bgImageView.layer.cornerRadius = 30.0
+        cell.bgImageView.clipsToBounds = true
+        
+        return cell
+    }
+    
     
 }

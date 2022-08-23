@@ -8,7 +8,7 @@
 import UIKit
 import WebKit
 
-class YCBaseWebViewController: YCBaseViewController, WKNavigationDelegate, WKUIDelegate{
+class YCBaseWebViewController: YCBaseViewController {
 
     lazy var wkwebView: WKWebView = {
         
@@ -17,6 +17,7 @@ class YCBaseWebViewController: YCBaseViewController, WKNavigationDelegate, WKUID
         webview.navigationDelegate = self
         return webview
     }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "WKWebView"
@@ -30,8 +31,10 @@ class YCBaseWebViewController: YCBaseViewController, WKNavigationDelegate, WKUID
         
         wkwebView.load(NSURLRequest.init(url: NSURL.init(string: "https://www.baidu.com")! as URL) as URLRequest)
     }
-    
-    // MARK: - WKNavigationDelegate, WKUIDelegate
+}
+
+// MARK: - WKNavigationDelegate, WKUIDelegate
+extension YCBaseWebViewController : WKNavigationDelegate, WKUIDelegate {
     // 页面开始加载时调用
     func webView(_ webView: WKWebView, didStartProvisionalNavigation navigation: WKNavigation!) {
         print("1.页面开始加载")

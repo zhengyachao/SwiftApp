@@ -12,9 +12,8 @@ class YCTabbarViewController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
-        
-        self.initTabbar()
+        // 初始化Tabbar
+        initTabbar()
     }
     
 
@@ -40,5 +39,8 @@ class YCTabbarViewController: UITabBarController {
         self.tabBar.shadowImage = UIImage()
         
         self.viewControllers = [homeNavVC, msgNavVC, mineNavVC]
+        
+        //默认选中的下标
+//        self.selectedIndex = 1
     }
 }
