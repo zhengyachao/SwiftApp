@@ -79,6 +79,8 @@ class HomePageViewController: UIViewController {
 //            make.left.right.equalTo(view)
 //            make.bottom.equalTo(view.snp_bottom).offset(-10)
 //        }
+        
+        requestDownloadApi()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -86,6 +88,8 @@ class HomePageViewController: UIViewController {
         
         //self.navigationController?.navigationBar.isHidden = true
 //        requestAppListApi()
+        
+        requestDownloadApi()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -94,7 +98,31 @@ class HomePageViewController: UIViewController {
         //self.navigationController?.navigationBar.isHidden = false
     }
     
-    //MARK: 网络请求
+    //MARK: 网络请求---download
+    func requestDownloadApi () {
+        let hud = MBProgressHUD.showAdded(to: self.view, animated: true)
+        hud.mode = .annularDeterminate
+        
+        homeProvider.request(HomeAppListApi.downloadTestApi, callbackQueue: nil) { progress in
+            print(progress.progress)
+    
+            hud.progress = Float(progress.progress)
+            
+        } completion: { result in
+            switch result {
+                
+            case let .success(response):
+                let jsonStr = JSON(response.data).description
+                print(jsonStr)
+                hud.hide(animated: true)
+                
+            case let .failure(error as NSError):
+                print(error)
+            }
+        }
+    }
+    
+    //MARK: 网络请求---test1
     func requestAppListApi () {
         homeProvider.request(HomeAppListApi.findRecruitmentDataPage(majorId: 1357)) { result in
             switch result {

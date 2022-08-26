@@ -24,6 +24,7 @@ PODS:
   - SnapKit (4.2.0)
   - SnapKitExtend (1.0.7):
     - SnapKit
+  - SSKeychain (1.4.1)
   - SwiftyJSON (5.0.1)
 
 DEPENDENCIES:
@@ -35,6 +36,7 @@ DEPENDENCIES:
   - MJRefresh
   - Moya
   - SnapKitExtend
+  - SSKeychain
   - SwiftyJSON
 
 SPEC REPOS:
@@ -49,6 +51,7 @@ SPEC REPOS:
     - Moya
     - SnapKit
     - SnapKitExtend
+    - SSKeychain
     - SwiftyJSON
 
 SPEC CHECKSUMS:
@@ -62,8 +65,9 @@ SPEC CHECKSUMS:
   Moya: 138f0573e53411fb3dc17016add0b748dfbd78ee
   SnapKit: fe8a619752f3f27075cc9a90244d75c6c3f27e2a
   SnapKitExtend: 00ee4db6d1f80bee01a1e75745f2a6ae695ba662
+  SSKeychain: 55cc80f66f5c73da827e3077f02e43528897db41
   SwiftyJSON: 2f33a42c6fbc52764d96f13368585094bfd8aa5e
 
-PODFILE CHECKSUM: e10e68cd8e59c9705ef175aab24c1e3f16760eac
+PODFILE CHECKSUM: 11ee069522247feba0d5d2ce3f1a3fab064f0f48
 
 COCOAPODS: 1.11.3

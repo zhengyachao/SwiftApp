@@ -15,14 +15,13 @@ import Moya
 import SwiftyJSON
 import HandyJSON
 
-//MRAK: 应用通用配置
+//MRAK: 应用全局通用配置
 let kScreenWidth  = UIScreen.main.bounds.width
 let kScreenHeight = UIScreen.main.bounds.height
 let keyWindow     = UIApplication.shared.delegate!.window
 let kUserDefaults = UserDefaults.standard
 let kNotificationCenter = NotificationCenter.default
 let kAppDelegate  = UIApplication.shared.delegate as! AppDelegate
-
 
 //MRAK:是否是刘海屏
 var kDevice_Is_iPhoneX : Bool {

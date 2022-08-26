@@ -10,6 +10,7 @@
 		0032FAB010D88C89AD0EC8D7 /* Pods_swiftTest2Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93EE9D4F2C7FC435A8F48FB9 /* Pods_swiftTest2Tests.framework */; };
 		72B850ADFA12235DC50DF19D /* Pods_swiftTest2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3FA13B3B777DCDF7C202157 /* Pods_swiftTest2.framework */; };
 		A3306C0339E055C3993D67D6 /* Pods_swiftTest2_swiftTest2UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E05880E99F318E30AA0B1A6 /* Pods_swiftTest2_swiftTest2UITests.framework */; };
+		C22158DF28B8B4C9001F8277 /* YCDeviceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C22158DE28B8B4C9001F8277 /* YCDeviceManager.swift */; };
 		C25BF04628ACCFAC003E9836 /* HomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C25BF04528ACCFAC003E9836 /* HomePageViewController.swift */; };
 		C25BF04828ACCFB5003E9836 /* MessagePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C25BF04728ACCFB5003E9836 /* MessagePageViewController.swift */; };
 		C25BF04A28ACCFBC003E9836 /* MinePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C25BF04928ACCFBC003E9836 /* MinePageViewController.swift */; };
@@ -75,6 +76,8 @@
 		6A6CF99E6574EF7F05DB26DA /* Pods-swiftTest2-swiftTest2UITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-swiftTest2-swiftTest2UITests.release.xcconfig"; path = "Target Support Files/Pods-swiftTest2-swiftTest2UITests/Pods-swiftTest2-swiftTest2UITests.release.xcconfig"; sourceTree = "<group>"; };
 		6D33019C09E60E5E33F86307 /* Pods-swiftTest2Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-swiftTest2Tests.release.xcconfig"; path = "Target Support Files/Pods-swiftTest2Tests/Pods-swiftTest2Tests.release.xcconfig"; sourceTree = "<group>"; };
 		93EE9D4F2C7FC435A8F48FB9 /* Pods_swiftTest2Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_swiftTest2Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C22158DE28B8B4C9001F8277 /* YCDeviceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YCDeviceManager.swift; sourceTree = "<group>"; };
+		C22158E028B8B626001F8277 /* swiftTest2.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = swiftTest2.entitlements; sourceTree = "<group>"; };
 		C25BF04528ACCFAC003E9836 /* HomePageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomePageViewController.swift; sourceTree = "<group>"; };
 		C25BF04728ACCFB5003E9836 /* MessagePageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessagePageViewController.swift; sourceTree = "<group>"; };
 		C25BF04928ACCFBC003E9836 /* MinePageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MinePageViewController.swift; sourceTree = "<group>"; };
@@ -173,6 +176,14 @@
 				6D33019C09E60E5E33F86307 /* Pods-swiftTest2Tests.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		C22158DD28B8B4A0001F8277 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				C22158DE28B8B4C9001F8277 /* YCDeviceManager.swift */,
+			);
+			path = Manager;
 			sourceTree = "<group>";
 		};
 		C25BF04128ACCF8E003E9836 /* Home */ = {
@@ -292,21 +303,23 @@
 		C2B1664B28AB9273004C7084 /* swiftTest2 */ = {
 			isa = PBXGroup;
 			children = (
+				C22158E028B8B626001F8277 /* swiftTest2.entitlements */,
 				C2B1664C28AB9273004C7084 /* AppDelegate.swift */,
 				C2B1665528AB9274004C7084 /* Assets.xcassets */,
+				C2B1665A28AB9274004C7084 /* Info.plist */,
 				C2B1665728AB9274004C7084 /* LaunchScreen.storyboard */,
 				C2B1665228AB9273004C7084 /* Main.storyboard */,
-				C2B1665A28AB9274004C7084 /* Info.plist */,
 				C2D23B2628ADD218007C149B /* swiftTest2-Bridging-Header.h */,
-				C2CDC3C628B4687E008D72CD /* Tool */,
 				C2D23B5828AE2A21007C149B /* Api */,
-				C2D23B5128ADEE01007C149B /* View&Cell */,
-				C2D23B4928ADEA1C007C149B /* ThirdParty */,
 				C292F85028AC7AC1001B1984 /* BaseVC */,
 				C292F85A28AC85F9001B1984 /* Class */,
 				C25BF04D28ACD1AD003E9836 /* Extension */,
 				C25BF05028ACD745003E9836 /* Macro&Const */,
+				C22158DD28B8B4A0001F8277 /* Manager */,
 				C292F85828AC85F9001B1984 /* Model */,
+				C2D23B4928ADEA1C007C149B /* ThirdParty */,
+				C2CDC3C628B4687E008D72CD /* Tool */,
+				C2D23B5128ADEE01007C149B /* View&Cell */,
 			);
 			path = swiftTest2;
 			sourceTree = "<group>";
@@ -649,6 +662,7 @@
 				C2D23B3C28ADDFE2007C149B /* StringExtension.swift in Sources */,
 				C2D23B5E28AE45A0007C149B /* YCBaseModel.swift in Sources */,
 				C25BF04A28ACCFBC003E9836 /* MinePageViewController.swift in Sources */,
+				C22158DF28B8B4C9001F8277 /* YCDeviceManager.swift in Sources */,
 				C2D23B3E28ADDFE2007C149B /* UIDeviceExtension.swift in Sources */,
 				C2D23B4E28ADEA1C007C149B /* ZCycleView.swift in Sources */,
 				C2D23B6128AF6F41007C149B /* MineCollectionViewCell.swift in Sources */,
@@ -842,6 +856,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = swiftTest2/swiftTest2.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = WGW32ZNK8Q;
@@ -875,6 +890,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = swiftTest2/swiftTest2.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = WGW32ZNK8Q;

@@ -56,8 +56,8 @@ class MessagePageViewController: UIViewController {
 //MARK: -- 点击cell头像的代理
 extension MessagePageViewController : MessageListTVCellProtocol {
     func tapBgImageView(isUpdate: Bool) {
-        self.isUpdate = isUpdate
         
+        self.isUpdate = isUpdate
         self.msgTabelView.reloadData()
     }
 }
@@ -77,12 +77,10 @@ extension MessagePageViewController : UITableViewDelegate,UITableViewDataSource 
         listCell?.configMessageListTVCellModel(self.isUpdate)
         
         listCell?.tapBlock = { [weak self] isUpdated in
-            
+
             self?.isUpdate = isUpdated
-            
             self?.msgTabelView.reloadData()
-        }
-        
+        }        
 //        listCell?.cellDelegate = self
         
         return listCell!

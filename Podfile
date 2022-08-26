@@ -12,6 +12,7 @@ target 'swiftTest2' do
   pod 'MJRefresh'
   pod 'MBProgressHUD'
   pod 'BRPickerView'
+  pod 'SSKeychain'
   
   # 纯代码布局---Masonry
   pod 'SnapKitExtend'
@@ -25,6 +26,7 @@ target 'swiftTest2' do
   pod 'SwiftyJSON'
   # Swift-转模型HandyJSON
   pod 'HandyJSON'
+  
 
   target 'swiftTest2Tests' do
     inherit! :search_paths
