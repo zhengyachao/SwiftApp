@@ -85,8 +85,6 @@ class LoginPageViewController: UIViewController, UITextFieldDelegate {
         //MARK: 当UITextField的rightView被占用的时候，clearButtonMode就失效了
         pwdTf.clearButtonMode = .whileEditing
 
-        
-        
         let loginBtn = UIButton()
         loginBtn.backgroundColor = UIColor.theme
         loginBtn.setTitle("登录", for: .normal)

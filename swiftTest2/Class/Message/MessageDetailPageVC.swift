@@ -6,31 +6,114 @@
 //
 
 import UIKit
+import SwiftyJSON
+import HandyJSON
 
 class MessageDetailPageVC: YCBaseViewController {
-
+    lazy var dataArray = [Any]()
+    
+    lazy var tableView: UITableView = {
+        let tableView = UITableView(frame: CGRect.zero, style: .grouped)
+        tableView.delegate = self
+        tableView.dataSource = self
+        return tableView
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "Detail"
-
-        // Do any additional setup after loading the view.
+        
+        view.addSubview(self.tableView)
+        self.tableView.snp.makeConstraints { make in
+            make.edges.equalTo(view)
+        }
+        // 每日一句
+        requestDaily_wordRecommend(count: 10)
+        // 添加下拉刷新
+        addRefreshTableView()
     }
-    /* 测试子类能否重写基类的导航返回按钮方法
-    override func onClickBackBtn(_ btn: UIButton) {
+    //MARK: -- 添加下拉刷新
+    func addRefreshTableView () {
+        self.tableView.mj_header = MJRefreshNormalHeader.init(refreshingBlock: {
+            self.requestDaily_wordRecommend(count: 10)
+        })
+    }
     
-        print(1111111)
+    //MARK: -- 网络请求
+    func requestDaily_wordRecommend(count : Int) -> Void {
+        MBProgressHUD.showAdded(to: self.view, animated: true)
+        messageProvider.request(MessagePageApi.getDaily_wordRecommend(count: count, app_id: kAppId, app_secret: kAppSecret)) { result in
+            MBProgressHUD.hide(for: self.view, animated: true)
+            
+            self.dataArray.removeAll()
+            
+            switch result {
+            case let .success(response):
+                
+                let jsonStr = JSON(response.data).description
+                print("JSON字符串---",jsonStr)
+                let messageModel = MessageTestModel.deserialize(from: jsonStr)
+                
+                let data = messageModel?.data ?? [Daily_wordModel]()
+                
+                for daily_wordModel in data {
+                    self.dataArray.append(daily_wordModel)
+                }
+//                self.dataArray.append(data)
+                
+                let daily_wordModel = self.dataArray[0] as! Daily_wordModel
+                print("content---",daily_wordModel.content)
+                
+                DispatchQueue.main.async {
+                    self.tableView.reloadData()
+                    self.tableView.mj_header?.endRefreshing()
+                }
+                
+            case let .failure(error as NSError):
+                print(error)
+                self.tableView.reloadData()
+                self.tableView.mj_header?.endRefreshing()
+            }
+        }
     }
-    */
+}
+
+extension MessageDetailPageVC : UITableViewDataSource,UITableViewDelegate {
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
+        return self.dataArray.count
     }
-    */
-
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let listCell = MessageDailyListCell.cellWithTableView(tableView)
+        
+        let listModel = self.dataArray[indexPath.row]
+        listCell?.configMessageDailyListCellModel(listModel as! Daily_wordModel)
+        
+        return listCell!
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        
+        let listModel = self.dataArray[indexPath.row]
+        return MessageDailyListCell.configMessageDailyListCellHeight(listModel as! Daily_wordModel)
+    }
+    
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        return UIView()
+    }
+    
+    func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+        return UIView()
+    }
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 0.01
+    }
+    
+    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        return 0.01
+    }
 }

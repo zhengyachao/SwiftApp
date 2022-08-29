@@ -22,6 +22,10 @@
 		C292F85728AC8082001B1984 /* YCTabbarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C292F85628AC8082001B1984 /* YCTabbarViewController.swift */; };
 		C292F86228AC8734001B1984 /* YCBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C292F86128AC8734001B1984 /* YCBaseViewController.swift */; };
 		C292F86428AC875A001B1984 /* YCNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C292F86328AC875A001B1984 /* YCNavigationController.swift */; };
+		C2A558D128BC5689005D3DC7 /* MoyaConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A558D028BC5689005D3DC7 /* MoyaConfig.swift */; };
+		C2A558D528BC5B0C005D3DC7 /* MessagePageApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A558D428BC5B0C005D3DC7 /* MessagePageApi.swift */; };
+		C2A558D728BC6686005D3DC7 /* MessageTestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A558D628BC6686005D3DC7 /* MessageTestModel.swift */; };
+		C2A558D928BC8AF6005D3DC7 /* MessageDailyListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A558D828BC8AF6005D3DC7 /* MessageDailyListCell.swift */; };
 		C2B1664D28AB9273004C7084 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2B1664C28AB9273004C7084 /* AppDelegate.swift */; };
 		C2B1665428AB9273004C7084 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2B1665228AB9273004C7084 /* Main.storyboard */; };
 		C2B1665628AB9274004C7084 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C2B1665528AB9274004C7084 /* Assets.xcassets */; };
@@ -89,6 +93,10 @@
 		C292F85628AC8082001B1984 /* YCTabbarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YCTabbarViewController.swift; sourceTree = "<group>"; };
 		C292F86128AC8734001B1984 /* YCBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YCBaseViewController.swift; sourceTree = "<group>"; };
 		C292F86328AC875A001B1984 /* YCNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YCNavigationController.swift; sourceTree = "<group>"; };
+		C2A558D028BC5689005D3DC7 /* MoyaConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoyaConfig.swift; sourceTree = "<group>"; };
+		C2A558D428BC5B0C005D3DC7 /* MessagePageApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagePageApi.swift; sourceTree = "<group>"; };
+		C2A558D628BC6686005D3DC7 /* MessageTestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageTestModel.swift; sourceTree = "<group>"; };
+		C2A558D828BC8AF6005D3DC7 /* MessageDailyListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageDailyListCell.swift; sourceTree = "<group>"; };
 		C2B1664928AB9273004C7084 /* swiftTest2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = swiftTest2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2B1664C28AB9273004C7084 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C2B1665328AB9273004C7084 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -263,6 +271,7 @@
 			children = (
 				C2D23B5D28AE45A0007C149B /* YCBaseModel.swift */,
 				C2D23B5B28AE436C007C149B /* HomeTestModel.swift */,
+				C2A558D628BC6686005D3DC7 /* MessageTestModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -388,6 +397,7 @@
 			isa = PBXGroup;
 			children = (
 				C2D23B5628AE14A8007C149B /* MessageListTVCell.swift */,
+				C2A558D828BC8AF6005D3DC7 /* MessageDailyListCell.swift */,
 			);
 			path = Message;
 			sourceTree = "<group>";
@@ -395,7 +405,9 @@
 		C2D23B5828AE2A21007C149B /* Api */ = {
 			isa = PBXGroup;
 			children = (
+				C2A558D028BC5689005D3DC7 /* MoyaConfig.swift */,
 				C2D23B5928AE2A37007C149B /* HomeAppListApi.swift */,
+				C2A558D428BC5B0C005D3DC7 /* MessagePageApi.swift */,
 			);
 			path = Api;
 			sourceTree = "<group>";
@@ -662,12 +674,16 @@
 				C2D23B3C28ADDFE2007C149B /* StringExtension.swift in Sources */,
 				C2D23B5E28AE45A0007C149B /* YCBaseModel.swift in Sources */,
 				C25BF04A28ACCFBC003E9836 /* MinePageViewController.swift in Sources */,
+				C2A558D528BC5B0C005D3DC7 /* MessagePageApi.swift in Sources */,
 				C22158DF28B8B4C9001F8277 /* YCDeviceManager.swift in Sources */,
 				C2D23B3E28ADDFE2007C149B /* UIDeviceExtension.swift in Sources */,
 				C2D23B4E28ADEA1C007C149B /* ZCycleView.swift in Sources */,
 				C2D23B6128AF6F41007C149B /* MineCollectionViewCell.swift in Sources */,
 				C2D23B4F28ADEA1C007C149B /* ZCycleLayout.swift in Sources */,
+				C2A558D928BC8AF6005D3DC7 /* MessageDailyListCell.swift in Sources */,
+				C2A558D128BC5689005D3DC7 /* MoyaConfig.swift in Sources */,
 				C2D23B4128ADDFE2007C149B /* DispatchQueueExtension.swift in Sources */,
+				C2A558D728BC6686005D3DC7 /* MessageTestModel.swift in Sources */,
 				C2D23B4428ADDFE2007C149B /* ButtonExtension.swift in Sources */,
 				C25BF05428ACEE14003E9836 /* UtilNoticeHeader.swift in Sources */,
 				C25BF05228ACD76E003E9836 /* UtilTextHeader.swift in Sources */,

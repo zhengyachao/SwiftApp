@@ -108,6 +108,13 @@ extension MessagePageViewController : UITableViewDelegate,UITableViewDataSource 
         
         let detailVC = MessageDetailPageVC()
         
+        switch indexPath.row {
+        case 0:
+            detailVC.title = "每日一句"
+        default: break
+            
+        }
+        
         self.navigationController?.pushViewController(detailVC, animated: true)
     }
 }

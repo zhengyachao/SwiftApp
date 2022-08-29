@@ -49,7 +49,6 @@ extension String {
         return hash as String
     }
     ///根据宽度跟字体，计算文字的高度
-    
     func textAutoHeight(width:CGFloat, font:UIFont) ->CGFloat{
         let origin = NSStringDrawingOptions.usesLineFragmentOrigin
         

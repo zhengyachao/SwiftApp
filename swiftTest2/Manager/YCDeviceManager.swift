@@ -29,7 +29,7 @@ class YCDeviceManager: NSObject {
         
         var uuid = SSKeychain.password(forService: keychain_service, account: keychain_account )
         var error: NSError? = nil
-        // ??空合运算符 uuid?.isEmpty ?? true表示判断uuid?.isEmpty是否为nil，若为nil，取true的值
+        // ?? 空合运算符 uuid?.isEmpty ?? true表示判断uuid?.isEmpty是否为nil，若为nil，取true的值
         if uuid?.isEmpty ?? true {
             // 获取UUID
             uuid = UIDevice.current.identifierForVendor!.uuidString

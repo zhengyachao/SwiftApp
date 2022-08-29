@@ -80,7 +80,7 @@ class HomePageViewController: UIViewController {
 //            make.bottom.equalTo(view.snp_bottom).offset(-10)
 //        }
         
-        requestDownloadApi()
+//        requestDownloadApi()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -89,7 +89,7 @@ class HomePageViewController: UIViewController {
         //self.navigationController?.navigationBar.isHidden = true
 //        requestAppListApi()
         
-        requestDownloadApi()
+//        requestDownloadApi()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
