@@ -26,7 +26,13 @@ target 'swiftTest2' do
   pod 'SwiftyJSON'
   # Swift-转模型HandyJSON
   pod 'HandyJSON'
-  
+  # 分页控制器
+  pod 'JXSegmentedView'
+  # 空数据占位显示
+  pod 'EmptyDataSet-Swift'
+  # 富文本--NSAttributedString
+  pod 'SwiftyAttributes'
+
 
   target 'swiftTest2Tests' do
     inherit! :search_paths

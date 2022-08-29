@@ -14,6 +14,7 @@ import Kingfisher
 import Moya
 import SwiftyJSON
 import HandyJSON
+import JXSegmentedView
 
 //MRAK: 应用全局通用配置
 let kScreenWidth  = UIScreen.main.bounds.width

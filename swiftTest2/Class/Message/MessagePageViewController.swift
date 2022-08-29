@@ -20,10 +20,7 @@ class MessagePageViewController: UIViewController {
         tableView.delegate = self
         tableView.estimatedRowHeight = 70
         tableView.rowHeight = 70
-        
-        if #available(iOS 15.0, *) {
-            tableView.sectionHeaderTopPadding = 0
-        }
+        tableView.tableViewNeverAdjustContentInset()
         
         return tableView
     }()
@@ -106,15 +103,21 @@ extension MessagePageViewController : UITableViewDelegate,UITableViewDataSource 
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        let detailVC = MessageDetailPageVC()
+        
         
         switch indexPath.row {
         case 0:
-            detailVC.title = "每日一句"
+            let dailyVC = MessageDetailPageVC()
+            dailyVC.title = "每日一句"
+            self.navigationController?.pushViewController(dailyVC, animated: true)
+        case 1:
+            let newsVC = MessageNewsPageVC()
+            newsVC.title = "新闻"
+            self.navigationController?.pushViewController(newsVC, animated: true)
         default: break
             
         }
         
-        self.navigationController?.pushViewController(detailVC, animated: true)
+        
     }
 }

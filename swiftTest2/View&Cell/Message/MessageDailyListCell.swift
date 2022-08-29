@@ -9,6 +9,7 @@ import UIKit
 
 class MessageDailyListCell: UITableViewCell {
 
+    lazy var bgView = UIView()
     // 详情
     lazy var contentLabel = UILabel(frame: CGRect.zero)
     // 作者
@@ -40,24 +41,33 @@ class MessageDailyListCell: UITableViewCell {
     }
     
     func setUpCellUI () {
- 
-        contentView.addSubview(contentLabel)
-        contentView.addSubview(authorLabel)
-
+        contentView.addSubview(bgView)
+        bgView.backgroundColor = UIColor.random
+        bgView.layer.cornerRadius = 5.0;
+        bgView.clipsToBounds = true
+        bgView.snp.makeConstraints { make in
+            make.top.left.equalTo(10)
+            make.width.equalTo(kScreenWidth - 20)
+            make.centerY.equalTo(contentView.snp.centerY)
+        }
+    
+        bgView.addSubview(contentLabel)
+        bgView.addSubview(authorLabel)
+        
         contentLabel.numberOfLines = 0;
         contentLabel.font = UIFont.systemFont(ofSize: 16)
-        contentLabel.textColor = UIColor.mainFontColor
+        contentLabel.textColor = UIColor.white
         contentLabel.snp.makeConstraints { make in
-            make.top.left.equalTo(contentView).offset(15)
-            make.width.equalTo(kScreenWidth - 30)
+            make.top.left.equalTo(bgView).offset(10)
+            make.width.equalTo(kScreenWidth - 40)
         }
         
         authorLabel.font = UIFont.systemFont(ofSize: 12)
-        authorLabel.textColor = UIColor.smallFontColor
+        authorLabel.textColor = UIColor.white
         authorLabel.textAlignment = .right
         authorLabel.snp.makeConstraints { make in
             make.top.equalTo(self.contentLabel.snp_bottom).offset(10)
-            make.right.equalTo(contentView).offset(-10)
+            make.right.equalTo(bgView).offset(-10)
             make.width.equalTo(140)
             make.height.equalTo(15)
         }
@@ -72,11 +82,10 @@ class MessageDailyListCell: UITableViewCell {
     
     class func configMessageDailyListCellHeight (_ listModel:Daily_wordModel) -> CGFloat {
         
-        let contentHeight = listModel.content.textAutoHeight(width: kScreenWidth - 30, font: UIFont.systemFont(ofSize: 16.0))
+        let contentHeight = listModel.content.textAutoHeight(width: kScreenWidth - 40, font: UIFont.systemFont(ofSize: 16.0))
         
-        let cellHeight = 15 + contentHeight + 10 + 15 + 15
-        print("contentHeight --- %ld",contentHeight)
-        print("cellHeight --- %ld",cellHeight)
+        let cellHeight = 10 + contentHeight + 10 + 15 + 10 + 20
+        
         return cellHeight
     }
 }

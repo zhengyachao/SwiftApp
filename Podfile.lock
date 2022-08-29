@@ -12,8 +12,10 @@ PODS:
     - BRPickerView/Base
   - BRPickerView/StringPickerView (2.8.0):
     - BRPickerView/Base
+  - EmptyDataSet-Swift (5.0.0)
   - HandyJSON (5.0.2)
   - IQKeyboardManagerSwift (6.5.10)
+  - JXSegmentedView (1.3.0)
   - Kingfisher (6.3.1)
   - MBProgressHUD (1.2.0)
   - MJRefresh (3.7.5)
@@ -25,26 +27,32 @@ PODS:
   - SnapKitExtend (1.0.7):
     - SnapKit
   - SSKeychain (1.4.1)
+  - SwiftyAttributes (5.1.1)
   - SwiftyJSON (5.0.1)
 
 DEPENDENCIES:
   - BRPickerView
+  - EmptyDataSet-Swift
   - HandyJSON
   - IQKeyboardManagerSwift
+  - JXSegmentedView
   - Kingfisher
   - MBProgressHUD
   - MJRefresh
   - Moya
   - SnapKitExtend
   - SSKeychain
+  - SwiftyAttributes
   - SwiftyJSON
 
 SPEC REPOS:
   trunk:
     - Alamofire
     - BRPickerView
+    - EmptyDataSet-Swift
     - HandyJSON
     - IQKeyboardManagerSwift
+    - JXSegmentedView
     - Kingfisher
     - MBProgressHUD
     - MJRefresh
@@ -52,13 +60,16 @@ SPEC REPOS:
     - SnapKit
     - SnapKitExtend
     - SSKeychain
+    - SwiftyAttributes
     - SwiftyJSON
 
 SPEC CHECKSUMS:
   Alamofire: d368e1ff8a298e6dde360e35a3e68e6c610e7204
   BRPickerView: a0ff460bf092bc069db5a54153395b1f7e8f5300
+  EmptyDataSet-Swift: eb382c0c87a2d9c678077385a595cec52da38171
   HandyJSON: 9e4e236f5d2dbefad5155a77417bbea438201c03
   IQKeyboardManagerSwift: 52962c76ab33532f15ad9f3ff4e5715eda5335bb
+  JXSegmentedView: fec0d335355b6e019c494fe2e030bde8a36d2df6
   Kingfisher: 016c8b653a35add51dd34a3aba36b580041acc74
   MBProgressHUD: 3ee5efcc380f6a79a7cc9b363dd669c5e1ae7406
   MJRefresh: fdf5e979eb406a0341468932d1dfc8b7f9fce961
@@ -66,8 +77,9 @@ SPEC CHECKSUMS:
   SnapKit: fe8a619752f3f27075cc9a90244d75c6c3f27e2a
   SnapKitExtend: 00ee4db6d1f80bee01a1e75745f2a6ae695ba662
   SSKeychain: 55cc80f66f5c73da827e3077f02e43528897db41
+  SwiftyAttributes: e3e13891ddac3c62b3d7798d5c3969cea88e62bb
   SwiftyJSON: 2f33a42c6fbc52764d96f13368585094bfd8aa5e
 
-PODFILE CHECKSUM: 11ee069522247feba0d5d2ce3f1a3fab064f0f48
+PODFILE CHECKSUM: 22be003a4cf75557a8978d96a81b43247c8f1fcf
 
 COCOAPODS: 1.11.3

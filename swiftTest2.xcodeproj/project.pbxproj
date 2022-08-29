@@ -26,6 +26,10 @@
 		C2A558D528BC5B0C005D3DC7 /* MessagePageApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A558D428BC5B0C005D3DC7 /* MessagePageApi.swift */; };
 		C2A558D728BC6686005D3DC7 /* MessageTestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A558D628BC6686005D3DC7 /* MessageTestModel.swift */; };
 		C2A558D928BC8AF6005D3DC7 /* MessageDailyListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A558D828BC8AF6005D3DC7 /* MessageDailyListCell.swift */; };
+		C2A558DB28BC979E005D3DC7 /* MessageNewsPageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A558DA28BC979E005D3DC7 /* MessageNewsPageVC.swift */; };
+		C2A558DD28BCA1A8005D3DC7 /* MessageNewsListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A558DC28BCA1A8005D3DC7 /* MessageNewsListVC.swift */; };
+		C2A558DF28BCA6E7005D3DC7 /* NewsTypesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A558DE28BCA6E7005D3DC7 /* NewsTypesModel.swift */; };
+		C2A558E328BCB9EE005D3DC7 /* UITableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A558E228BCB9EE005D3DC7 /* UITableView+Extension.swift */; };
 		C2B1664D28AB9273004C7084 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2B1664C28AB9273004C7084 /* AppDelegate.swift */; };
 		C2B1665428AB9273004C7084 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2B1665228AB9273004C7084 /* Main.storyboard */; };
 		C2B1665628AB9274004C7084 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C2B1665528AB9274004C7084 /* Assets.xcassets */; };
@@ -97,6 +101,10 @@
 		C2A558D428BC5B0C005D3DC7 /* MessagePageApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagePageApi.swift; sourceTree = "<group>"; };
 		C2A558D628BC6686005D3DC7 /* MessageTestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageTestModel.swift; sourceTree = "<group>"; };
 		C2A558D828BC8AF6005D3DC7 /* MessageDailyListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageDailyListCell.swift; sourceTree = "<group>"; };
+		C2A558DA28BC979E005D3DC7 /* MessageNewsPageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageNewsPageVC.swift; sourceTree = "<group>"; };
+		C2A558DC28BCA1A8005D3DC7 /* MessageNewsListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageNewsListVC.swift; sourceTree = "<group>"; };
+		C2A558DE28BCA6E7005D3DC7 /* NewsTypesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsTypesModel.swift; sourceTree = "<group>"; };
+		C2A558E228BCB9EE005D3DC7 /* UITableView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extension.swift"; sourceTree = "<group>"; };
 		C2B1664928AB9273004C7084 /* swiftTest2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = swiftTest2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2B1664C28AB9273004C7084 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C2B1665328AB9273004C7084 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -223,6 +231,8 @@
 			children = (
 				C25BF04728ACCFB5003E9836 /* MessagePageViewController.swift */,
 				C2D23B6628AF7607007C149B /* MessageDetailPageVC.swift */,
+				C2A558DA28BC979E005D3DC7 /* MessageNewsPageVC.swift */,
+				C2A558DC28BCA1A8005D3DC7 /* MessageNewsListVC.swift */,
 			);
 			path = Message;
 			sourceTree = "<group>";
@@ -241,6 +251,7 @@
 				C2D23B3728ADDFE2007C149B /* UIImageExtensions.swift */,
 				C2D23B2A28ADDFE2007C149B /* WindowExtension.swift */,
 				C25BF04E28ACD1AD003E9836 /* UIColorExtension.swift */,
+				C2A558E228BCB9EE005D3DC7 /* UITableView+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -272,6 +283,7 @@
 				C2D23B5D28AE45A0007C149B /* YCBaseModel.swift */,
 				C2D23B5B28AE436C007C149B /* HomeTestModel.swift */,
 				C2A558D628BC6686005D3DC7 /* MessageTestModel.swift */,
+				C2A558DE28BCA6E7005D3DC7 /* NewsTypesModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -664,6 +676,7 @@
 				C2D23B6728AF7607007C149B /* MessageDetailPageVC.swift in Sources */,
 				C292F86228AC8734001B1984 /* YCBaseViewController.swift in Sources */,
 				C2D23B3D28ADDFE2007C149B /* UIBarButtonItemExtension.swift in Sources */,
+				C2A558DF28BCA6E7005D3DC7 /* NewsTypesModel.swift in Sources */,
 				C25BF04828ACCFB5003E9836 /* MessagePageViewController.swift in Sources */,
 				C25BF04C28ACCFD3003E9836 /* LoginPageViewController.swift in Sources */,
 				C2D23B4328ADDFE2007C149B /* ArrayExtensions.swift in Sources */,
@@ -672,6 +685,7 @@
 				C2D23B3828ADDFE2007C149B /* DictionaryExtension.swift in Sources */,
 				C25BF04628ACCFAC003E9836 /* HomePageViewController.swift in Sources */,
 				C2D23B3C28ADDFE2007C149B /* StringExtension.swift in Sources */,
+				C2A558DB28BC979E005D3DC7 /* MessageNewsPageVC.swift in Sources */,
 				C2D23B5E28AE45A0007C149B /* YCBaseModel.swift in Sources */,
 				C25BF04A28ACCFBC003E9836 /* MinePageViewController.swift in Sources */,
 				C2A558D528BC5B0C005D3DC7 /* MessagePageApi.swift in Sources */,
@@ -680,9 +694,11 @@
 				C2D23B4E28ADEA1C007C149B /* ZCycleView.swift in Sources */,
 				C2D23B6128AF6F41007C149B /* MineCollectionViewCell.swift in Sources */,
 				C2D23B4F28ADEA1C007C149B /* ZCycleLayout.swift in Sources */,
+				C2A558E328BCB9EE005D3DC7 /* UITableView+Extension.swift in Sources */,
 				C2A558D928BC8AF6005D3DC7 /* MessageDailyListCell.swift in Sources */,
 				C2A558D128BC5689005D3DC7 /* MoyaConfig.swift in Sources */,
 				C2D23B4128ADDFE2007C149B /* DispatchQueueExtension.swift in Sources */,
+				C2A558DD28BCA1A8005D3DC7 /* MessageNewsListVC.swift in Sources */,
 				C2A558D728BC6686005D3DC7 /* MessageTestModel.swift in Sources */,
 				C2D23B4428ADDFE2007C149B /* ButtonExtension.swift in Sources */,
 				C25BF05428ACEE14003E9836 /* UtilNoticeHeader.swift in Sources */,

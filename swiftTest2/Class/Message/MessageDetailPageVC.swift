@@ -10,12 +10,22 @@ import SwiftyJSON
 import HandyJSON
 
 class MessageDetailPageVC: YCBaseViewController {
-    lazy var dataArray = [Any]()
+    /*
+     初始化一个Any类型的空Array，此处必须指定类型，否则会报编译错误
+     var emptyArray = Array<Any>()
+     var emptyArray1: [Any] = Array()
+     var emptyArray2: Array<Any> = Array()
+     var emptyArray3 = [Any]()
+     */
+    lazy var dataArray = Array<Any>()
     
     lazy var tableView: UITableView = {
         let tableView = UITableView(frame: CGRect.zero, style: .grouped)
         tableView.delegate = self
         tableView.dataSource = self
+        tableView.addEmptyDataSetView()
+        tableView.tableViewNeverAdjustContentInset()
+        tableView.separatorStyle = .none
         return tableView
     }()
     
@@ -26,7 +36,7 @@ class MessageDetailPageVC: YCBaseViewController {
         self.tableView.snp.makeConstraints { make in
             make.edges.equalTo(view)
         }
-        // 每日一句
+        // 每日一句接口
         requestDaily_wordRecommend(count: 10)
         // 添加下拉刷新
         addRefreshTableView()
@@ -45,7 +55,6 @@ class MessageDetailPageVC: YCBaseViewController {
             MBProgressHUD.hide(for: self.view, animated: true)
             
             self.dataArray.removeAll()
-            
             switch result {
             case let .success(response):
                 
