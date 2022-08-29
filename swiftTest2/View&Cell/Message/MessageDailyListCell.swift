@@ -48,7 +48,7 @@ class MessageDailyListCell: UITableViewCell {
         bgView.snp.makeConstraints { make in
             make.top.left.equalTo(10)
             make.width.equalTo(kScreenWidth - 20)
-            make.centerY.equalTo(contentView.snp.centerY)
+            make.bottom.equalTo(contentView)
         }
     
         bgView.addSubview(contentLabel)
@@ -84,7 +84,7 @@ class MessageDailyListCell: UITableViewCell {
         
         let contentHeight = listModel.content.textAutoHeight(width: kScreenWidth - 40, font: UIFont.systemFont(ofSize: 16.0))
         
-        let cellHeight = 10 + contentHeight + 10 + 15 + 10 + 20
+        let cellHeight = 10 + 10 + contentHeight + 10 + 15 + 10 
         
         return cellHeight
     }
