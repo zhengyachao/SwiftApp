@@ -32,6 +32,8 @@ target 'swiftTest2' do
   pod 'EmptyDataSet-Swift'
   # 富文本--NSAttributedString
   pod 'SwiftyAttributes'
+  # 动画开发库--播放式动画
+  pod 'lottie-ios'
 
 
   target 'swiftTest2Tests' do

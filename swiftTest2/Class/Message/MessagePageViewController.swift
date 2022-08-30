@@ -114,6 +114,9 @@ extension MessagePageViewController : UITableViewDelegate,UITableViewDataSource 
             let newsVC = MessageNewsPageVC()
             newsVC.title = "新闻"
             self.navigationController?.pushViewController(newsVC, animated: true)
+        case 2:
+            let lottieVC = MessageLottiePageVC()
+            self.navigationController?.pushViewController(lottieVC, animated: true)
         default: break
             
         }

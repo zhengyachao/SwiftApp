@@ -67,7 +67,6 @@ class MessageDetailPageVC: YCBaseViewController {
                 for daily_wordModel in data {
                     self.dataArray.append(daily_wordModel)
                 }
-//                self.dataArray.append(data)
                 
                 let daily_wordModel = self.dataArray[0] as! Daily_wordModel
                 print("content---",daily_wordModel.content)

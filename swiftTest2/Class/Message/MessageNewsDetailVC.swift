@@ -34,7 +34,6 @@ class MessageNewsDetailVC: YCBaseViewController {
         requestNewsDetailApi()
     }
     
-    
     //MARK: --  加载webView内容--parameter model: 新闻模型
     func loadWebViewContent(model: NewsDetailDataModel) {
         
