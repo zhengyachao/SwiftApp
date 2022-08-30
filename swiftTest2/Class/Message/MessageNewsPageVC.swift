@@ -51,6 +51,10 @@ class MessageNewsPageVC: YCBaseViewController {
 
         view.addSubview(self.segmentView)
         view.addSubview(self.listContainerView)
+        self.listContainerView.snp.makeConstraints { make in
+            make.top.equalTo(50)
+            make.left.right.bottom.equalTo(view)
+        }
         // 获取所有新闻类型列表
         requestNewsType()
     }
@@ -73,12 +77,9 @@ class MessageNewsPageVC: YCBaseViewController {
                     
                     self.typeIdArray.append(item.typeId)
                 }
-                
-                print("当前线程---",Thread.current)
-                
+            
                 self.segmentView.dataSource = self.dataTitleSource
                 self.segmentView.reloadData()
-                
             case let .failure(error as NSError):
                 print(error)
             }
@@ -108,7 +109,7 @@ extension MessageNewsPageVC : JXSegmentedListContainerViewDataSource {
         let listVC = MessageNewsListVC()
         listVC.typeId = self.typeIdArray[index] as! String
         
-        return listVC
+        return listVC as JXSegmentedListContainerViewListDelegate
     }
 }
 

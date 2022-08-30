@@ -39,16 +39,16 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "16671DBA-769A-4834-AD1E-6F739778D771"
+            uuid = "1D92EF12-7E04-4756-AFD2-F5D527ADC36D"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "swiftTest2/Class/Message/MessageNewsListVC.swift"
+            filePath = "swiftTest2/Class/Message/MessageNewsDetailVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "30"
-            endingLineNumber = "30"
-            landmarkName = "requestNewsListApi()"
+            startingLineNumber = "91"
+            endingLineNumber = "91"
+            landmarkName = "loadWebViewContent(model:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
