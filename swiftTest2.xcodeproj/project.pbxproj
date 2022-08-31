@@ -44,6 +44,7 @@
 		C2B1666428AB9274004C7084 /* swiftTest2Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2B1666328AB9274004C7084 /* swiftTest2Tests.swift */; };
 		C2B1666E28AB9274004C7084 /* swiftTest2UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2B1666D28AB9274004C7084 /* swiftTest2UITests.swift */; };
 		C2B1667028AB9274004C7084 /* swiftTest2UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2B1666F28AB9274004C7084 /* swiftTest2UITestsLaunchTests.swift */; };
+		C2C57F2D28BF3B3E006B76BF /* YCCircleProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C57F2C28BF3B3E006B76BF /* YCCircleProgressView.swift */; };
 		C2CDC3BC28B31EF7008D72CD /* YCBaseWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2CDC3BB28B31EF7008D72CD /* YCBaseWebViewController.swift */; };
 		C2D23B3828ADDFE2007C149B /* DictionaryExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2D23B2728ADDFE2007C149B /* DictionaryExtension.swift */; };
 		C2D23B3B28ADDFE2007C149B /* WindowExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2D23B2A28ADDFE2007C149B /* WindowExtension.swift */; };
@@ -130,6 +131,7 @@
 		C2B1666928AB9274004C7084 /* swiftTest2UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = swiftTest2UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2B1666D28AB9274004C7084 /* swiftTest2UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = swiftTest2UITests.swift; sourceTree = "<group>"; };
 		C2B1666F28AB9274004C7084 /* swiftTest2UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = swiftTest2UITestsLaunchTests.swift; sourceTree = "<group>"; };
+		C2C57F2C28BF3B3E006B76BF /* YCCircleProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YCCircleProgressView.swift; sourceTree = "<group>"; };
 		C2CDC3BB28B31EF7008D72CD /* YCBaseWebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YCBaseWebViewController.swift; sourceTree = "<group>"; };
 		C2D23B2628ADD218007C149B /* swiftTest2-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "swiftTest2-Bridging-Header.h"; sourceTree = "<group>"; };
 		C2D23B2728ADDFE2007C149B /* DictionaryExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DictionaryExtension.swift; sourceTree = "<group>"; };
@@ -398,6 +400,22 @@
 			path = swiftTest2UITests;
 			sourceTree = "<group>";
 		};
+		C2C57F2A28BF3B2C006B76BF /* Custom */ = {
+			isa = PBXGroup;
+			children = (
+				C2C57F2B28BF3B2C006B76BF /* YCCircleProgressView */,
+			);
+			path = Custom;
+			sourceTree = "<group>";
+		};
+		C2C57F2B28BF3B2C006B76BF /* YCCircleProgressView */ = {
+			isa = PBXGroup;
+			children = (
+				C2C57F2C28BF3B3E006B76BF /* YCCircleProgressView.swift */,
+			);
+			path = YCCircleProgressView;
+			sourceTree = "<group>";
+		};
 		C2CDC3C628B4687E008D72CD /* Tool */ = {
 			isa = PBXGroup;
 			children = (
@@ -426,6 +444,7 @@
 		C2D23B5128ADEE01007C149B /* View&Cell */ = {
 			isa = PBXGroup;
 			children = (
+				C2C57F2A28BF3B2C006B76BF /* Custom */,
 				C2D23B5F28AF6F2A007C149B /* Mine */,
 				C2D23B5528AE1490007C149B /* Message */,
 				C2D23B5228ADEE01007C149B /* Home */,
@@ -713,6 +732,7 @@
 				C292F85528AC7D2D001B1984 /* SwiftHeader.swift in Sources */,
 				C2D23B5428ADEE32007C149B /* HomeCycleCollectionCell.swift in Sources */,
 				C2D23B6728AF7607007C149B /* MessageDetailPageVC.swift in Sources */,
+				C2C57F2D28BF3B3E006B76BF /* YCCircleProgressView.swift in Sources */,
 				C292F86228AC8734001B1984 /* YCBaseViewController.swift in Sources */,
 				C2D23B3D28ADDFE2007C149B /* UIBarButtonItemExtension.swift in Sources */,
 				C2A558DF28BCA6E7005D3DC7 /* NewsTypesModel.swift in Sources */,
