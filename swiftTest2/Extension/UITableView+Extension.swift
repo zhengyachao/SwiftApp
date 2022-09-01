@@ -24,7 +24,7 @@ extension UITableView {
         }
     }
     
-    //MARK: -- 添加空白视图
+    //MARK: -- 添加空数据占位视图
     func addEmptyDataSetView() {
         let noDataStr = "暂无数据"
         self.emptyDataSetView { view in

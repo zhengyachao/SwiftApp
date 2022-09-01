@@ -67,6 +67,10 @@ class HomePageViewController: UIViewController {
         // Do any additional setup after loading the view.
         view.backgroundColor = UIColor.background
         
+        // 使用拓展UIBarButtonItem创建导航右侧按钮
+        let rightItem = UIBarButtonItem.init(title: "设置", titleColor: UIColor.white, titleFont: UIFont.systemFont(ofSize: 16.0), titleEdgeInsets: UIEdgeInsets.zero, target: self, action: #selector(onClickSettingBtn))
+        self.navigationItem.rightBarButtonItem = rightItem
+        
 //        view.addSubview(topCycleView)
 //        view.addSubview(collectionView)
 //        topCycleView.snp.makeConstraints { make in
@@ -96,6 +100,13 @@ class HomePageViewController: UIViewController {
         super.viewWillDisappear(animated)
         
         //self.navigationController?.navigationBar.isHidden = false
+    }
+    
+    //MARK -- 跳转到手势密码页面
+    @objc func onClickSettingBtn () {
+        let lockVC = YCPatternLockVC()
+        
+        self.navigationController?.pushViewController(lockVC, animated: true)
     }
     
     //MARK: 网络请求---download

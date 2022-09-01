@@ -9,6 +9,7 @@
 #define swiftTest2_Bridging_Header_h
 
 #import "MBProgressHUD.h"
+#import "MBProgressHUD+Category.h"
 #import "MJRefresh.h"
 #import "BRPickerView.h"
 

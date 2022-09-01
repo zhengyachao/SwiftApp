@@ -45,6 +45,19 @@
 		C2B1666E28AB9274004C7084 /* swiftTest2UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2B1666D28AB9274004C7084 /* swiftTest2UITests.swift */; };
 		C2B1667028AB9274004C7084 /* swiftTest2UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2B1666F28AB9274004C7084 /* swiftTest2UITestsLaunchTests.swift */; };
 		C2C57F2D28BF3B3E006B76BF /* YCCircleProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C57F2C28BF3B3E006B76BF /* YCCircleProgressView.swift */; };
+		C2C57F2F28C04539006B76BF /* NSDecimalNumber+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C57F2E28C04539006B76BF /* NSDecimalNumber+Extension.swift */; };
+		C2C57F3B28C05F21006B76BF /* PatternLockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C57F3228C05F21006B76BF /* PatternLockView.swift */; };
+		C2C57F3C28C05F21006B76BF /* LockConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C57F3328C05F21006B76BF /* LockConfig.swift */; };
+		C2C57F3D28C05F21006B76BF /* ConnectLineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C57F3428C05F21006B76BF /* ConnectLineView.swift */; };
+		C2C57F3E28C05F21006B76BF /* GridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C57F3528C05F21006B76BF /* GridView.swift */; };
+		C2C57F3F28C05F21006B76BF /* ImageLineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C57F3628C05F21006B76BF /* ImageLineView.swift */; };
+		C2C57F4028C05F21006B76BF /* RotateImageGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C57F3728C05F21006B76BF /* RotateImageGridView.swift */; };
+		C2C57F4128C05F21006B76BF /* ShadowGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C57F3828C05F21006B76BF /* ShadowGridView.swift */; };
+		C2C57F4228C05F21006B76BF /* ImageGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C57F3928C05F21006B76BF /* ImageGridView.swift */; };
+		C2C57F4328C05F21006B76BF /* PatternLockPathView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C57F3A28C05F21006B76BF /* PatternLockPathView.swift */; };
+		C2C57F4628C05FA2006B76BF /* LockViewConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C57F4528C05FA2006B76BF /* LockViewConfig.swift */; };
+		C2C57F4928C0617B006B76BF /* YCPatternLockVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C57F4828C0617B006B76BF /* YCPatternLockVC.swift */; };
+		C2C57F4D28C085A7006B76BF /* MBProgressHUD+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = C2C57F4B28C085A7006B76BF /* MBProgressHUD+Category.m */; };
 		C2CDC3BC28B31EF7008D72CD /* YCBaseWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2CDC3BB28B31EF7008D72CD /* YCBaseWebViewController.swift */; };
 		C2D23B3828ADDFE2007C149B /* DictionaryExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2D23B2728ADDFE2007C149B /* DictionaryExtension.swift */; };
 		C2D23B3B28ADDFE2007C149B /* WindowExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2D23B2A28ADDFE2007C149B /* WindowExtension.swift */; };
@@ -132,6 +145,20 @@
 		C2B1666D28AB9274004C7084 /* swiftTest2UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = swiftTest2UITests.swift; sourceTree = "<group>"; };
 		C2B1666F28AB9274004C7084 /* swiftTest2UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = swiftTest2UITestsLaunchTests.swift; sourceTree = "<group>"; };
 		C2C57F2C28BF3B3E006B76BF /* YCCircleProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YCCircleProgressView.swift; sourceTree = "<group>"; };
+		C2C57F2E28C04539006B76BF /* NSDecimalNumber+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSDecimalNumber+Extension.swift"; sourceTree = "<group>"; };
+		C2C57F3228C05F21006B76BF /* PatternLockView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PatternLockView.swift; sourceTree = "<group>"; };
+		C2C57F3328C05F21006B76BF /* LockConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LockConfig.swift; sourceTree = "<group>"; };
+		C2C57F3428C05F21006B76BF /* ConnectLineView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectLineView.swift; sourceTree = "<group>"; };
+		C2C57F3528C05F21006B76BF /* GridView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GridView.swift; sourceTree = "<group>"; };
+		C2C57F3628C05F21006B76BF /* ImageLineView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageLineView.swift; sourceTree = "<group>"; };
+		C2C57F3728C05F21006B76BF /* RotateImageGridView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RotateImageGridView.swift; sourceTree = "<group>"; };
+		C2C57F3828C05F21006B76BF /* ShadowGridView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShadowGridView.swift; sourceTree = "<group>"; };
+		C2C57F3928C05F21006B76BF /* ImageGridView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageGridView.swift; sourceTree = "<group>"; };
+		C2C57F3A28C05F21006B76BF /* PatternLockPathView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PatternLockPathView.swift; sourceTree = "<group>"; };
+		C2C57F4528C05FA2006B76BF /* LockViewConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LockViewConfig.swift; sourceTree = "<group>"; };
+		C2C57F4828C0617B006B76BF /* YCPatternLockVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YCPatternLockVC.swift; sourceTree = "<group>"; };
+		C2C57F4B28C085A7006B76BF /* MBProgressHUD+Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+Category.m"; sourceTree = "<group>"; };
+		C2C57F4C28C085A7006B76BF /* MBProgressHUD+Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+Category.h"; sourceTree = "<group>"; };
 		C2CDC3BB28B31EF7008D72CD /* YCBaseWebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YCBaseWebViewController.swift; sourceTree = "<group>"; };
 		C2D23B2628ADD218007C149B /* swiftTest2-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "swiftTest2-Bridging-Header.h"; sourceTree = "<group>"; };
 		C2D23B2728ADDFE2007C149B /* DictionaryExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DictionaryExtension.swift; sourceTree = "<group>"; };
@@ -270,6 +297,7 @@
 				C2D23B2A28ADDFE2007C149B /* WindowExtension.swift */,
 				C25BF04E28ACD1AD003E9836 /* UIColorExtension.swift */,
 				C2A558E228BCB9EE005D3DC7 /* UITableView+Extension.swift */,
+				C2C57F2E28C04539006B76BF /* NSDecimalNumber+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -315,6 +343,7 @@
 				C25BF04228ACCF8E003E9836 /* Login */,
 				C25BF04428ACCF8E003E9836 /* Message */,
 				C25BF04328ACCF8E003E9836 /* Mine */,
+				C2C57F4728C0614D006B76BF /* Setting */,
 			);
 			path = Class;
 			sourceTree = "<group>";
@@ -416,9 +445,59 @@
 			path = YCCircleProgressView;
 			sourceTree = "<group>";
 		};
+		C2C57F3028C05F21006B76BF /* PatternLock(手势密码) */ = {
+			isa = PBXGroup;
+			children = (
+				C2C57F3128C05F21006B76BF /* Core */,
+				C2C57F3628C05F21006B76BF /* ImageLineView.swift */,
+				C2C57F3728C05F21006B76BF /* RotateImageGridView.swift */,
+				C2C57F3828C05F21006B76BF /* ShadowGridView.swift */,
+				C2C57F3928C05F21006B76BF /* ImageGridView.swift */,
+				C2C57F3A28C05F21006B76BF /* PatternLockPathView.swift */,
+			);
+			path = "PatternLock(手势密码)";
+			sourceTree = "<group>";
+		};
+		C2C57F3128C05F21006B76BF /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				C2C57F3228C05F21006B76BF /* PatternLockView.swift */,
+				C2C57F3328C05F21006B76BF /* LockConfig.swift */,
+				C2C57F3428C05F21006B76BF /* ConnectLineView.swift */,
+				C2C57F3528C05F21006B76BF /* GridView.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		C2C57F4428C05F62006B76BF /* Configs */ = {
+			isa = PBXGroup;
+			children = (
+				C2C57F4528C05FA2006B76BF /* LockViewConfig.swift */,
+			);
+			path = Configs;
+			sourceTree = "<group>";
+		};
+		C2C57F4728C0614D006B76BF /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+				C2C57F4828C0617B006B76BF /* YCPatternLockVC.swift */,
+			);
+			path = Setting;
+			sourceTree = "<group>";
+		};
+		C2C57F4A28C085A7006B76BF /* MBProgress */ = {
+			isa = PBXGroup;
+			children = (
+				C2C57F4C28C085A7006B76BF /* MBProgressHUD+Category.h */,
+				C2C57F4B28C085A7006B76BF /* MBProgressHUD+Category.m */,
+			);
+			path = MBProgress;
+			sourceTree = "<group>";
+		};
 		C2CDC3C628B4687E008D72CD /* Tool */ = {
 			isa = PBXGroup;
 			children = (
+				C2C57F4428C05F62006B76BF /* Configs */,
 			);
 			path = Tool;
 			sourceTree = "<group>";
@@ -426,6 +505,8 @@
 		C2D23B4928ADEA1C007C149B /* ThirdParty */ = {
 			isa = PBXGroup;
 			children = (
+				C2C57F4A28C085A7006B76BF /* MBProgress */,
+				C2C57F3028C05F21006B76BF /* PatternLock(手势密码) */,
 				C2D23B4A28ADEA1C007C149B /* CycleView(轮播图) */,
 			);
 			path = ThirdParty;
@@ -756,18 +837,29 @@
 				C2D23B4F28ADEA1C007C149B /* ZCycleLayout.swift in Sources */,
 				C2A558E328BCB9EE005D3DC7 /* UITableView+Extension.swift in Sources */,
 				C2A558D928BC8AF6005D3DC7 /* MessageDailyListCell.swift in Sources */,
+				C2C57F3E28C05F21006B76BF /* GridView.swift in Sources */,
 				C2A558D128BC5689005D3DC7 /* MoyaConfig.swift in Sources */,
 				C2D23B4128ADDFE2007C149B /* DispatchQueueExtension.swift in Sources */,
+				C2C57F4228C05F21006B76BF /* ImageGridView.swift in Sources */,
 				C2A558DD28BCA1A8005D3DC7 /* MessageNewsListVC.swift in Sources */,
 				C2A558D728BC6686005D3DC7 /* MessageTestModel.swift in Sources */,
 				C2D23B4428ADDFE2007C149B /* ButtonExtension.swift in Sources */,
 				C2A558E928BDB6BA005D3DC7 /* MessageNewsDetailVC.swift in Sources */,
+				C2C57F3C28C05F21006B76BF /* LockConfig.swift in Sources */,
 				C25BF05428ACEE14003E9836 /* UtilNoticeHeader.swift in Sources */,
 				C25BF05228ACD76E003E9836 /* UtilTextHeader.swift in Sources */,
+				C2C57F2F28C04539006B76BF /* NSDecimalNumber+Extension.swift in Sources */,
+				C2C57F4D28C085A7006B76BF /* MBProgressHUD+Category.m in Sources */,
+				C2C57F4328C05F21006B76BF /* PatternLockPathView.swift in Sources */,
 				C292F85728AC8082001B1984 /* YCTabbarViewController.swift in Sources */,
+				C2C57F4628C05FA2006B76BF /* LockViewConfig.swift in Sources */,
 				C2D23B5C28AE436C007C149B /* HomeTestModel.swift in Sources */,
+				C2C57F3B28C05F21006B76BF /* PatternLockView.swift in Sources */,
+				C2C57F4928C0617B006B76BF /* YCPatternLockVC.swift in Sources */,
 				C2D23B4828ADDFE2007C149B /* UIImageExtensions.swift in Sources */,
+				C2C57F3D28C05F21006B76BF /* ConnectLineView.swift in Sources */,
 				C2D23B5028ADEA1C007C149B /* ZPageControl.swift in Sources */,
+				C2C57F3F28C05F21006B76BF /* ImageLineView.swift in Sources */,
 				C25BF04F28ACD1AD003E9836 /* UIColorExtension.swift in Sources */,
 				C2B1664D28AB9273004C7084 /* AppDelegate.swift in Sources */,
 				C2D23B5728AE14A8007C149B /* MessageListTVCell.swift in Sources */,
@@ -776,6 +868,8 @@
 				C2CDC3BC28B31EF7008D72CD /* YCBaseWebViewController.swift in Sources */,
 				C292F86428AC875A001B1984 /* YCNavigationController.swift in Sources */,
 				C2A558E528BDA172005D3DC7 /* MessageNewsListCell.swift in Sources */,
+				C2C57F4028C05F21006B76BF /* RotateImageGridView.swift in Sources */,
+				C2C57F4128C05F21006B76BF /* ShadowGridView.swift in Sources */,
 				C2A558F328BE13B6005D3DC7 /* MessageLottiePageVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
