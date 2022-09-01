@@ -58,6 +58,22 @@
 		C2C57F4628C05FA2006B76BF /* LockViewConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C57F4528C05FA2006B76BF /* LockViewConfig.swift */; };
 		C2C57F4928C0617B006B76BF /* YCPatternLockVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C57F4828C0617B006B76BF /* YCPatternLockVC.swift */; };
 		C2C57F4D28C085A7006B76BF /* MBProgressHUD+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = C2C57F4B28C085A7006B76BF /* MBProgressHUD+Category.m */; };
+		C2C57F6128C09179006B76BF /* SPAlertAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C57F5128C09179006B76BF /* SPAlertAnimation.swift */; };
+		C2C57F6228C09179006B76BF /* SPAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C57F5228C09179006B76BF /* SPAlertController.swift */; };
+		C2C57F6328C09179006B76BF /* SPAlertController+transitionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C57F5328C09179006B76BF /* SPAlertController+transitionDelegate.swift */; };
+		C2C57F6428C09179006B76BF /* SPInteractiveTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C57F5428C09179006B76BF /* SPInteractiveTransition.swift */; };
+		C2C57F6528C09179006B76BF /* SPAlertPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C57F5528C09179006B76BF /* SPAlertPresentationController.swift */; };
+		C2C57F6628C09179006B76BF /* SPInterfaceHeaderScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C57F5628C09179006B76BF /* SPInterfaceHeaderScrollView.swift */; };
+		C2C57F6728C09179006B76BF /* SPInterfaceActionSequenceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C57F5728C09179006B76BF /* SPInterfaceActionSequenceView.swift */; };
+		C2C57F6828C09179006B76BF /* SPAlertControllerActionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C57F5828C09179006B76BF /* SPAlertControllerActionView.swift */; };
+		C2C57F6928C09179006B76BF /* SPAlertController+Public.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C57F5928C09179006B76BF /* SPAlertController+Public.swift */; };
+		C2C57F6A28C09179006B76BF /* SPInterfaceActionItemSeparatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C57F5B28C09179006B76BF /* SPInterfaceActionItemSeparatorView.swift */; };
+		C2C57F6B28C09179006B76BF /* SPAlertAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C57F5C28C09179006B76BF /* SPAlertAction.swift */; };
+		C2C57F6C28C09179006B76BF /* SPConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C57F5D28C09179006B76BF /* SPConstant.swift */; };
+		C2C57F6E28C09179006B76BF /* SPAlertControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C57F5F28C09179006B76BF /* SPAlertControllerDelegate.swift */; };
+		C2C57F6F28C09179006B76BF /* SPOverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C57F6028C09179006B76BF /* SPOverlayView.swift */; };
+		C2C57F7A28C0996D006B76BF /* SwiftyStarRatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C57F7828C0996D006B76BF /* SwiftyStarRatingView.swift */; };
+		C2C57F7B28C0996D006B76BF /* ScoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C57F7928C0996D006B76BF /* ScoreView.swift */; };
 		C2CDC3BC28B31EF7008D72CD /* YCBaseWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2CDC3BB28B31EF7008D72CD /* YCBaseWebViewController.swift */; };
 		C2D23B3828ADDFE2007C149B /* DictionaryExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2D23B2728ADDFE2007C149B /* DictionaryExtension.swift */; };
 		C2D23B3B28ADDFE2007C149B /* WindowExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2D23B2A28ADDFE2007C149B /* WindowExtension.swift */; };
@@ -159,6 +175,23 @@
 		C2C57F4828C0617B006B76BF /* YCPatternLockVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YCPatternLockVC.swift; sourceTree = "<group>"; };
 		C2C57F4B28C085A7006B76BF /* MBProgressHUD+Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+Category.m"; sourceTree = "<group>"; };
 		C2C57F4C28C085A7006B76BF /* MBProgressHUD+Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+Category.h"; sourceTree = "<group>"; };
+		C2C57F5128C09179006B76BF /* SPAlertAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPAlertAnimation.swift; sourceTree = "<group>"; };
+		C2C57F5228C09179006B76BF /* SPAlertController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPAlertController.swift; sourceTree = "<group>"; };
+		C2C57F5328C09179006B76BF /* SPAlertController+transitionDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SPAlertController+transitionDelegate.swift"; sourceTree = "<group>"; };
+		C2C57F5428C09179006B76BF /* SPInteractiveTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPInteractiveTransition.swift; sourceTree = "<group>"; };
+		C2C57F5528C09179006B76BF /* SPAlertPresentationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPAlertPresentationController.swift; sourceTree = "<group>"; };
+		C2C57F5628C09179006B76BF /* SPInterfaceHeaderScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPInterfaceHeaderScrollView.swift; sourceTree = "<group>"; };
+		C2C57F5728C09179006B76BF /* SPInterfaceActionSequenceView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPInterfaceActionSequenceView.swift; sourceTree = "<group>"; };
+		C2C57F5828C09179006B76BF /* SPAlertControllerActionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPAlertControllerActionView.swift; sourceTree = "<group>"; };
+		C2C57F5928C09179006B76BF /* SPAlertController+Public.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SPAlertController+Public.swift"; sourceTree = "<group>"; };
+		C2C57F5A28C09179006B76BF /* SPAlertController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPAlertController.h; sourceTree = "<group>"; };
+		C2C57F5B28C09179006B76BF /* SPInterfaceActionItemSeparatorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPInterfaceActionItemSeparatorView.swift; sourceTree = "<group>"; };
+		C2C57F5C28C09179006B76BF /* SPAlertAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPAlertAction.swift; sourceTree = "<group>"; };
+		C2C57F5D28C09179006B76BF /* SPConstant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPConstant.swift; sourceTree = "<group>"; };
+		C2C57F5F28C09179006B76BF /* SPAlertControllerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPAlertControllerDelegate.swift; sourceTree = "<group>"; };
+		C2C57F6028C09179006B76BF /* SPOverlayView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPOverlayView.swift; sourceTree = "<group>"; };
+		C2C57F7828C0996D006B76BF /* SwiftyStarRatingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyStarRatingView.swift; sourceTree = "<group>"; };
+		C2C57F7928C0996D006B76BF /* ScoreView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScoreView.swift; sourceTree = "<group>"; };
 		C2CDC3BB28B31EF7008D72CD /* YCBaseWebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YCBaseWebViewController.swift; sourceTree = "<group>"; };
 		C2D23B2628ADD218007C149B /* swiftTest2-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "swiftTest2-Bridging-Header.h"; sourceTree = "<group>"; };
 		C2D23B2728ADDFE2007C149B /* DictionaryExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DictionaryExtension.swift; sourceTree = "<group>"; };
@@ -432,6 +465,7 @@
 		C2C57F2A28BF3B2C006B76BF /* Custom */ = {
 			isa = PBXGroup;
 			children = (
+				C2C57F7728C0996D006B76BF /* RateScoreView */,
 				C2C57F2B28BF3B2C006B76BF /* YCCircleProgressView */,
 			);
 			path = Custom;
@@ -494,6 +528,37 @@
 			path = MBProgress;
 			sourceTree = "<group>";
 		};
+		C2C57F5028C09179006B76BF /* SPAlertController */ = {
+			isa = PBXGroup;
+			children = (
+				C2C57F5128C09179006B76BF /* SPAlertAnimation.swift */,
+				C2C57F5228C09179006B76BF /* SPAlertController.swift */,
+				C2C57F5328C09179006B76BF /* SPAlertController+transitionDelegate.swift */,
+				C2C57F5428C09179006B76BF /* SPInteractiveTransition.swift */,
+				C2C57F5528C09179006B76BF /* SPAlertPresentationController.swift */,
+				C2C57F5628C09179006B76BF /* SPInterfaceHeaderScrollView.swift */,
+				C2C57F5728C09179006B76BF /* SPInterfaceActionSequenceView.swift */,
+				C2C57F5828C09179006B76BF /* SPAlertControllerActionView.swift */,
+				C2C57F5928C09179006B76BF /* SPAlertController+Public.swift */,
+				C2C57F5A28C09179006B76BF /* SPAlertController.h */,
+				C2C57F5B28C09179006B76BF /* SPInterfaceActionItemSeparatorView.swift */,
+				C2C57F5C28C09179006B76BF /* SPAlertAction.swift */,
+				C2C57F5D28C09179006B76BF /* SPConstant.swift */,
+				C2C57F5F28C09179006B76BF /* SPAlertControllerDelegate.swift */,
+				C2C57F6028C09179006B76BF /* SPOverlayView.swift */,
+			);
+			path = SPAlertController;
+			sourceTree = "<group>";
+		};
+		C2C57F7728C0996D006B76BF /* RateScoreView */ = {
+			isa = PBXGroup;
+			children = (
+				C2C57F7828C0996D006B76BF /* SwiftyStarRatingView.swift */,
+				C2C57F7928C0996D006B76BF /* ScoreView.swift */,
+			);
+			path = RateScoreView;
+			sourceTree = "<group>";
+		};
 		C2CDC3C628B4687E008D72CD /* Tool */ = {
 			isa = PBXGroup;
 			children = (
@@ -505,6 +570,7 @@
 		C2D23B4928ADEA1C007C149B /* ThirdParty */ = {
 			isa = PBXGroup;
 			children = (
+				C2C57F5028C09179006B76BF /* SPAlertController */,
 				C2C57F4A28C085A7006B76BF /* MBProgress */,
 				C2C57F3028C05F21006B76BF /* PatternLock(手势密码) */,
 				C2D23B4A28ADEA1C007C149B /* CycleView(轮播图) */,
@@ -811,6 +877,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				C292F85528AC7D2D001B1984 /* SwiftHeader.swift in Sources */,
+				C2C57F6628C09179006B76BF /* SPInterfaceHeaderScrollView.swift in Sources */,
+				C2C57F6C28C09179006B76BF /* SPConstant.swift in Sources */,
 				C2D23B5428ADEE32007C149B /* HomeCycleCollectionCell.swift in Sources */,
 				C2D23B6728AF7607007C149B /* MessageDetailPageVC.swift in Sources */,
 				C2C57F2D28BF3B3E006B76BF /* YCCircleProgressView.swift in Sources */,
@@ -824,6 +892,7 @@
 				C2D23B5A28AE2A37007C149B /* HomeAppListApi.swift in Sources */,
 				C2D23B3B28ADDFE2007C149B /* WindowExtension.swift in Sources */,
 				C2D23B3828ADDFE2007C149B /* DictionaryExtension.swift in Sources */,
+				C2C57F6E28C09179006B76BF /* SPAlertControllerDelegate.swift in Sources */,
 				C25BF04628ACCFAC003E9836 /* HomePageViewController.swift in Sources */,
 				C2D23B3C28ADDFE2007C149B /* StringExtension.swift in Sources */,
 				C2A558DB28BC979E005D3DC7 /* MessageNewsPageVC.swift in Sources */,
@@ -840,36 +909,49 @@
 				C2C57F3E28C05F21006B76BF /* GridView.swift in Sources */,
 				C2A558D128BC5689005D3DC7 /* MoyaConfig.swift in Sources */,
 				C2D23B4128ADDFE2007C149B /* DispatchQueueExtension.swift in Sources */,
+				C2C57F6828C09179006B76BF /* SPAlertControllerActionView.swift in Sources */,
+				C2C57F6128C09179006B76BF /* SPAlertAnimation.swift in Sources */,
 				C2C57F4228C05F21006B76BF /* ImageGridView.swift in Sources */,
 				C2A558DD28BCA1A8005D3DC7 /* MessageNewsListVC.swift in Sources */,
 				C2A558D728BC6686005D3DC7 /* MessageTestModel.swift in Sources */,
+				C2C57F6328C09179006B76BF /* SPAlertController+transitionDelegate.swift in Sources */,
+				C2C57F6B28C09179006B76BF /* SPAlertAction.swift in Sources */,
 				C2D23B4428ADDFE2007C149B /* ButtonExtension.swift in Sources */,
 				C2A558E928BDB6BA005D3DC7 /* MessageNewsDetailVC.swift in Sources */,
 				C2C57F3C28C05F21006B76BF /* LockConfig.swift in Sources */,
 				C25BF05428ACEE14003E9836 /* UtilNoticeHeader.swift in Sources */,
 				C25BF05228ACD76E003E9836 /* UtilTextHeader.swift in Sources */,
+				C2C57F6728C09179006B76BF /* SPInterfaceActionSequenceView.swift in Sources */,
 				C2C57F2F28C04539006B76BF /* NSDecimalNumber+Extension.swift in Sources */,
 				C2C57F4D28C085A7006B76BF /* MBProgressHUD+Category.m in Sources */,
 				C2C57F4328C05F21006B76BF /* PatternLockPathView.swift in Sources */,
 				C292F85728AC8082001B1984 /* YCTabbarViewController.swift in Sources */,
 				C2C57F4628C05FA2006B76BF /* LockViewConfig.swift in Sources */,
+				C2C57F6428C09179006B76BF /* SPInteractiveTransition.swift in Sources */,
 				C2D23B5C28AE436C007C149B /* HomeTestModel.swift in Sources */,
+				C2C57F6F28C09179006B76BF /* SPOverlayView.swift in Sources */,
 				C2C57F3B28C05F21006B76BF /* PatternLockView.swift in Sources */,
 				C2C57F4928C0617B006B76BF /* YCPatternLockVC.swift in Sources */,
 				C2D23B4828ADDFE2007C149B /* UIImageExtensions.swift in Sources */,
+				C2C57F6228C09179006B76BF /* SPAlertController.swift in Sources */,
+				C2C57F6928C09179006B76BF /* SPAlertController+Public.swift in Sources */,
 				C2C57F3D28C05F21006B76BF /* ConnectLineView.swift in Sources */,
 				C2D23B5028ADEA1C007C149B /* ZPageControl.swift in Sources */,
 				C2C57F3F28C05F21006B76BF /* ImageLineView.swift in Sources */,
 				C25BF04F28ACD1AD003E9836 /* UIColorExtension.swift in Sources */,
 				C2B1664D28AB9273004C7084 /* AppDelegate.swift in Sources */,
+				C2C57F7B28C0996D006B76BF /* ScoreView.swift in Sources */,
 				C2D23B5728AE14A8007C149B /* MessageListTVCell.swift in Sources */,
 				C2D23B4528ADDFE2007C149B /* FontExtension.swift in Sources */,
 				C2A558E728BDA2D3005D3DC7 /* NewsListModel.swift in Sources */,
+				C2C57F7A28C0996D006B76BF /* SwiftyStarRatingView.swift in Sources */,
+				C2C57F6A28C09179006B76BF /* SPInterfaceActionItemSeparatorView.swift in Sources */,
 				C2CDC3BC28B31EF7008D72CD /* YCBaseWebViewController.swift in Sources */,
 				C292F86428AC875A001B1984 /* YCNavigationController.swift in Sources */,
 				C2A558E528BDA172005D3DC7 /* MessageNewsListCell.swift in Sources */,
 				C2C57F4028C05F21006B76BF /* RotateImageGridView.swift in Sources */,
 				C2C57F4128C05F21006B76BF /* ShadowGridView.swift in Sources */,
+				C2C57F6528C09179006B76BF /* SPAlertPresentationController.swift in Sources */,
 				C2A558F328BE13B6005D3DC7 /* MessageLottiePageVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

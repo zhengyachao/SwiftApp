@@ -117,10 +117,28 @@ extension MessagePageViewController : UITableViewDelegate,UITableViewDataSource 
         case 2:
             let lottieVC = MessageLottiePageVC()
             self.navigationController?.pushViewController(lottieVC, animated: true)
+        case 3:
+            self.showRateView()
         default: break
             
         }
+    }
+    
+    func showRateView () {
+        // scoreview的子控件采用的是自动布局，由于高度上能够由子控件撑起来，所以高度可以给0，如果宽度也能撑起，宽度也可以给0
+        let scoreView = ScoreView.init(frame: CGRect.init(x: 0, y: 0, width: 275, height: 0))
+        scoreView.backgroundColor = .white
+        scoreView.submitClickedClosure = { [weak self] in
+            self?.presentedViewController?.dismiss(animated: true, completion: nil)
+        }
         
+        scoreView.cancelClickedClosure = { [weak self] in
+            self?.presentedViewController?.dismiss(animated: true, completion: nil)
+        }
         
+        let alertController = SPAlertController.alertController(withCustomActionSequenceView: scoreView, title: "提示", message: "请给我们的app打分", preferredStyle: .alert, animationType: .default)
+        alertController.image = UIImage.init(named: "empty")
+
+        self.present(alertController, animated: true, completion: nil)
     }
 }
