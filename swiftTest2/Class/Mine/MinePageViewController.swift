@@ -43,7 +43,7 @@ class MinePageViewController: UIViewController {
     
     @objc func onClickLogoutBtn () {
         // 退出登录通知
-        kNotificationCenter.post(name: NSNotification.Name(kLogoutSuccessNotice), object: nil)
+        kNotificationCenter.post(name:.kLogoutSuccessNotice, object: nil)
     }
 }
 

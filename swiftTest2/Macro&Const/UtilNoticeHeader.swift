@@ -6,7 +6,14 @@
 //
 
 import Foundation
+/*
+ 可以注意到，Swift中通知中心NotificationCenter不带NS前缀，
+ 通知名由字符串变成了NSNotification.Name的结构体。
+ */
 //Mark ---- 通知名称统一处理
-let kLoginSuccessNotice  = "kLoginSuccessNotice"   // 登录成功通知
-let kLogoutSuccessNotice = "kLogoutSuccessNotice"  // 退出登录成功通知
+extension NSNotification.Name {
+    static let kLoginSuccessNotice  = NSNotification.Name("kLoginSuccessNotice")    // 登录成功通知
+    static let kLogoutSuccessNotice = NSNotification.Name("kLogoutSuccessNotice")   // 登录成功通知
+
+}
 

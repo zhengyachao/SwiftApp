@@ -29,8 +29,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         IQKeyboardManager.shared.enable = true
 
         // MARK -- 添加通知方法
-        kNotificationCenter.addObserver(self, selector: #selector(onLoginSuccessNotify(_:)), name: NSNotification.Name(kLoginSuccessNotice), object: nil)
-        kNotificationCenter.addObserver(self, selector: #selector(onLogoutSuccessNotify), name: NSNotification.Name(kLogoutSuccessNotice), object: nil)
+        kNotificationCenter.addObserver(self, selector: #selector(onLoginSuccessNotify(_:)), name: .kLoginSuccessNotice, object: nil)
+        kNotificationCenter.addObserver(self, selector: #selector(onLogoutSuccessNotify), name: .kLogoutSuccessNotice, object: nil)
         
         //保存打印日志到沙盒
 //        redirectNSlogToDocumentFolder()

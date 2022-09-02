@@ -24,6 +24,8 @@ class MessageListTVCell: UITableViewCell {
     
     // 图片
     lazy var bgImageView = UIImageView(frame: CGRect.zero)
+    // num
+    lazy var numLabel = UILabel(frame: .zero)
     // 标题
     lazy var titleLabel  = UILabel(frame: CGRect.zero)
     // 详情
@@ -68,6 +70,7 @@ class MessageListTVCell: UITableViewCell {
     
     func setUpCellUI () {
         contentView.addSubview(bgImageView)
+        bgImageView.addSubview(numLabel)
         contentView.addSubview(titleLabel)
         contentView.addSubview(detailLabel)
         contentView.addSubview(timeLabel)
@@ -82,6 +85,14 @@ class MessageListTVCell: UITableViewCell {
             make.left.equalTo(10)
             make.width.height.equalTo(50)
             make.centerY.equalTo(contentView.snp_centerY)
+        }
+        
+        numLabel.textAlignment = .center
+        numLabel.textColor = .white
+        numLabel.font = UIFont.systemFont(ofSize: 14.0)
+        numLabel.snp.makeConstraints { make in
+            make.centerX.centerY.equalTo(bgImageView)
+            make.width.height.equalTo(50)
         }
         
         titleLabel.snp.makeConstraints { make in

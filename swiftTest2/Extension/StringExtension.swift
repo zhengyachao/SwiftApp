@@ -57,7 +57,7 @@ extension String {
         return UIDevice.current.systemVersion
     }
     //MARK -- 获取UUID
-    public func lh_UUIDString() -> String {
+    public static func lh_UUIDString() -> String {
         
         return UIDevice.current.identifierForVendor!.uuidString
     }

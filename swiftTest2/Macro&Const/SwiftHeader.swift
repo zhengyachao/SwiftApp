@@ -23,6 +23,7 @@ let keyWindow     = UIApplication.shared.delegate!.window
 let kUserDefaults = UserDefaults.standard
 let kNotificationCenter = NotificationCenter.default
 let kAppDelegate  = UIApplication.shared.delegate as! AppDelegate
+let kFileManager  = FileManager.default
 
 //MRAK:是否是刘海屏
 var kDevice_Is_iPhoneX : Bool {

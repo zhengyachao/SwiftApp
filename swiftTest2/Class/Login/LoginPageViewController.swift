@@ -116,7 +116,7 @@ class LoginPageViewController: UIViewController, UITextFieldDelegate {
         DispatchQueue.main.asyncAfter(deadline: .now() + 2.0, execute: {
             
             // 登录成功通知
-            kNotificationCenter.post(name: NSNotification.Name(kLoginSuccessNotice), object: nil)
+            kNotificationCenter.post(name: .kLoginSuccessNotice, object: nil)
             MBProgressHUD.hide(for: self.view, animated: true)
         })
         

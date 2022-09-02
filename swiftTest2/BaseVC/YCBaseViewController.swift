@@ -8,6 +8,16 @@
 import UIKit
 
 class YCBaseViewController: UIViewController {
+    
+    lazy var backBtn: UIButton = {
+        let backBtn = UIButton.init(frame: CGRect.init(x: 0, y: 0, width: 40, height: 40))
+        backBtn.setImage(UIImage(named: "common_back_btn"), for: .normal)
+        backBtn.setImage(UIImage(named: "common_back_btn"), for: .highlighted)
+        backBtn.setTitle("返回", for: .normal)
+        backBtn.titleLabel?.font = UIFont.systemFont(ofSize: 16.0)
+        backBtn.addTarget(self, action: #selector(onClickBackBtn(_:)), for: .touchUpInside)
+        return backBtn
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,14 +29,7 @@ class YCBaseViewController: UIViewController {
     //MARK: 统一设置二级以上页的返回按钮
     func setupBackBtn () {
         
-        let backBtn = UIButton.init(frame: CGRect.init(x: 0, y: 0, width: 40, height: 40))
-        backBtn.setImage(UIImage(named: "common_back_btn"), for: .normal)
-        backBtn.setImage(UIImage(named: "common_back_btn"), for: .highlighted)
-        backBtn.setTitle("返回", for: .normal)
-        backBtn.titleLabel?.font = UIFont.systemFont(ofSize: 16.0)
-        backBtn.addTarget(self, action: #selector(onClickBackBtn(_:)), for: .touchUpInside)
-        
-        let backItem = UIBarButtonItem.init(customView: backBtn)
+        let backItem = UIBarButtonItem.init(customView: self.backBtn)
         
         self.navigationItem.leftBarButtonItem = backItem
     }

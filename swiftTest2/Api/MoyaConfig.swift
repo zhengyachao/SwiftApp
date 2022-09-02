@@ -20,3 +20,5 @@ let kNewsTypes   = "news/types"   // 获取所有新闻类型列表
 let kNewsList    = "news/list"    // 根据新闻类型获取新闻列表
 let kNewsDetails = "news/details" // 根据新闻id获取新闻详情
 
+//MARK -- 获取福利图片列表
+let kGirlList = "image/girl/list/random"

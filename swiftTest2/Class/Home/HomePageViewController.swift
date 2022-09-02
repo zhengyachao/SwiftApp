@@ -70,7 +70,7 @@ class HomePageViewController: UIViewController {
         // 使用拓展UIBarButtonItem创建导航右侧按钮
         let rightItem = UIBarButtonItem.init(title: "设置", titleColor: UIColor.white, titleFont: UIFont.systemFont(ofSize: 16.0), titleEdgeInsets: UIEdgeInsets.zero, target: self, action: #selector(onClickSettingBtn))
         self.navigationItem.rightBarButtonItem = rightItem
-        
+
 //        view.addSubview(topCycleView)
 //        view.addSubview(collectionView)
 //        topCycleView.snp.makeConstraints { make in

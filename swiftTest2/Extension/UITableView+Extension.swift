@@ -14,6 +14,7 @@ extension UITableView {
     /// tableView 在 iOS 11 上的适配
     func tableViewNeverAdjustContentInset() {
         if #available(iOS 11, *) {
+            self.estimatedRowHeight = 0
             self.estimatedSectionFooterHeight = 0
             self.estimatedSectionHeaderHeight = 0
             self.contentInsetAdjustmentBehavior = .never

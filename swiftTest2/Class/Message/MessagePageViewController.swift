@@ -8,7 +8,7 @@
 import UIKit
 
 class MessagePageViewController: UIViewController {
-
+    
     var dataArray = ["1"]
     var isUpdate = false
     
@@ -73,6 +73,8 @@ extension MessagePageViewController : UITableViewDelegate,UITableViewDataSource 
         
         listCell?.configMessageListTVCellModel(self.isUpdate)
         
+        listCell?.numLabel.text = String(indexPath.row)
+        
         listCell?.tapBlock = { [weak self] isUpdated in
 
             self?.isUpdate = isUpdated
@@ -119,8 +121,36 @@ extension MessagePageViewController : UITableViewDelegate,UITableViewDataSource 
             self.navigationController?.pushViewController(lottieVC, animated: true)
         case 3:
             self.showRateView()
+        case 4:
+            self.showRateStarView()
+        case 5:
+            let dataVC = MessageDataViewController()
+            self.navigationController?.pushViewController(dataVC, animated: true)
+        case 6:
+            let fileVC = MessageFileManagerVC()
+            self.navigationController?.pushViewController(fileVC, animated: true)
+        case 7:
+            let imageVC = MessageImageListVC()
+            self.navigationController?.pushViewController(imageVC, animated: true)
         default: break
             
+        }
+    }
+    
+    func showRateStarView() {
+//        let bgView = UIView()
+//        bgView.backgroundColor = .black.withAlphaComponent(0.5)
+//        let window = UIApplication.shared.delegate?.window
+//        window??.addSubview(bgView)
+//        bgView.snp.makeConstraints { make in
+//            make.edges.equalTo(window!!)
+//        }
+
+        let rateView = BJRateStarView()
+        self.view.addSubview(rateView)
+        rateView.snp.makeConstraints { make in
+            make.centerX.centerY.equalTo(self.view)
+            make.width.height.equalTo(58+105+105)
         }
     }
     
@@ -138,7 +168,9 @@ extension MessagePageViewController : UITableViewDelegate,UITableViewDataSource 
         
         let alertController = SPAlertController.alertController(withCustomActionSequenceView: scoreView, title: "提示", message: "请给我们的app打分", preferredStyle: .alert, animationType: .default)
         alertController.image = UIImage.init(named: "empty")
-
+        
+        alertController.needDialogBlur = true
+        
         self.present(alertController, animated: true, completion: nil)
     }
 }
