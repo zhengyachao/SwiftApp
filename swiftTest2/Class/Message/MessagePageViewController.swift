@@ -132,6 +132,9 @@ extension MessagePageViewController : UITableViewDelegate,UITableViewDataSource 
         case 7:
             let imageVC = MessageImageListVC()
             self.navigationController?.pushViewController(imageVC, animated: true)
+        case 8:
+            let foodVC = MessageFoodPageVC()
+            self.navigationController?.pushViewController(foodVC, animated: true)
         default: break
             
         }

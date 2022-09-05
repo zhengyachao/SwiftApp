@@ -17,6 +17,8 @@ enum MessagePageApi {
     case getNewsList(typeId:String,page:Int)
     case getNewsDetails(newsId:String)
     case getGirlList(page: Int)
+    case getFoodHeatTypeList
+    case getFoodHeatFoodList(id:String,page:Int)
 }
 
 extension MessagePageApi: TargetType {
@@ -40,6 +42,10 @@ extension MessagePageApi: TargetType {
             return kNewsDetails
         case .getGirlList(_):
             return kGirlList
+        case .getFoodHeatTypeList:
+            return kFoodHeatTypeList
+        case.getFoodHeatFoodList(_):
+            return kFoodHeatFoodList
         }
     }
 
@@ -79,6 +85,18 @@ extension MessagePageApi: TargetType {
             return .requestParameters(parameters: parmeters, encoding: URLEncoding.default)
             
         case .getGirlList(let page):
+            parmeters["page"]       = page
+            parmeters["app_id"]     = kAppId
+            parmeters["app_secret"] = kAppSecret
+            return .requestParameters(parameters: parmeters, encoding: URLEncoding.default)
+            
+        case .getFoodHeatTypeList:
+            parmeters["app_id"]     = kAppId
+            parmeters["app_secret"] = kAppSecret
+            return .requestParameters(parameters: parmeters, encoding: URLEncoding.default)
+            
+        case .getFoodHeatFoodList(id: let id, page: let page):
+            parmeters["id"]         = id
             parmeters["page"]       = page
             parmeters["app_id"]     = kAppId
             parmeters["app_secret"] = kAppSecret

@@ -102,6 +102,11 @@
 		C2D23B5E28AE45A0007C149B /* YCBaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2D23B5D28AE45A0007C149B /* YCBaseModel.swift */; };
 		C2D23B6128AF6F41007C149B /* MineCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2D23B6028AF6F41007C149B /* MineCollectionViewCell.swift */; };
 		C2D23B6728AF7607007C149B /* MessageDetailPageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2D23B6628AF7607007C149B /* MessageDetailPageVC.swift */; };
+		C2FA386828C58E5000811A43 /* MessageFoodPageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2FA386728C58E5000811A43 /* MessageFoodPageVC.swift */; };
+		C2FA386B28C5915E00811A43 /* LeftTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2FA386928C5915E00811A43 /* LeftTableViewCell.swift */; };
+		C2FA386C28C5915E00811A43 /* RightTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2FA386A28C5915E00811A43 /* RightTableViewCell.swift */; };
+		C2FA386E28C593FF00811A43 /* FoodTypeListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2FA386D28C593FF00811A43 /* FoodTypeListModel.swift */; };
+		C2FA387028C5940F00811A43 /* FoodListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2FA386F28C5940F00811A43 /* FoodListModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -228,6 +233,11 @@
 		C2D23B5D28AE45A0007C149B /* YCBaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YCBaseModel.swift; sourceTree = "<group>"; };
 		C2D23B6028AF6F41007C149B /* MineCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MineCollectionViewCell.swift; sourceTree = "<group>"; };
 		C2D23B6628AF7607007C149B /* MessageDetailPageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageDetailPageVC.swift; sourceTree = "<group>"; };
+		C2FA386728C58E5000811A43 /* MessageFoodPageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageFoodPageVC.swift; sourceTree = "<group>"; };
+		C2FA386928C5915E00811A43 /* LeftTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeftTableViewCell.swift; sourceTree = "<group>"; };
+		C2FA386A28C5915E00811A43 /* RightTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RightTableViewCell.swift; sourceTree = "<group>"; };
+		C2FA386D28C593FF00811A43 /* FoodTypeListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodTypeListModel.swift; sourceTree = "<group>"; };
+		C2FA386F28C5940F00811A43 /* FoodListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodListModel.swift; sourceTree = "<group>"; };
 		D3FA13B3B777DCDF7C202157 /* Pods_swiftTest2.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_swiftTest2.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D59B5F94AD5566389FDEA433 /* Pods-swiftTest2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-swiftTest2.debug.xcconfig"; path = "Target Support Files/Pods-swiftTest2/Pods-swiftTest2.debug.xcconfig"; sourceTree = "<group>"; };
 		E370FEBBA6C4284F0F91CB94 /* Pods-swiftTest2.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-swiftTest2.release.xcconfig"; path = "Target Support Files/Pods-swiftTest2/Pods-swiftTest2.release.xcconfig"; sourceTree = "<group>"; };
@@ -329,6 +339,7 @@
 				C286617F28C1969100EAF1EE /* MessageDataViewController.swift */,
 				C286618128C1A83100EAF1EE /* MessageFileManagerVC.swift */,
 				C286618528C1DD5600EAF1EE /* MessageImageListVC.swift */,
+				C2FA386728C58E5000811A43 /* MessageFoodPageVC.swift */,
 			);
 			path = Message;
 			sourceTree = "<group>";
@@ -391,6 +402,8 @@
 				C2A558DE28BCA6E7005D3DC7 /* NewsTypesModel.swift */,
 				C2A558E628BDA2D3005D3DC7 /* NewsListModel.swift */,
 				C2A558EA28BDDBB7005D3DC7 /* NewsDetailModel.swift */,
+				C2FA386D28C593FF00811A43 /* FoodTypeListModel.swift */,
+				C2FA386F28C5940F00811A43 /* FoodListModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -638,6 +651,8 @@
 		C2D23B5528AE1490007C149B /* Message */ = {
 			isa = PBXGroup;
 			children = (
+				C2FA386928C5915E00811A43 /* LeftTableViewCell.swift */,
+				C2FA386A28C5915E00811A43 /* RightTableViewCell.swift */,
 				C2D23B5628AE14A8007C149B /* MessageListTVCell.swift */,
 				C2A558D828BC8AF6005D3DC7 /* MessageDailyListCell.swift */,
 				C2A558E428BDA172005D3DC7 /* MessageNewsListCell.swift */,
@@ -905,6 +920,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C2FA386B28C5915E00811A43 /* LeftTableViewCell.swift in Sources */,
 				C292F85528AC7D2D001B1984 /* SwiftHeader.swift in Sources */,
 				C2C57F6628C09179006B76BF /* SPInterfaceHeaderScrollView.swift in Sources */,
 				C2C57F6C28C09179006B76BF /* SPConstant.swift in Sources */,
@@ -914,6 +930,7 @@
 				C2C57F2D28BF3B3E006B76BF /* YCCircleProgressView.swift in Sources */,
 				C292F86228AC8734001B1984 /* YCBaseViewController.swift in Sources */,
 				C2D23B3D28ADDFE2007C149B /* UIBarButtonItemExtension.swift in Sources */,
+				C2FA386828C58E5000811A43 /* MessageFoodPageVC.swift in Sources */,
 				C2A558DF28BCA6E7005D3DC7 /* NewsTypesModel.swift in Sources */,
 				C25BF04828ACCFB5003E9836 /* MessagePageViewController.swift in Sources */,
 				C25BF04C28ACCFD3003E9836 /* LoginPageViewController.swift in Sources */,
@@ -932,6 +949,7 @@
 				C22158DF28B8B4C9001F8277 /* YCDeviceManager.swift in Sources */,
 				C2D23B3E28ADDFE2007C149B /* UIDeviceExtension.swift in Sources */,
 				C2D23B4E28ADEA1C007C149B /* ZCycleView.swift in Sources */,
+				C2FA387028C5940F00811A43 /* FoodListModel.swift in Sources */,
 				C2D23B6128AF6F41007C149B /* MineCollectionViewCell.swift in Sources */,
 				C2D23B4F28ADEA1C007C149B /* ZCycleLayout.swift in Sources */,
 				C2A558E328BCB9EE005D3DC7 /* UITableView+Extension.swift in Sources */,
@@ -968,12 +986,14 @@
 				C2C57F6928C09179006B76BF /* SPAlertController+Public.swift in Sources */,
 				C2C57F3D28C05F21006B76BF /* ConnectLineView.swift in Sources */,
 				C286618228C1A83100EAF1EE /* MessageFileManagerVC.swift in Sources */,
+				C2FA386E28C593FF00811A43 /* FoodTypeListModel.swift in Sources */,
 				C2D23B5028ADEA1C007C149B /* ZPageControl.swift in Sources */,
 				C2C57F3F28C05F21006B76BF /* ImageLineView.swift in Sources */,
 				C25BF04F28ACD1AD003E9836 /* UIColorExtension.swift in Sources */,
 				C2B1664D28AB9273004C7084 /* AppDelegate.swift in Sources */,
 				C2C57F7B28C0996D006B76BF /* ScoreView.swift in Sources */,
 				C2D23B5728AE14A8007C149B /* MessageListTVCell.swift in Sources */,
+				C2FA386C28C5915E00811A43 /* RightTableViewCell.swift in Sources */,
 				C2D23B4528ADDFE2007C149B /* FontExtension.swift in Sources */,
 				C2A558E728BDA2D3005D3DC7 /* NewsListModel.swift in Sources */,
 				C2C57F7A28C0996D006B76BF /* SwiftyStarRatingView.swift in Sources */,

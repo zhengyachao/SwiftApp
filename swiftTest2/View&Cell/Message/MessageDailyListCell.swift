@@ -50,6 +50,14 @@ class MessageDailyListCell: UITableViewCell {
             make.width.equalTo(kScreenWidth - 20)
             make.bottom.equalTo(contentView)
         }
+        // 毛玻璃 模糊效果
+        let blurEffect = UIBlurEffect(style: .light)
+        let blurView = UIVisualEffectView(effect: blurEffect)
+        bgView.addSubview(blurView)
+        blurView.snp.makeConstraints { make in
+            make.edges.equalTo(bgView)
+        }
+        bgView.insertSubview(blurView, at: 0)
     
         bgView.addSubview(contentLabel)
         bgView.addSubview(authorLabel)

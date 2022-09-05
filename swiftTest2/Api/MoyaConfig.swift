@@ -21,4 +21,8 @@ let kNewsList    = "news/list"    // 根据新闻类型获取新闻列表
 let kNewsDetails = "news/details" // 根据新闻id获取新闻详情
 
 //MARK -- 获取福利图片列表
-let kGirlList = "image/girl/list/random"
+let kGirlList    = "image/girl/list/random"
+
+//MARK -- 获取食物的分类列表
+let kFoodHeatTypeList = "food_heat/type/list" // 获取食物的分类列表
+let kFoodHeatFoodList = "food_heat/food/list" // 获取分类下的食物列表
