@@ -17,6 +17,14 @@ class MessageFoodPageVC: YCBaseViewController {
     lazy var rightListArray = Array<Any>()
     
     let group = DispatchGroup()
+    /*
+     label -> 队列名字
+     qos -> 优先级
+     attributes -> 属性列表，可以在这里设置同步异步（添加了 .concurrent 就是并发对列，否则就是穿行队列）
+     autoreleaseFrequency -> block 内制动释放的频率
+     target->想要 block 在哪个对列执行，默认是当前对列
+     */
+    let concurrentQueue = DispatchQueue(label: "testQueu", qos: .default, attributes: .concurrent, autoreleaseFrequency: .workItem, target: nil)
     
     //左侧表格
     lazy var leftTableView : UITableView = {
@@ -59,11 +67,39 @@ class MessageFoodPageVC: YCBaseViewController {
         }
         
         // 创建队列数据1 --- 信号量(DispatchSemaphore) + notify
-        createSequenceNetworking()
+         createSequenceNetworking()
         // 创建队列数据2 --- group.enter()&&group.leave() + notify
-        createGroupQueueNetworking()
+         createGroupQueueNetworking()
+        // 异步栅栏函数 + 自定义队列
+//         createAsyncBarrierAndConcurrentQueue()
+    }
+    //MARK: -- 异步栅栏函数 + 自定义队列(这里回调有问题)
+    func createAsyncBarrierAndConcurrentQueue () {
+        
+        concurrentQueue.sync { [weak self] in
+            
+            print("AAAAA----",Thread.current)
+            self?.requestFoodHeatTypeList()
+        }
+        /*
+         group -> 调度组
+         qos -> 优先级
+         flags -> 附加属性，可以在这里设置为栅栏函数
+         work -> block
+         */
+        concurrentQueue.sync(flags: .barrier) {
+            
+            print("BBBBB----",Thread.current)
+        }
+        
+        concurrentQueue.sync { [weak self] in
+            
+            print("CCCCC-----",Thread.current)
+            self?.requestFoodHeatFoodList()
+        }
     }
     
+    //MARK: -- group.enter()&&group.leave() + notify
     func createGroupQueueNetworking() {
         let queue = DispatchQueue(label: "MessageFoodPageQueue2", qos: .default, attributes: .concurrent)
         
@@ -99,10 +135,11 @@ class MessageFoodPageVC: YCBaseViewController {
     }
     //MARK: -- 获取食物的分类列表
     func requestFoodHeatTypeList () {
+        
         let sema = DispatchSemaphore(value: 0)
         group.enter()
         messageProvider.request(MessagePageApi.getFoodHeatTypeList) { [self] result in
-            
+            print("111111 ---",Thread.current)
             sema.signal()
             group.leave()
             self.leftListArray.removeAll()
@@ -132,8 +169,7 @@ class MessageFoodPageVC: YCBaseViewController {
                 } else {
                     MBProgressHUD.show(foodTypeListModel?.msg , object: self)
                 }
-                print("111111 ---",self.typeId)
-
+                
                 DispatchQueue.main.async { [weak self] in
                     self?.leftTableView.reloadData()
                 }
@@ -147,7 +183,6 @@ class MessageFoodPageVC: YCBaseViewController {
     }
     //MARK: -- 获取分类下的食物列表
     func requestFoodHeatFoodList () {
-        print("222222 --- ",self.typeId as Any)
         messageProvider.request(MessagePageApi.getFoodHeatFoodList(id: self.typeId, page: self.page)) { result in
             self.rightListArray.removeAll()
             switch result {
