@@ -105,8 +105,6 @@ extension MessagePageViewController : UITableViewDelegate,UITableViewDataSource 
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        
-        
         switch indexPath.row {
         case 0:
             let dailyVC = MessageDetailPageVC()
@@ -153,7 +151,7 @@ extension MessagePageViewController : UITableViewDelegate,UITableViewDataSource 
         self.view.addSubview(rateView)
         rateView.snp.makeConstraints { make in
             make.centerX.centerY.equalTo(self.view)
-            make.width.height.equalTo(58+105+105)
+            make.width.height.equalTo(58 + 105 + 105)
         }
     }
     

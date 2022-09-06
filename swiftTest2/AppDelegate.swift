@@ -37,7 +37,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         let uuid = YCDeviceManager.shared.getDeviceUUIDAndSaveUUIDToKeyChain()
         
-        print("uuid------",uuid)
+        MBProgressHUD.show("uuid---\(uuid)", object: self)
         
         return true
     }

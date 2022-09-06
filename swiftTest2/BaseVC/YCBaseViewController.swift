@@ -8,7 +8,7 @@
 import UIKit
 
 class YCBaseViewController: UIViewController {
-    
+    //MARK: -- 自定义返回按钮替换系统默认返回按钮
     lazy var backBtn: UIButton = {
         let backBtn = UIButton.init(frame: CGRect.init(x: 0, y: 0, width: 40, height: 40))
         backBtn.setImage(UIImage(named: "common_back_btn"), for: .normal)
@@ -22,19 +22,19 @@ class YCBaseViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .background
-        //
+        
+        // 设置返回按钮
         setupBackBtn()
     }
     
-    //MARK: 统一设置二级以上页的返回按钮
+    //MARK: -- 统一设置二级页面以上页的返回按钮
     func setupBackBtn () {
         
         let backItem = UIBarButtonItem.init(customView: self.backBtn)
-        
         self.navigationItem.leftBarButtonItem = backItem
     }
     
-    //MARK: 返回按钮点击方法 子类可重写
+    //MARK: -- 返回按钮点击方法 子类可重写
     @objc open func onClickBackBtn(_ btn:UIButton) {
         
         self.navigationController?.popViewController(animated: true)

@@ -71,7 +71,7 @@ class MessageFoodPageVC: YCBaseViewController {
         // 创建队列数据2 --- group.enter()&&group.leave() + notify
          createGroupQueueNetworking()
         // 异步栅栏函数 + 自定义队列
-//         createAsyncBarrierAndConcurrentQueue()
+        // createAsyncBarrierAndConcurrentQueue()
     }
     //MARK: -- 异步栅栏函数 + 自定义队列(这里回调有问题)
     func createAsyncBarrierAndConcurrentQueue () {
@@ -83,9 +83,9 @@ class MessageFoodPageVC: YCBaseViewController {
         }
         /*
          group -> 调度组
-         qos -> 优先级
+         qos   -> 优先级
          flags -> 附加属性，可以在这里设置为栅栏函数
-         work -> block
+         work  -> block
          */
         concurrentQueue.sync(flags: .barrier) {
             

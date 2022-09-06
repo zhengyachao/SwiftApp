@@ -33,6 +33,7 @@
         hud1.mode = MBProgressHUDModeText;
         hud1.removeFromSuperViewOnHide = YES;
         hud1.label.text = str;
+        hud1.label.numberOfLines = 0;
         hud1.offset = CGPointMake(0, -50);
         [hud1 hideAnimated:YES afterDelay:1.5];
     }
