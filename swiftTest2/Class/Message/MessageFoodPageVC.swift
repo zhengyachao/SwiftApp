@@ -154,7 +154,6 @@ class MessageFoodPageVC: YCBaseViewController {
                 if foodTypeListModel?.code == 1 {
                     let data = foodTypeListModel?.data ?? [TypeListModel]()
                     // print("data---",data as Any)
-                    
                     for (index, item) in data.enumerated() {
                         if index == 0 {
                             item.isSelected = true
