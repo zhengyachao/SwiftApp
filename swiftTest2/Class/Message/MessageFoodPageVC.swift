@@ -155,21 +155,28 @@ class MessageFoodPageVC: YCBaseViewController {
                     let data = foodTypeListModel?.data ?? [TypeListModel]()
                     // print("data---",data as Any)
                     for (index, item) in data.enumerated() {
+                        
                         if index == 0 {
+                            
                             item.isSelected = true
                             self.typeId = String(item.id)
                             self.typeName = item.name
+                            
                         } else {
+                            
                             item.isSelected = false
                         }
+                        
                         self.leftListArray.append(item)
                     }
                     
                 } else {
+                    
                     MBProgressHUD.show(foodTypeListModel?.msg , object: self)
                 }
                 
                 DispatchQueue.main.async { [weak self] in
+                    
                     self?.leftTableView.reloadData()
                 }
                 
