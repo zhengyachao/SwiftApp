@@ -10,6 +10,7 @@ import UIKit
 class MessageTestModel: YCBaseModel {
 
     var code : Int = 0
+    var msg  : String = ""
     var data : [Daily_wordModel]?
     
     required init() {

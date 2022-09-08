@@ -85,7 +85,7 @@ class MessageDailyListCell: UITableViewCell {
         
         self.contentLabel.text = listModel.content.isEmpty ? "暂无数据" :listModel.content
         
-        self.authorLabel.text = listModel.author.isEmpty ? "未知作者" :listModel.author
+        self.authorLabel.text = listModel.author.isEmpty ? "--" + "未知作者" : "--" + listModel.author
     }
     
     class func configMessageDailyListCellHeight (_ listModel:Daily_wordModel) -> CGFloat {

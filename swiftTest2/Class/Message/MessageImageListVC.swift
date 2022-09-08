@@ -76,9 +76,7 @@ class MessageImageListVC: YCBaseViewController {
         navigationController?.navigationBar.isTranslucent = false
         navigationController?.navigationBar.isHidden = false
     }
-    
-    
-    
+    //MARK: -- 网络请求
     func requestGirlListApi () {
         MBProgressHUD.showAdded(to: self.view, animated: true)
         messageProvider.request(MessagePageApi.getGirlList(page: self.page)) { result in

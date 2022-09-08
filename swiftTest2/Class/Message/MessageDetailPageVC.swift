@@ -62,14 +62,17 @@ class MessageDetailPageVC: YCBaseViewController {
                 print("JSON字符串---",jsonStr)
                 let messageModel = MessageTestModel.deserialize(from: jsonStr)
                 
-                let data = messageModel?.data ?? [Daily_wordModel]()
-                
-                for daily_wordModel in data {
-                    self.dataArray.append(daily_wordModel)
+                if messageModel?.code == 1 {
+                    
+                    let data = messageModel?.data ?? [Daily_wordModel]()
+                    
+                    for daily_wordModel in data {
+                        self.dataArray.append(daily_wordModel)
+                    }
+                    
+                } else {
+                    MBProgressHUD.show(messageModel?.msg, object: self)
                 }
-                
-                let daily_wordModel = self.dataArray[0] as! Daily_wordModel
-                print("content---",daily_wordModel.content)
                 
                 DispatchQueue.main.async {
                     self.tableView.reloadData()

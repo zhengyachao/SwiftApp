@@ -9,8 +9,8 @@ import Foundation
 
 let kBaseUrl   = "https://www.mxnzp.com/api/"
 
-let kAppId     = "sqnmugmnspqditkh"
-let kAppSecret = "akw0SkhCOVoweWhWT3FQQ3dJNHgxUT09"
+let kAppId     = "1gggxzoqoamfmpsu"
+let kAppSecret = "cWkxSm9VYzkwd3BTRG8xK3BvSGIxUT09"
 
 
 //MARK: -- 每日一句Path
