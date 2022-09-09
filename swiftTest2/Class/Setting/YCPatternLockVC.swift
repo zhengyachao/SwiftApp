@@ -44,12 +44,12 @@ class YCPatternLockVC: YCBaseViewController {
         }
         
         lockView.snp.makeConstraints { make in
-            make.left.equalTo(15)
-            make.width.height.equalTo(kScreenWidth - 30)
+            make.left.equalTo(40)
+            make.width.height.equalTo(kScreenWidth - 80)
             make.centerY.equalTo(view)
         }
     }
-    //MARK -- 设置密码
+    //MARK: -- 设置密码
     func setupPassword() {
         if firstPassword.isEmpty {
             firstPassword = currentPassword
@@ -69,6 +69,7 @@ class YCPatternLockVC: YCBaseViewController {
     }
 }
 
+//MARK: -- PatternLockViewDelegate
 extension YCPatternLockVC: PatternLockViewDelegate {
     
     func lockView(_ lockView: PatternLockView, didConnectedGrid grid: PatternLockGrid) {
@@ -98,6 +99,4 @@ extension YCPatternLockVC: PatternLockViewDelegate {
         currentPassword = ""
         print("currentPassword",currentPassword)
     }
-    
-    
 }

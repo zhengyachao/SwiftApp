@@ -83,16 +83,14 @@ class HomePageViewController: UIViewController {
 //            make.left.right.equalTo(view)
 //            make.bottom.equalTo(view.snp_bottom).offset(-10)
 //        }
-        
 //        requestDownloadApi()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        //self.navigationController?.navigationBar.isHidden = true
+//        self.navigationController?.navigationBar.isHidden = true
 //        requestAppListApi()
-        
 //        requestDownloadApi()
     }
     
@@ -102,7 +100,7 @@ class HomePageViewController: UIViewController {
         //self.navigationController?.navigationBar.isHidden = false
     }
     
-    //MARK -- 跳转到手势密码页面
+    //MARK: -- 跳转到手势密码页面
     @objc func onClickSettingBtn () {
         let lockVC = YCPatternLockVC()
         
@@ -118,7 +116,6 @@ class HomePageViewController: UIViewController {
             print(progress.progress)
     
             hud.progress = Float(progress.progress)
-            
         } completion: { result in
             switch result {
                 
@@ -164,21 +161,19 @@ class HomePageViewController: UIViewController {
             }
         }
     }
-    
-    
-    
 }
-//MARK: ZCycleViewProtocol
+
+//MARK: -- ZCycleViewProtocol
 extension HomePageViewController :ZCycleViewProtocol {
-    
+    /// 注册cell，[重用标志符：cell类]
     func cycleViewRegisterCellClasses() -> [String : AnyClass] {
-        /// 注册cell，[重用标志符：cell类]
         
         return ["HomeCycleCollectionCell": HomeCycleCollectionCell.self]
     }
     
+    /// cell赋值
     func cycleViewConfigureCell(collectionView: UICollectionView, cellForItemAt indexPath: IndexPath, realIndex: Int) -> UICollectionViewCell {
-        /// cell赋值
+        
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "HomeCycleCollectionCell", for: indexPath) as! HomeCycleCollectionCell
         
         cell.bgImageView.kf.setImage(with: URL(string: imageArray[realIndex]))
@@ -188,14 +183,15 @@ extension HomePageViewController :ZCycleViewProtocol {
         return cell
     }
     
-    
+    /// 点击了index
     func cycleViewDidSelectedIndex(_ cycleView: ZCycleView, index: Int) {
-        /// 点击了index
+        
         print("点击了----index",index)
     }
     
+    /// pageControl
     func cycleViewConfigurePageControl(_ cycleView: ZCycleView, pageControl: ZPageControl) {
-        /// pageControl
+        
         pageControl.isHidden = false
         pageControl.currentPageIndicatorTintColor = .red
         pageControl.pageIndicatorTintColor = .green
@@ -206,6 +202,7 @@ extension HomePageViewController :ZCycleViewProtocol {
 extension HomePageViewController: UICollectionViewDelegate,UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        
         return 9
     }
     
@@ -220,6 +217,4 @@ extension HomePageViewController: UICollectionViewDelegate,UICollectionViewDataS
         
         return cell
     }
-    
-    
 }

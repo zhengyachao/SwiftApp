@@ -44,7 +44,7 @@ extension MessagePageApi: TargetType {
             return kGirlList
         case .getFoodHeatTypeList:
             return kFoodHeatTypeList
-        case.getFoodHeatFoodList(_):
+        case.getFoodHeatFoodList(_, _):
             return kFoodHeatFoodList
         }
     }
