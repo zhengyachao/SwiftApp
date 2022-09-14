@@ -39,9 +39,9 @@ class MessageDataViewController: YCBaseViewController {
 2222
 3333
 """
-        print("str3 ----\(str3)")
-
+        print("str2----\(str2)")
         
+        print("str3 ----\(str3)")
         // Do any additional setup after loading the view.
         temArray1.append(1)
         temArray1.append("one")
@@ -56,20 +56,5 @@ class MessageDataViewController: YCBaseViewController {
         print("dict3----1\(dict3)")
         dict3 = [:]
         print("dict3----2\(dict3)")
-
-        
-        
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

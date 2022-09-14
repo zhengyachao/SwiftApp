@@ -85,7 +85,7 @@ class MessageLottiePageVC: YCBaseViewController {
         super.viewWillDisappear(animated)
 //        cancelGcdTimer()
     }
-    // 创建定时器
+    //MARK: -- 创建定时器
     func createGCDTimer () {
         // 创建定时器
         self.gcdTimer = DispatchSource.makeTimerSource(flags: .strict, queue: DispatchQueue.global())
@@ -127,7 +127,7 @@ class MessageLottiePageVC: YCBaseViewController {
             self.gcdTimer = nil
         }
     }
-    // 析构过程原理（类似OC里的dealloc）
+    //MARK: -- 析构过程原理（类似OC里的dealloc）
     deinit {
         print("deinit----")
         cancelGcdTimer()

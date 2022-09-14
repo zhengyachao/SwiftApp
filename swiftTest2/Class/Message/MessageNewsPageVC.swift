@@ -41,7 +41,7 @@ class MessageNewsPageVC: YCBaseViewController {
         segmentView.delegate = self
         segmentView.backgroundColor = UIColor.white
         segmentView.listContainer = listContainerView // 视图容器
-        segmentView.indicators = [sliderView] // 标题下的横线
+        segmentView.indicators = [sliderView]         // 标题下的横线
         segmentView.defaultSelectedIndex = 0
         return segmentView
     }()
@@ -58,7 +58,6 @@ class MessageNewsPageVC: YCBaseViewController {
         // 获取所有新闻类型列表
         requestNewsType()
     }
-    
     
     //MARK: -- 获取所有新闻类型列表
     func requestNewsType () {
@@ -85,7 +84,6 @@ class MessageNewsPageVC: YCBaseViewController {
             }
         }
     }
-
 }
 
 //MARK: -- JXSegmentedListContainerViewDataSource
