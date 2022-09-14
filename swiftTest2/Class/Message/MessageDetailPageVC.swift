@@ -29,6 +29,8 @@ class MessageDetailPageVC: YCBaseViewController {
         return tableView
     }()
     
+    var pageNum = 1
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -43,18 +45,28 @@ class MessageDetailPageVC: YCBaseViewController {
     }
     //MARK: -- 添加下拉刷新
     func addRefreshTableView () {
-        self.tableView.mj_header = MJRefreshNormalHeader.init(refreshingBlock: {
-            self.requestDaily_wordRecommend(count: 10)
+        self.tableView.mj_header = MJRefreshNormalHeader.init(refreshingBlock: {[weak self] in
+            self?.pageNum = 1
+            self?.requestDaily_wordRecommend(count: 10)
+        })
+        
+        self.tableView.mj_footer = MJRefreshBackNormalFooter.init(refreshingBlock: {[weak self] in
+            self?.pageNum += 1
+            self?.requestDaily_wordRecommend(count: 10)
         })
     }
     
     //MARK: -- 网络请求
     func requestDaily_wordRecommend(count : Int) -> Void {
         MBProgressHUD.showAdded(to: self.view, animated: true)
-        messageProvider.request(MessagePageApi.getDaily_wordRecommend(count: count, app_id: kAppId, app_secret: kAppSecret)) { result in
+        messageProvider.request(MessagePageApi.getDaily_wordRecommend(page: self.pageNum, count: count, app_id: kAppId, app_secret: kAppSecret)) { result in
             MBProgressHUD.hide(for: self.view, animated: true)
             
-            self.dataArray.removeAll()
+            if self.pageNum == 1 {
+                
+                self.dataArray.removeAll()
+            }
+            
             switch result {
             case let .success(response):
                 
@@ -77,12 +89,14 @@ class MessageDetailPageVC: YCBaseViewController {
                 DispatchQueue.main.async {
                     self.tableView.reloadData()
                     self.tableView.mj_header?.endRefreshing()
+                    self.tableView.mj_footer?.endRefreshing()
                 }
                 
             case let .failure(error as NSError):
                 print(error)
                 self.tableView.reloadData()
                 self.tableView.mj_header?.endRefreshing()
+                self.tableView.mj_footer?.endRefreshing()
             }
         }
     }
@@ -97,12 +111,21 @@ extension MessageDetailPageVC : UITableViewDataSource,UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let listCell = MessageDailyListCell.cellWithTableView(tableView)
+        let listCell = MessageDailyListCell.cellWithTableView(tableView, indexPath: indexPath)
         
-        let listModel = self.dataArray[indexPath.row]
-        listCell?.configMessageDailyListCellModel(listModel as! Daily_wordModel)
+//        let listModel = self.dataArray[indexPath.row]
+//        listCell?.configMessageDailyListCellModel(listModel as! Daily_wordModel)
         
         return listCell!
+    }
+    
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        guard let listCell = cell as? MessageDailyListCell else {
+            return
+        }
+        
+        let listModel = self.dataArray[indexPath.row]
+        listCell.configMessageDailyListCellModel(listModel as! Daily_wordModel)
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

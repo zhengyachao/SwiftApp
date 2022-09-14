@@ -19,12 +19,23 @@ class MessageDailyListCell: UITableViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
-    class func cellWithTableView (_ tableView: UITableView) -> Self! {
-        
+    class func cellWithTableView (_ tableView: UITableView, indexPath: IndexPath) -> Self! {
+        /*
+         在iOS9.3和iOS8.1下测试，只要为tableview注册了相应的cell类，无论用两种方法中的哪一种，都不用手动创建就能获得cell，不会为nil。
+         然而如果没有为tableview注册cell类，则dequeueReusableCellWithIdentifier:forIndexPath:会crash，crash原因为
+         “must register a nib or a class for the identifier or connect a prototype cell in a
+         storyboard”，即dequeueReusableCellWithIdentifier:forIndexPath:方法必须与register方法配套使用。
+         但如果没有为tableview注册cell类，dequeueReusableCellWithIdentifier:方法也不会崩溃，只是会返回nil，此时需要我们手动创建cell，
+         如果未创建，则程序会crash，crash原因为“UITableView failed to obtain a cell from its dataSource”，即此时tableView无法获取到cell实例。
+         */
         let identifier = "MessageDailyListCell_Id"
         
-        var cell = tableView.dequeueReusableCell(withIdentifier: identifier)
+        //MARK: -- 方法1使用dequeueReusableCellWithIdentifier:forIndexPath:但是必须要先注册cell 否则会崩溃
+        //tableView.register(MessageDailyListCell.self, forCellReuseIdentifier: identifier)
+        //var cell = tableView.dequeueReusableCell(withIdentifier: identifier, for: indexPath)
         
+        //MARK: -- 方法2使用dequeueReusableCellWithIdentifier:会返回nil
+        var cell = tableView.dequeueReusableCell(withIdentifier: identifier)
         if cell == nil {
             cell = MessageDailyListCell.init(style: .subtitle, reuseIdentifier: identifier)
         }

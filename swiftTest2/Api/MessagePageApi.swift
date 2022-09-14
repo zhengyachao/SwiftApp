@@ -12,7 +12,7 @@ let messageProvider = MoyaProvider<MessagePageApi>()
 
 enum MessagePageApi {
 
-    case getDaily_wordRecommend(count:Int,app_id:String,app_secret:String)
+    case getDaily_wordRecommend(page: Int,count:Int,app_id:String,app_secret:String)
     case getNewsTypes
     case getNewsList(typeId:String,page:Int)
     case getNewsDetails(newsId:String)
@@ -32,7 +32,7 @@ extension MessagePageApi: TargetType {
     var path: String {
         
         switch self {
-        case .getDaily_wordRecommend(_, _, _):
+        case .getDaily_wordRecommend(_,_, _, _):
             return kDaily_wordRecommend
         case .getNewsTypes:
             return kNewsTypes
@@ -60,7 +60,8 @@ extension MessagePageApi: TargetType {
         var parmeters : [String : Any] = Dictionary()
         
         switch self {
-        case .getDaily_wordRecommend(let count, let app_id, let app_secret):
+        case .getDaily_wordRecommend(let page, let count, let app_id, let app_secret):
+            parmeters["page"] = page
             parmeters["count"] = count
             parmeters["app_id"] = app_id
             parmeters["app_secret"] = app_secret
