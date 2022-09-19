@@ -30,9 +30,9 @@ class MessagePageViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         view.backgroundColor = UIColor.background
-        
-//        let ary = ["1"]
-//        print(ary[2])
+                
+        let rightItem = UIBarButtonItem.init(title: "弹窗", titleColor: UIColor.white, titleFont: UIFont.systemFont(ofSize: 16.0), titleEdgeInsets: UIEdgeInsets.zero, target: self, action: #selector(onClickRightBtn))
+        self.navigationItem.rightBarButtonItem = rightItem
         
         view.addSubview(msgTabelView)
         msgTabelView.snp.makeConstraints { make in
@@ -47,6 +47,24 @@ class MessagePageViewController: UIViewController {
         msgTabelView.mj_header = MJRefreshNormalHeader.init(refreshingBlock: { [self] in
             msgTabelView.mj_header?.endRefreshing()
         })
+    }
+    
+    @objc func onClickRightBtn () {
+        let maskView = CustomMaskView(frame: .zero, title: "更新提示",detail: "更新提示更新提示更新提示更新提示更新提示更新提示更新提示更新提示更新提示更新提示")
+        
+        maskView.clickCancelBlock = { btn in
+            maskView.hide()
+        }
+        
+        maskView.clickSubmitBlock = { btn in
+            maskView.hide()
+        }
+        
+        maskView.setBackMyClosure { str in
+            
+        }
+        
+        maskView.show()
     }
 }
 
@@ -79,7 +97,8 @@ extension MessagePageViewController : UITableViewDelegate,UITableViewDataSource 
 
             self?.isUpdate = isUpdated
             self?.msgTabelView.reloadData()
-        }        
+        }
+        
 //        listCell?.cellDelegate = self
         
         return listCell!
@@ -135,6 +154,9 @@ extension MessagePageViewController : UITableViewDelegate,UITableViewDataSource 
         case 8:
             let foodVC = MessageFoodPageVC()
             self.navigationController?.pushViewController(foodVC, animated: true)
+        case 9:
+            let stackVC = MessageStackVC()
+            self.navigationController?.pushViewController(stackVC, animated: true)
         default: break
             
         }
@@ -173,7 +195,7 @@ extension MessagePageViewController : UITableViewDelegate,UITableViewDataSource 
         alertController.image = UIImage.init(named: "empty")
         
         alertController.needDialogBlur = true
-        
+    
         self.present(alertController, animated: true, completion: nil)
     }
 }

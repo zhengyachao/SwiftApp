@@ -16,7 +16,7 @@ enum MessagePageApi {
     case getNewsTypes
     case getNewsList(typeId:String,page:Int)
     case getNewsDetails(newsId:String)
-    case getGirlList(page: Int)
+    case getGirlList(page:Int)
     case getFoodHeatTypeList
     case getFoodHeatFoodList(id:String,page:Int)
 }
@@ -32,11 +32,11 @@ extension MessagePageApi: TargetType {
     var path: String {
         
         switch self {
-        case .getDaily_wordRecommend(_,_, _, _):
+        case .getDaily_wordRecommend(_,_,_,_):
             return kDaily_wordRecommend
         case .getNewsTypes:
             return kNewsTypes
-        case .getNewsList(_, _):
+        case .getNewsList(_,_):
             return kNewsList
         case .getNewsDetails(_):
             return kNewsDetails
@@ -44,7 +44,7 @@ extension MessagePageApi: TargetType {
             return kGirlList
         case .getFoodHeatTypeList:
             return kFoodHeatTypeList
-        case.getFoodHeatFoodList(_, _):
+        case.getFoodHeatFoodList(_,_):
             return kFoodHeatFoodList
         }
     }
@@ -104,7 +104,6 @@ extension MessagePageApi: TargetType {
             return .requestParameters(parameters: parmeters, encoding: URLEncoding.default)
         }
     }
-
     /// The headers to be used in the request.
     var headers: [String: String]? {
         return nil

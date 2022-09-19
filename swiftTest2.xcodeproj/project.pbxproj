@@ -43,6 +43,7 @@
 		C2A558F028BE1368005D3DC7 /* chicken.json in Resources */ = {isa = PBXBuildFile; fileRef = C2A558EE28BE1368005D3DC7 /* chicken.json */; };
 		C2A558F128BE1368005D3DC7 /* mouse.json in Resources */ = {isa = PBXBuildFile; fileRef = C2A558EF28BE1368005D3DC7 /* mouse.json */; };
 		C2A558F328BE13B6005D3DC7 /* MessageLottiePageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A558F228BE13B6005D3DC7 /* MessageLottiePageVC.swift */; };
+		C2AD521428D3118B00513AF7 /* MessageStackVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2AD521328D3118B00513AF7 /* MessageStackVC.swift */; };
 		C2B1664D28AB9273004C7084 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2B1664C28AB9273004C7084 /* AppDelegate.swift */; };
 		C2B1665428AB9273004C7084 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2B1665228AB9273004C7084 /* Main.storyboard */; };
 		C2B1665628AB9274004C7084 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C2B1665528AB9274004C7084 /* Assets.xcassets */; };
@@ -81,6 +82,7 @@
 		C2C57F7A28C0996D006B76BF /* SwiftyStarRatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C57F7828C0996D006B76BF /* SwiftyStarRatingView.swift */; };
 		C2C57F7B28C0996D006B76BF /* ScoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C57F7928C0996D006B76BF /* ScoreView.swift */; };
 		C2C57F7D28C09B13006B76BF /* BJRateStarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C57F7C28C09B13006B76BF /* BJRateStarView.swift */; };
+		C2CDBC0E28D41F9100590074 /* CustomMaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2CDBC0D28D41F9100590074 /* CustomMaskView.swift */; };
 		C2CDC3BC28B31EF7008D72CD /* YCBaseWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2CDC3BB28B31EF7008D72CD /* YCBaseWebViewController.swift */; };
 		C2D23B3828ADDFE2007C149B /* DictionaryExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2D23B2728ADDFE2007C149B /* DictionaryExtension.swift */; };
 		C2D23B3B28ADDFE2007C149B /* WindowExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2D23B2A28ADDFE2007C149B /* WindowExtension.swift */; };
@@ -167,6 +169,7 @@
 		C2A558EE28BE1368005D3DC7 /* chicken.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = chicken.json; sourceTree = "<group>"; };
 		C2A558EF28BE1368005D3DC7 /* mouse.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = mouse.json; sourceTree = "<group>"; };
 		C2A558F228BE13B6005D3DC7 /* MessageLottiePageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageLottiePageVC.swift; sourceTree = "<group>"; };
+		C2AD521328D3118B00513AF7 /* MessageStackVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageStackVC.swift; sourceTree = "<group>"; };
 		C2B1664928AB9273004C7084 /* swiftTest2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = swiftTest2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2B1664C28AB9273004C7084 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C2B1665328AB9273004C7084 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -211,6 +214,7 @@
 		C2C57F7828C0996D006B76BF /* SwiftyStarRatingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyStarRatingView.swift; sourceTree = "<group>"; };
 		C2C57F7928C0996D006B76BF /* ScoreView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScoreView.swift; sourceTree = "<group>"; };
 		C2C57F7C28C09B13006B76BF /* BJRateStarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BJRateStarView.swift; sourceTree = "<group>"; };
+		C2CDBC0D28D41F9100590074 /* CustomMaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomMaskView.swift; sourceTree = "<group>"; };
 		C2CDC3BB28B31EF7008D72CD /* YCBaseWebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YCBaseWebViewController.swift; sourceTree = "<group>"; };
 		C2D23B2628ADD218007C149B /* swiftTest2-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "swiftTest2-Bridging-Header.h"; sourceTree = "<group>"; };
 		C2D23B2728ADDFE2007C149B /* DictionaryExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DictionaryExtension.swift; sourceTree = "<group>"; };
@@ -340,6 +344,7 @@
 				C286618128C1A83100EAF1EE /* MessageFileManagerVC.swift */,
 				C286618528C1DD5600EAF1EE /* MessageImageListVC.swift */,
 				C2FA386728C58E5000811A43 /* MessageFoodPageVC.swift */,
+				C2AD521328D3118B00513AF7 /* MessageStackVC.swift */,
 			);
 			path = Message;
 			sourceTree = "<group>";
@@ -504,6 +509,7 @@
 		C2C57F2A28BF3B2C006B76BF /* Custom */ = {
 			isa = PBXGroup;
 			children = (
+				C2CDBC0C28D41F7700590074 /* MaskView(蒙层) */,
 				C286618928C20D0600EAF1EE /* NavbarView */,
 				C2C57F7728C0996D006B76BF /* RateScoreView */,
 				C2C57F2B28BF3B2C006B76BF /* YCCircleProgressView */,
@@ -598,6 +604,14 @@
 				C2C57F7C28C09B13006B76BF /* BJRateStarView.swift */,
 			);
 			path = RateScoreView;
+			sourceTree = "<group>";
+		};
+		C2CDBC0C28D41F7700590074 /* MaskView(蒙层) */ = {
+			isa = PBXGroup;
+			children = (
+				C2CDBC0D28D41F9100590074 /* CustomMaskView.swift */,
+			);
+			path = "MaskView(蒙层)";
 			sourceTree = "<group>";
 		};
 		C2CDC3C628B4687E008D72CD /* Tool */ = {
@@ -922,6 +936,7 @@
 			files = (
 				C2FA386B28C5915E00811A43 /* LeftTableViewCell.swift in Sources */,
 				C292F85528AC7D2D001B1984 /* SwiftHeader.swift in Sources */,
+				C2CDBC0E28D41F9100590074 /* CustomMaskView.swift in Sources */,
 				C2C57F6628C09179006B76BF /* SPInterfaceHeaderScrollView.swift in Sources */,
 				C2C57F6C28C09179006B76BF /* SPConstant.swift in Sources */,
 				C2D23B5428ADEE32007C149B /* HomeCycleCollectionCell.swift in Sources */,
@@ -962,6 +977,7 @@
 				C2C57F4228C05F21006B76BF /* ImageGridView.swift in Sources */,
 				C2A558DD28BCA1A8005D3DC7 /* MessageNewsListVC.swift in Sources */,
 				C2A558D728BC6686005D3DC7 /* MessageTestModel.swift in Sources */,
+				C2AD521428D3118B00513AF7 /* MessageStackVC.swift in Sources */,
 				C2C57F6328C09179006B76BF /* SPAlertController+transitionDelegate.swift in Sources */,
 				C2C57F6B28C09179006B76BF /* SPAlertAction.swift in Sources */,
 				C2D23B4428ADDFE2007C149B /* ButtonExtension.swift in Sources */,

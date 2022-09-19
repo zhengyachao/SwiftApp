@@ -73,6 +73,7 @@ extension HomeAppListApi:  TargetType {
             if self.method == .post {
                 return .requestCompositeParameters(bodyParameters: parmeters, bodyEncoding: JSONEncoding.default, urlParameters: [:])
             }
+            
             return .requestParameters(parameters: parmeters, encoding: URLEncoding.default)
             
         case .downloadTestApi:
