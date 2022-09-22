@@ -19,6 +19,10 @@ import JXSegmentedView
 //MRAK: 应用全局通用配置
 let kScreenWidth  = UIScreen.main.bounds.width
 let kScreenHeight = UIScreen.main.bounds.height
+
+let kWidthScale   = UIScreen.main.bounds.width / 375
+let kHeightScale  = UIScreen.main.bounds.height / 667
+
 let keyWindow     = UIApplication.shared.delegate!.window
 let kUserDefaults = UserDefaults.standard
 let kNotificationCenter = NotificationCenter.default

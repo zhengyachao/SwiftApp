@@ -39,6 +39,15 @@ class MinePageViewController: UIViewController {
         collectionView.snp.makeConstraints { make in
             make.edges.equalTo(view)
         }
+        
+        let imageView1 = UIImageView.init(frame: CGRect.zero)
+        imageView1.image =  UIImage.createImageWithColor(.theme, frame: CGRect(x: 0, y: 0, width: 1, height: 1))
+        self.collectionView.addSubview(imageView1)
+        imageView1.snp.makeConstraints { make in
+            make.centerX.equalTo(self.collectionView)
+            make.top.equalTo(kScreenWidth/3 * 0.618 * 3 + 20)
+            make.width.height.equalTo(100*kHeightScale)
+        }
     }
     
     @objc func onClickLogoutBtn () {

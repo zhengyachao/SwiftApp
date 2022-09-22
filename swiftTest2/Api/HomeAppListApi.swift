@@ -38,7 +38,7 @@ extension HomeAppListApi:  TargetType {
             return URL(string: "http://iservice.bjyijie.com.cn/")!
         case .downloadTestApi:
 //            return URL(string: "https://v-cdn.zjol.com.cn/")!
-            return URL(string: "http://mvimg2.meitudata.com/55fe3d94efbc12843.jpg")!
+            return URL(string: "https://tvax2.sinaimg.cn/large/005BYqpggy1g3jskzyvifj31900u00xo.jpg")!
         }
     }
     

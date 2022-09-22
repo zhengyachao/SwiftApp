@@ -11,7 +11,9 @@ import SwiftyJSON
 import HandyJSON
 
 class HomePageViewController: UIViewController {
-
+    
+    var countNum = 0
+    
     let imageArray = ["http://mvimg2.meitudata.com/55fe3d94efbc12843.jpg",
                       "http://mvimg2.meitudata.com/55fe3d94efbc12843.jpg",
                       "http://mvimg2.meitudata.com/55fe3d94efbc12843.jpg",
@@ -83,11 +85,16 @@ class HomePageViewController: UIViewController {
 //            make.left.right.equalTo(view)
 //            make.bottom.equalTo(view.snp_bottom).offset(-10)
 //        }
-//        requestDownloadApi()
+        
+        
+        requestDownloadApi()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        
+        print("22222222---",self.countNum)
+        self.countNum = 0
         
 //        self.navigationController?.navigationBar.isHidden = true
 //        requestAppListApi()
@@ -117,6 +124,9 @@ class HomePageViewController: UIViewController {
     
             hud.progress = Float(progress.progress)
         } completion: { result in
+            
+            self.countNum += 1
+            
             switch result {
                 
             case let .success(response):
@@ -127,6 +137,20 @@ class HomePageViewController: UIViewController {
             case let .failure(error as NSError):
                 print(error)
             }
+            
+            /* 轮询
+            // 初始化延时任务
+            let dispatchWorkItem = DispatchWorkItem {[weak self] in
+                self?.requestDownloadApi()
+            }
+            
+            DispatchQueue.main.asyncAfter(deadline: .now() + 2, execute: dispatchWorkItem)
+            
+            if self.countNum == 3 {
+                print("111111111---",self.countNum)
+                dispatchWorkItem.cancel()
+            }
+            */
         }
     }
     

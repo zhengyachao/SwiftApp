@@ -27,7 +27,6 @@ class MessageStackVC: YCBaseViewController {
         stackView.distribution = .fillEqually
         stackView.alignment = .top
         
-        
         return stackView
     }()
         
