@@ -114,7 +114,6 @@ class MessageFoodPageVC: YCBaseViewController {
     
     //MARK: -- GCD 信号量(DispatchSemaphore)/group.enter()&&group.leave() + notify
     func createSequenceNetworking () {
-        
         /*
          默认创建是串行队列
          label:队列的名称
@@ -131,7 +130,6 @@ class MessageFoodPageVC: YCBaseViewController {
         group.notify( queue: DispatchQueue.main) { [weak self] in
             self?.requestFoodHeatFoodList()
         }
-        
     }
     //MARK: -- 获取食物的分类列表
     func requestFoodHeatTypeList () {
@@ -161,7 +159,6 @@ class MessageFoodPageVC: YCBaseViewController {
                             item.isSelected = true
                             self.typeId = String(item.id)
                             self.typeName = item.name
-                            
                         } else {
                             
                             item.isSelected = false
@@ -169,7 +166,6 @@ class MessageFoodPageVC: YCBaseViewController {
                         
                         self.leftListArray.append(item)
                     }
-                    
                 } else {
                     
                     MBProgressHUD.show(foodTypeListModel?.msg , object: self)
@@ -179,7 +175,6 @@ class MessageFoodPageVC: YCBaseViewController {
                     
                     self?.leftTableView.reloadData()
                 }
-                
             case let .failure(error as NSError):
                 print(error)
                 self.leftTableView.reloadData()
