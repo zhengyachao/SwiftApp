@@ -15,5 +15,8 @@ extension NSNotification.Name {
     static let kLoginSuccessNotice  = NSNotification.Name("kLoginSuccessNotice")    // 登录成功通知
     static let kLogoutSuccessNotice = NSNotification.Name("kLogoutSuccessNotice")   // 登录成功通知
 
+    
+    static let kRefreshMessageListNotice = NSNotification.Name("kRefreshMessageListNotice")   //刷新Message列表成功通知
+
 }
 

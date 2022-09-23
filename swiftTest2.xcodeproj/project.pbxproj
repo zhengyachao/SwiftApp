@@ -10,6 +10,9 @@
 		0032FAB010D88C89AD0EC8D7 /* Pods_swiftTest2Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93EE9D4F2C7FC435A8F48FB9 /* Pods_swiftTest2Tests.framework */; };
 		72B850ADFA12235DC50DF19D /* Pods_swiftTest2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3FA13B3B777DCDF7C202157 /* Pods_swiftTest2.framework */; };
 		A3306C0339E055C3993D67D6 /* Pods_swiftTest2_swiftTest2UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E05880E99F318E30AA0B1A6 /* Pods_swiftTest2_swiftTest2UITests.framework */; };
+		C207F36E28DC5A5A00D99558 /* ExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C207F36D28DC5A5A00D99558 /* ExampleViewController.swift */; };
+		C207F37128DC618400D99558 /* ExampleBasicContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C207F36F28DC618300D99558 /* ExampleBasicContentView.swift */; };
+		C207F37228DC618400D99558 /* ExampleBouncesContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C207F37028DC618400D99558 /* ExampleBouncesContentView.swift */; };
 		C22158DF28B8B4C9001F8277 /* YCDeviceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C22158DE28B8B4C9001F8277 /* YCDeviceManager.swift */; };
 		C25BF04628ACCFAC003E9836 /* HomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C25BF04528ACCFAC003E9836 /* HomePageViewController.swift */; };
 		C25BF04828ACCFB5003E9836 /* MessagePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C25BF04728ACCFB5003E9836 /* MessagePageViewController.swift */; };
@@ -135,6 +138,9 @@
 		6A6CF99E6574EF7F05DB26DA /* Pods-swiftTest2-swiftTest2UITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-swiftTest2-swiftTest2UITests.release.xcconfig"; path = "Target Support Files/Pods-swiftTest2-swiftTest2UITests/Pods-swiftTest2-swiftTest2UITests.release.xcconfig"; sourceTree = "<group>"; };
 		6D33019C09E60E5E33F86307 /* Pods-swiftTest2Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-swiftTest2Tests.release.xcconfig"; path = "Target Support Files/Pods-swiftTest2Tests/Pods-swiftTest2Tests.release.xcconfig"; sourceTree = "<group>"; };
 		93EE9D4F2C7FC435A8F48FB9 /* Pods_swiftTest2Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_swiftTest2Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C207F36D28DC5A5A00D99558 /* ExampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleViewController.swift; sourceTree = "<group>"; };
+		C207F36F28DC618300D99558 /* ExampleBasicContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExampleBasicContentView.swift; sourceTree = "<group>"; };
+		C207F37028DC618400D99558 /* ExampleBouncesContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExampleBouncesContentView.swift; sourceTree = "<group>"; };
 		C22158DE28B8B4C9001F8277 /* YCDeviceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YCDeviceManager.swift; sourceTree = "<group>"; };
 		C22158E028B8B626001F8277 /* swiftTest2.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = swiftTest2.entitlements; sourceTree = "<group>"; };
 		C25BF04528ACCFAC003E9836 /* HomePageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomePageViewController.swift; sourceTree = "<group>"; };
@@ -298,6 +304,16 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		C207F36C28DC5A4B00D99558 /* Example */ = {
+			isa = PBXGroup;
+			children = (
+				C207F36F28DC618300D99558 /* ExampleBasicContentView.swift */,
+				C207F37028DC618400D99558 /* ExampleBouncesContentView.swift */,
+				C207F36D28DC5A5A00D99558 /* ExampleViewController.swift */,
+			);
+			path = Example;
+			sourceTree = "<group>";
+		};
 		C22158DD28B8B4A0001F8277 /* Manager */ = {
 			isa = PBXGroup;
 			children = (
@@ -416,6 +432,7 @@
 		C292F85A28AC85F9001B1984 /* Class */ = {
 			isa = PBXGroup;
 			children = (
+				C207F36C28DC5A4B00D99558 /* Example */,
 				C25BF04128ACCF8E003E9836 /* Home */,
 				C25BF04228ACCF8E003E9836 /* Login */,
 				C25BF04428ACCF8E003E9836 /* Message */,
@@ -978,6 +995,8 @@
 				C2A558DD28BCA1A8005D3DC7 /* MessageNewsListVC.swift in Sources */,
 				C2A558D728BC6686005D3DC7 /* MessageTestModel.swift in Sources */,
 				C2AD521428D3118B00513AF7 /* MessageStackVC.swift in Sources */,
+				C207F37128DC618400D99558 /* ExampleBasicContentView.swift in Sources */,
+				C207F37228DC618400D99558 /* ExampleBouncesContentView.swift in Sources */,
 				C2C57F6328C09179006B76BF /* SPAlertController+transitionDelegate.swift in Sources */,
 				C2C57F6B28C09179006B76BF /* SPAlertAction.swift in Sources */,
 				C2D23B4428ADDFE2007C149B /* ButtonExtension.swift in Sources */,
@@ -1019,6 +1038,7 @@
 				C292F86428AC875A001B1984 /* YCNavigationController.swift in Sources */,
 				C2A558E528BDA172005D3DC7 /* MessageNewsListCell.swift in Sources */,
 				C286618628C1DD5600EAF1EE /* MessageImageListVC.swift in Sources */,
+				C207F36E28DC5A5A00D99558 /* ExampleViewController.swift in Sources */,
 				C2C57F4028C05F21006B76BF /* RotateImageGridView.swift in Sources */,
 				C2C57F4128C05F21006B76BF /* ShadowGridView.swift in Sources */,
 				C286618428C1AA0800EAF1EE /* YCFileManager.swift in Sources */,

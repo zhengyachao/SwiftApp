@@ -92,8 +92,6 @@ class HomePageViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
-        print("22222222---",self.countNum)
         self.countNum = 0
         
 //        self.navigationController?.navigationBar.isHidden = true

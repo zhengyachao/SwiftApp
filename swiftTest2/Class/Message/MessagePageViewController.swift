@@ -36,10 +36,17 @@ class MessagePageViewController: UIViewController {
         
         view.addSubview(msgTabelView)
         msgTabelView.snp.makeConstraints { make in
-            make.edges.equalTo(view)
+            make.top.left.right.equalTo(view)
+            make.bottom.equalTo(view).offset(-kAppTabBarHeight)
         }
-        // 下来刷新
+        // 下拉刷新
         addTableViewRefresh()
+        // 再次点击message的Tabbar刷新列表
+        kNotificationCenter.addObserver(self, selector: #selector(refreshMessageList), name: .kRefreshMessageListNotice, object: nil)
+    }
+    
+    @objc func refreshMessageList () {
+        self.msgTabelView.mj_header?.beginRefreshing()
     }
     
     func addTableViewRefresh () {

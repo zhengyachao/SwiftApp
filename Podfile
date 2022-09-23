@@ -16,6 +16,8 @@ target 'swiftTest2' do
   
   # 纯代码布局---Masonry
   pod 'SnapKitExtend'
+  # 高度自定义的TabBarController组件
+  pod "ESTabBarController-swift"
   # 键盘管理
   pod 'IQKeyboardManagerSwift'
   # 翠鸟--图片加载框架

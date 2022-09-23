@@ -14,12 +14,11 @@
 import UIKit
 import Moya
 
-
 //默认下载保存地址（用户文档目录）
 let DefaultDownloadDir: URL = {
     
     let directoryURLs = FileManager.default.urls(for: .documentDirectory,
-                                                 in: .userDomainMask)
+                                                  in: .userDomainMask)
     return directoryURLs.first ?? URL(fileURLWithPath: NSTemporaryDirectory())
 }()
 
