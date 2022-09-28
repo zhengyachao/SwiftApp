@@ -9,8 +9,8 @@ import UIKit
 
 class YCBaseViewController: UIViewController {
     //MARK: -- 自定义返回按钮替换系统默认返回按钮
-    lazy var backBtn: UIButton = {
-        let backBtn = UIButton.init(frame: CGRect.init(x: 0, y: 0, width: 40, height: 40))
+    lazy var backBtn: ZYButton = {
+        let backBtn = ZYButton.init(frame: CGRect.init(x: 0, y: 0, width: 40, height: 40))
         backBtn.setImage(UIImage(named: "common_back_btn"), for: .normal)
         backBtn.setImage(UIImage(named: "common_back_btn"), for: .highlighted)
         backBtn.setTitle("返回", for: .normal)

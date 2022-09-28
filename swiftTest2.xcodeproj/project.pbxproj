@@ -13,6 +13,7 @@
 		C207F36E28DC5A5A00D99558 /* ExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C207F36D28DC5A5A00D99558 /* ExampleViewController.swift */; };
 		C207F37128DC618400D99558 /* ExampleBasicContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C207F36F28DC618300D99558 /* ExampleBasicContentView.swift */; };
 		C207F37228DC618400D99558 /* ExampleBouncesContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C207F37028DC618400D99558 /* ExampleBouncesContentView.swift */; };
+		C215624528E3ED69005D4FA5 /* ZYButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C215624428E3ED69005D4FA5 /* ZYButton.swift */; };
 		C22158DF28B8B4C9001F8277 /* YCDeviceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C22158DE28B8B4C9001F8277 /* YCDeviceManager.swift */; };
 		C25BF04628ACCFAC003E9836 /* HomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C25BF04528ACCFAC003E9836 /* HomePageViewController.swift */; };
 		C25BF04828ACCFB5003E9836 /* MessagePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C25BF04728ACCFB5003E9836 /* MessagePageViewController.swift */; };
@@ -141,6 +142,7 @@
 		C207F36D28DC5A5A00D99558 /* ExampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleViewController.swift; sourceTree = "<group>"; };
 		C207F36F28DC618300D99558 /* ExampleBasicContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExampleBasicContentView.swift; sourceTree = "<group>"; };
 		C207F37028DC618400D99558 /* ExampleBouncesContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExampleBouncesContentView.swift; sourceTree = "<group>"; };
+		C215624428E3ED69005D4FA5 /* ZYButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZYButton.swift; sourceTree = "<group>"; };
 		C22158DE28B8B4C9001F8277 /* YCDeviceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YCDeviceManager.swift; sourceTree = "<group>"; };
 		C22158E028B8B626001F8277 /* swiftTest2.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = swiftTest2.entitlements; sourceTree = "<group>"; };
 		C25BF04528ACCFAC003E9836 /* HomePageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomePageViewController.swift; sourceTree = "<group>"; };
@@ -312,6 +314,14 @@
 				C207F36D28DC5A5A00D99558 /* ExampleViewController.swift */,
 			);
 			path = Example;
+			sourceTree = "<group>";
+		};
+		C215624328E3ED53005D4FA5 /* CustomBtn */ = {
+			isa = PBXGroup;
+			children = (
+				C215624428E3ED69005D4FA5 /* ZYButton.swift */,
+			);
+			path = CustomBtn;
 			sourceTree = "<group>";
 		};
 		C22158DD28B8B4A0001F8277 /* Manager */ = {
@@ -526,6 +536,7 @@
 		C2C57F2A28BF3B2C006B76BF /* Custom */ = {
 			isa = PBXGroup;
 			children = (
+				C215624328E3ED53005D4FA5 /* CustomBtn */,
 				C2CDBC0C28D41F7700590074 /* MaskView(蒙层) */,
 				C286618928C20D0600EAF1EE /* NavbarView */,
 				C2C57F7728C0996D006B76BF /* RateScoreView */,
@@ -988,6 +999,7 @@
 				C2A558D928BC8AF6005D3DC7 /* MessageDailyListCell.swift in Sources */,
 				C2C57F3E28C05F21006B76BF /* GridView.swift in Sources */,
 				C2A558D128BC5689005D3DC7 /* MoyaConfig.swift in Sources */,
+				C215624528E3ED69005D4FA5 /* ZYButton.swift in Sources */,
 				C2D23B4128ADDFE2007C149B /* DispatchQueueExtension.swift in Sources */,
 				C2C57F6828C09179006B76BF /* SPAlertControllerActionView.swift in Sources */,
 				C2C57F6128C09179006B76BF /* SPAlertAnimation.swift in Sources */,

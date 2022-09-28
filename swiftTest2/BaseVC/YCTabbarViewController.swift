@@ -15,7 +15,6 @@ class YCTabbarViewController: ESTabBarController, UITabBarControllerDelegate {
 
         // 初始化Tabbar
 //        initTabbar()
-        
         initCustomESTabbar()
     }
     
@@ -29,9 +28,9 @@ class YCTabbarViewController: ESTabBarController, UITabBarControllerDelegate {
         let v2NavVC = YCNavigationController.init(rootViewController: v2)
         let v3NavVC = YCNavigationController.init(rootViewController: v3)
 
-        v1NavVC.tabBarItem = ESTabBarItem.init(ExampleBouncesContentView(),title: "Home", image: UIImage(named: "home"), selectedImage: UIImage(named: "home_1"))
+        v1NavVC.tabBarItem = ESTabBarItem.init(ExampleBouncesContentView(),title: "Home",    image: UIImage(named: "home"),    selectedImage: UIImage(named: "home_1"))
         v2NavVC.tabBarItem = ESTabBarItem.init(ExampleBouncesContentView(),title: "Message", image: UIImage(named: "message"), selectedImage: UIImage(named: "message_1"))
-        v3NavVC.tabBarItem = ESTabBarItem.init(ExampleBouncesContentView(),title: "Me", image: UIImage(named: "me"), selectedImage: UIImage(named: "me_1"))
+        v3NavVC.tabBarItem = ESTabBarItem.init(ExampleBouncesContentView(),title: "Me",      image: UIImage(named: "me"),      selectedImage: UIImage(named: "me_1"))
         
         v1.title    = "Home"
         v2.title    = "Message"
@@ -68,9 +67,9 @@ class YCTabbarViewController: ESTabBarController, UITabBarControllerDelegate {
         let msgNavVC  = YCNavigationController.init(rootViewController: messageVC)
         let mineNavVC = YCNavigationController.init(rootViewController: mineVC)
         
-        homeNavVC.tabBarItem    = UITabBarItem.init(title: "", image: UIImage(named: "home"), selectedImage: UIImage(named: "home_1"))
-        msgNavVC.tabBarItem     = UITabBarItem.init(title: "", image: UIImage(named: "message"), selectedImage: UIImage(named: "message_1"))
-        mineNavVC.tabBarItem    = UITabBarItem.init(title: "", image: UIImage(named: "me"), selectedImage: UIImage(named: "me_1"))
+        homeNavVC.tabBarItem = UITabBarItem.init(title: "", image: UIImage(named: "home"), selectedImage: UIImage(named: "home_1"))
+        msgNavVC.tabBarItem  = UITabBarItem.init(title: "", image: UIImage(named: "message"), selectedImage: UIImage(named: "message_1"))
+        mineNavVC.tabBarItem = UITabBarItem.init(title: "", image: UIImage(named: "me"), selectedImage: UIImage(named: "me_1"))
         
         homeVC.title    = "首页"
         messageVC.title = "Message"

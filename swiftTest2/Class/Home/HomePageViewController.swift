@@ -233,7 +233,7 @@ extension HomePageViewController: UICollectionViewDelegate,UICollectionViewDataS
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "HomeCycleCollectionCell_Id", for: indexPath) as! HomeCycleCollectionCell
         
         cell.bgImageView.kf.setImage(with: URL(string: imageArray[indexPath.item]))
-//        cell.bgImageView.image = UIImage.createImageWithColor(UIColor.random, frame: cell.bounds)
+//        cell.bgImageView.image = UIImage.createImageWithColor(UIColor.random, frame: cell.bounds)z
         cell.bgImageView.layer.cornerRadius = 30.0
         cell.bgImageView.clipsToBounds = true
         
